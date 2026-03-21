@@ -9,6 +9,8 @@ import Home from "@/pages/Home";
 import Lessons from "@/pages/Lessons";
 import Glossary from "@/pages/Glossary";
 import FAQ from "@/pages/FAQ";
+import MMBotMode from "@/pages/MMBotMode";
+import YourFirstBot from "@/pages/YourFirstBot";
 
 function Router() {
   return (
@@ -19,6 +21,12 @@ function Router() {
         <Route path="/lessons" component={Lessons} />
         <Route path="/glossary" component={Glossary} />
         <Route path="/faq" component={FAQ} />
+        <Route path="/get-started" component={YourFirstBot} />
+        <Route path="/modes/grid">{() => <MMBotMode mode="GRID" />}</Route>
+        <Route path="/modes/mid">{() => <MMBotMode mode="MID" />}</Route>
+        <Route path="/modes/rgrid">{() => <MMBotMode mode="RGRID" />}</Route>
+        <Route path="/modes/rsi">{() => <MMBotMode mode="RSI" />}</Route>
+        <Route path="/modes/blend">{() => <MMBotMode mode="BLEND" />}</Route>
         <Route component={NotFound} />
       </Switch>
     </div>

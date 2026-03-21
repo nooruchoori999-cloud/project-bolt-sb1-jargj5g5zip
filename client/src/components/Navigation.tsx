@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'wouter';
-import { Menu, X, Zap } from 'lucide-react';
-import { useState } from 'react';
+import { Menu, X, Zap, ChevronDown } from 'lucide-react';
+import { useState, useRef, useEffect } from 'react';
 
 const navLinks = [
   { path: '/', label: 'Home' },
@@ -9,11 +9,33 @@ const navLinks = [
   { path: '/faq', label: 'FAQ' },
 ];
 
+const botModes = [
+  { path: '/modes/grid', label: 'GRID' },
+  { path: '/modes/mid', label: 'MID' },
+  { path: '/modes/rgrid', label: 'RGRID' },
+  { path: '/modes/rsi', label: 'RSI' },
+  { path: '/modes/blend', label: 'BLEND' },
+];
+
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [mobileModesOpen, setMobileModesOpen] = useState(false);
   const [location] = useLocation();
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const isActive = (path: string) => location === path;
+  const isModesActive = botModes.some((m) => location === m.path);
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setDropdownOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   return (
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50">
@@ -44,6 +66,55 @@ export default function Navigation() {
                 {link.label}
               </Link>
             ))}
+
+            <div className="relative" ref={dropdownRef}>
+              <button
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+                data-testid="button-modes-dropdown"
+                className={`flex items-center gap-1 text-sm font-medium transition-colors duration-200 ${
+                  isModesActive ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                MM Bot Modes
+                <ChevronDown
+                  size={15}
+                  className={`transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`}
+                />
+              </button>
+
+              {dropdownOpen && (
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2.5 w-40 bg-card border border-card-border rounded-xl shadow-xl shadow-black/30 py-1.5 z-50">
+                  {botModes.map((mode) => (
+                    <Link
+                      key={mode.path}
+                      to={mode.path}
+                      onClick={() => setDropdownOpen(false)}
+                      data-testid={`link-mode-${mode.label.toLowerCase()}`}
+                      className={`block px-4 py-2.5 text-sm font-medium transition-colors duration-150 ${
+                        isActive(mode.path)
+                          ? 'text-primary bg-primary/5'
+                          : 'text-muted-foreground hover:text-foreground hover:bg-muted/40'
+                      }`}
+                    >
+                      {mode.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <Link
+              to="/get-started"
+              data-testid="link-nav-get-started"
+              className={`text-sm font-medium transition-colors duration-200 ${
+                isActive('/get-started')
+                  ? 'text-primary'
+                  : 'text-muted-foreground hover:text-foreground'
+              }`}
+            >
+              Get Started
+            </Link>
+
             <a
               href="https://app.tread.fi"
               target="_blank"
@@ -67,14 +138,14 @@ export default function Navigation() {
 
       {mobileMenuOpen && (
         <div className="md:hidden bg-background border-t border-border/50">
-          <div className="px-4 py-4 space-y-3">
+          <div className="px-4 py-4 space-y-1">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 onClick={() => setMobileMenuOpen(false)}
                 data-testid={`link-mobile-nav-${link.label.toLowerCase()}`}
-                className={`block text-sm font-medium transition-colors duration-200 py-1 ${
+                className={`block text-sm font-medium transition-colors duration-200 py-2 ${
                   isActive(link.path)
                     ? 'text-primary'
                     : 'text-muted-foreground hover:text-foreground'
@@ -83,6 +154,53 @@ export default function Navigation() {
                 {link.label}
               </Link>
             ))}
+
+            <div>
+              <button
+                onClick={() => setMobileModesOpen(!mobileModesOpen)}
+                className={`flex items-center gap-1 w-full text-sm font-medium transition-colors duration-200 py-2 ${
+                  isModesActive ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                MM Bot Modes
+                <ChevronDown
+                  size={14}
+                  className={`transition-transform duration-200 ${mobileModesOpen ? 'rotate-180' : ''}`}
+                />
+              </button>
+              {mobileModesOpen && (
+                <div className="pl-4 space-y-1 pb-1">
+                  {botModes.map((mode) => (
+                    <Link
+                      key={mode.path}
+                      to={mode.path}
+                      onClick={() => { setMobileMenuOpen(false); setMobileModesOpen(false); }}
+                      className={`block text-sm py-1.5 transition-colors duration-150 ${
+                        isActive(mode.path)
+                          ? 'text-primary'
+                          : 'text-muted-foreground hover:text-foreground'
+                      }`}
+                    >
+                      {mode.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <Link
+              to="/get-started"
+              onClick={() => setMobileMenuOpen(false)}
+              data-testid="link-mobile-nav-get-started"
+              className={`block text-sm font-medium transition-colors duration-200 py-2 ${
+                isActive('/get-started')
+                  ? 'text-primary'
+                  : 'text-muted-foreground hover:text-foreground'
+              }`}
+            >
+              Get Started
+            </Link>
+
             <a
               href="https://app.tread.fi"
               target="_blank"
