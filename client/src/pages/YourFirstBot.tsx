@@ -1,42 +1,102 @@
-import { Lightbulb } from 'lucide-react';
+interface Section {
+  title: string;
+  content: string;
+  images?: string[];
+}
 
-const steps = [
+const sections: Section[] = [
   {
-    title: 'Connect Your Exchange Account',
-    desc: 'Link your perpetual DEX account to TreadFi by providing your API key and secret. Make sure to enable trading permissions but restrict withdrawals for security. Your credentials are encrypted and never stored in plain text.',
+    title: 'Adding Your Trading Account',
+    content:
+      'Tread supports HyperliquidX, Aster DEX, Pacifica, Paradex, Extended, and NadoHQ. For this tutorial we\'ll use Paradex — it\'s the cheapest place to start as it has zero trading fees and no builder fee from Tread. With other exchanges you pay: Exchange trading fees + 0.02% builder fee to Tread on every trade. So for beginners, Paradex makes the most sense.',
   },
   {
-    title: 'Choose a Bot Mode',
-    desc: 'Select the strategy that best fits current market conditions. If you\'re unsure, start with GRID mode — it\'s the most beginner-friendly and gives you a clear picture of how market making works before you layer in more complexity.',
+    title: 'Connecting Paradex',
+    content:
+      'Click the wallet icon, then click "Connect Perp Dex account". Choose Paradex from the dropdown. Choose an account name, click Connect Wallet, select your wallet, and sign the transaction. Your wallet is now linked.',
+    images: ['https://drive.google.com/uc?export=view&id=1Si6g8zAomzjB3ZHqJJr9CwwnbPb9X1tA'],
   },
   {
-    title: 'Set Your Parameters',
-    desc: 'Configure the key parameters for your chosen mode: spread size, order size, price range, and refresh interval. Start conservative — smaller orders and wider spreads limit your downside while you learn how the bot behaves in live markets.',
+    title: 'Setting Up the Market Maker Bot',
+    content:
+      'Go to the Bot section and click Market Maker Bot. Under Account, select your Paradex account. Choose your trading pair.',
+    images: ['https://drive.google.com/uc?export=view&id=1dwqxiKQ3-HMy-lLFtQ6VF5755-yDQOt2'],
   },
   {
-    title: 'Run a Simulation First',
-    desc: 'Before going live, use the paper trading or simulation mode to see how your strategy would have performed on recent market data. Review the simulated PnL, fill rate, and inventory drift to validate your setup.',
+    title: 'Choosing the Right Pair & Time',
+    content:
+      'Look for clear ranging price action. On Paradex, BTCUSD usually works well. Avoid running during NY market open (9:30 AM NY time). Instead use: NY afternoon after 11:30 AM NY time, around 2:30 PM NY time, or London session after 5:00 AM NY time.',
+    images: ['https://drive.google.com/uc?export=view&id=1snPoU5D_Mfy1p4mjYbhrupVD0JFW6MHS'],
   },
   {
-    title: 'Go Live and Monitor',
-    desc: 'Deploy your bot with real capital. Check performance regularly — especially in the first few hours. Watch your inventory position, spread capture, and overall PnL. Be ready to pause the bot if market conditions change dramatically.',
+    title: 'Margin & Leverage',
+    content:
+      'Margin determines how much balance you use and how much volume you target. Example: $10,000 volume at 20x leverage = ~$25 margin needed. Always keep 2x buffer — have $50 balance for a $25 margin order.',
   },
 ];
 
-const tips = [
+const refModes = [
   {
-    title: 'Start Small',
-    desc: 'Use a fraction of your intended capital for the first week. This lets you observe the bot\'s behavior without significant exposure while you gain confidence.',
+    name: 'MID',
+    desc: 'Best for volume, not PNL. Works in trending or ranging markets but usually incurs small negative PNL. Easiest for beginners. Supports directional bias: Long, Short, or Neutral.',
+    images: ['https://drive.google.com/uc?export=view&id=1PuO0q7OoXVY7lRn4sxDU7Gz_eTQr6Nj0'],
   },
   {
-    title: 'Understand the Incentives',
-    desc: 'Factor in points programs and fee rebates when evaluating performance. A strategy with slightly negative trading PnL may still be highly profitable when incentives are included.',
+    name: 'GRID',
+    desc: 'Most popular. Locks in profit at a specific spread. Grid +1 means every buy is lower than sell, locking in 1 basis point per cycle. Works best in sideways markets. Spread ranges: +1 to +50 (locks profit, higher stall risk), -1 to -50 (small losses, higher fill rate).',
+    images: ['https://drive.google.com/uc?export=view&id=1jF-E7PWYtYl3-iYKDw7SZ3fLyL9usbO5'],
   },
   {
-    title: 'Don\'t Over-Optimize Early',
-    desc: 'Resist the urge to tweak parameters every day. Give each configuration at least a few days to accumulate meaningful data before drawing conclusions.',
+    name: 'RGRID',
+    desc: 'Opposite of Grid. Designed for clean directional moves, not choppy markets. If price is trending with speed on a 1 min chart, RGRID is built for that.',
+    images: [
+      'https://drive.google.com/uc?export=view&id=1fRXaxe4GNnoRwuw_6nNAPgxba8SZRoG6',
+      'https://drive.google.com/uc?export=view&id=1ggmz43wAH7DLblt3V2jiLPR8aeXMRj4K',
+    ],
+  },
+  {
+    name: 'RSI (SIGNAL)',
+    desc: 'Uses RSI indicator from kiyotaka.ai. Buys when RSI is low, sells when RSI is high. Good for mean reverting trends.',
+    images: [
+      'https://drive.google.com/uc?export=view&id=1gAg7i0d_8v8I98j-jqArVHSKA92fmUAG',
+      'https://drive.google.com/uc?export=view&id=1SEyudPNxPDj2G9iyhFCNZDq4h-Y5yKEK',
+    ],
+  },
+  {
+    name: 'BLEND',
+    desc: 'A Mid bot that uses blended reference price from other venues. Useful for low liquidity tokens where you prefer quoting based on price from a higher liquidity exchange.',
   },
 ];
+
+const stopLossImages = [
+  'https://drive.google.com/uc?export=view&id=1snPoU5D_Mfy1p4mjYbhrupVD0JFW6MHS',
+  'https://drive.google.com/uc?export=view&id=1L1OS8WwG1xDg4LbRSDH4INW0Vo6IN3yV',
+];
+
+const monitorImages = [
+  'https://drive.google.com/uc?export=view&id=1_pTj4X_Jzp0lmSsJENfQTrW_DIkedsy0',
+  'https://drive.google.com/uc?export=view&id=14jwfxoiMP_ll23aI3xdirK4F27XdjYCp',
+];
+
+function SectionImage({ src, alt }: { src: string; alt: string }) {
+  return (
+    <img
+      src={src}
+      alt={alt}
+      className="w-full rounded-xl border border-border/40 my-4 object-contain"
+      data-testid="img-section"
+    />
+  );
+}
+
+function SectionBlock({ title, children }: { title: string; children: JSX.Element | JSX.Element[] }) {
+  return (
+    <section className="border-t border-border/30 pt-10 mb-10">
+      <h2 className="text-2xl font-bold text-foreground mb-4">{title}</h2>
+      {children}
+    </section>
+  );
+}
 
 export default function YourFirstBot() {
   return (
@@ -48,55 +108,111 @@ export default function YourFirstBot() {
             Get Started
           </div>
           <h1 className="text-5xl sm:text-6xl font-bold text-foreground mb-6 tracking-tight">
-            Your First Bot
+            How to Start Your First Bot with Tread
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Everything you need to go from zero to a running market making bot. Follow these steps in order and you'll be live faster than you think.
+            Before we get into how to use Tread, the first step is creating an account. Use this referral link:{' '}
+            <a
+              href="https://app.tread.fi/referral/59S1TB1X"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline font-medium"
+              data-testid="link-referral"
+            >
+              https://app.tread.fi/referral/59S1TB1X
+            </a>{' '}
+            — Complete the signup process, set your credentials, and log in.
           </p>
         </section>
 
-        <section className="mb-16 border-t border-border/30 pt-14">
-          <h2 className="text-2xl font-bold text-foreground mb-10">5 Steps to Get Started</h2>
-          <div className="space-y-8">
-            {steps.map((step, i) => (
-              <div key={i} className="flex gap-6">
-                <div className="flex-shrink-0 flex flex-col items-center">
-                  <div className="w-10 h-10 rounded-full gradient-bg-cyan-emerald flex items-center justify-center text-white font-bold text-sm shadow-lg shadow-primary/20">
-                    {i + 1}
-                  </div>
-                  {i < steps.length - 1 && (
-                    <div className="w-px flex-1 bg-border/40 mt-3" />
-                  )}
-                </div>
-                <div className="pb-8">
-                  <h3 className="text-lg font-semibold text-foreground mb-2">{step.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed text-sm">{step.desc}</p>
-                </div>
-              </div>
+        {sections.map((s, i) => (
+          <SectionBlock key={i} title={s.title}>
+            <p className="text-muted-foreground leading-relaxed mb-2">{s.content}</p>
+            {s.images?.map((img, j) => (
+              <SectionImage key={j} src={img} alt={`${s.title} screenshot ${j + 1}`} />
             ))}
-          </div>
-        </section>
+          </SectionBlock>
+        ))}
 
-        <section className="border-t border-border/30 pt-14">
-          <h2 className="text-2xl font-bold text-foreground mb-8">Tips for New Market Makers</h2>
-          <div className="space-y-4">
-            {tips.map((tip, i) => (
+        <SectionBlock title="Participation Rate">
+          <SectionImage src="https://drive.google.com/uc?export=view&id=1pT7ZVaDiyAh-M2CH9it19cu0uHoXVlBl" alt="Participation Rate" />
+          <p className="text-muted-foreground leading-relaxed">
+            <span className="text-foreground font-semibold">Aggressive</span> — builds position quickly around one price point, best in tight ranges.{' '}
+            <span className="text-foreground font-semibold">Normal</span> — balanced approach.{' '}
+            <span className="text-foreground font-semibold">Passive</span> — builds slowly like a ladder, max exposure ~$450–$500 on a $10k order, best for larger ranges and orders below $10k.
+          </p>
+        </SectionBlock>
+
+        <SectionBlock title="Reference Price Modes">
+          <p className="text-muted-foreground leading-relaxed mb-6">
+            There are 5 modes. Understanding the difference is the gap between farming volume and locking in profit.
+          </p>
+          <div className="space-y-8">
+            {refModes.map((mode, i) => (
               <div
                 key={i}
-                className="bg-card border border-card-border rounded-xl p-6 flex gap-4"
-                data-testid={`card-tip-${i}`}
+                className="bg-card border border-card-border rounded-xl p-6"
+                data-testid={`card-refmode-${i}`}
               >
-                <div className="flex-shrink-0 w-9 h-9 rounded-md bg-primary/10 border border-primary/20 flex items-center justify-center">
-                  <Lightbulb className="text-primary" size={18} />
+                <div className="inline-flex items-center px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-semibold mb-3">
+                  {mode.name}
                 </div>
-                <div>
-                  <h3 className="text-base font-semibold text-foreground mb-1">{tip.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{tip.desc}</p>
-                </div>
+                <p className="text-muted-foreground leading-relaxed text-sm mb-2">{mode.desc}</p>
+                {mode.images?.map((img, j) => (
+                  <SectionImage key={j} src={img} alt={`${mode.name} screenshot ${j + 1}`} />
+                ))}
               </div>
             ))}
           </div>
-        </section>
+        </SectionBlock>
+
+        <SectionBlock title="Stop Loss & Grid Reset Threshold">
+          <SectionImage src={stopLossImages[0]} alt="Stop Loss settings" />
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            <span className="text-foreground font-semibold">Stop Loss:</span> If set to 10%, once loss exceeds 10% of margin the bot cancels orders and closes exposure. With $25 margin, SL = $2.50. Note: bot exits using maker-based cleanup logic over 1–2 minutes, so realized loss may slightly exceed SL during violent moves.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            <span className="text-foreground font-semibold">Grid Reset Threshold</span> (grid bots only): If set to 0.5%, bot accepts the loss when price moves 0.5% away from average entry and restarts around current price. Prevents one bad move from hitting full SL immediately.
+          </p>
+          <SectionImage src={stopLossImages[1]} alt="Grid Reset Threshold" />
+        </SectionBlock>
+
+        <SectionBlock title="Beginner-Safe Settings">
+          <div className="bg-card border border-card-border rounded-xl p-6" data-testid="card-beginner-settings">
+            <ul className="space-y-2 text-muted-foreground text-sm leading-relaxed">
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">•</span>
+                <span><span className="text-foreground font-medium">10–15x leverage</span></span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">•</span>
+                <span><span className="text-foreground font-medium">Grid +1 spread</span></span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">•</span>
+                <span><span className="text-foreground font-medium">0.1% grid reset threshold</span></span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">•</span>
+                <span><span className="text-foreground font-medium">10% stop loss</span></span>
+              </li>
+            </ul>
+            <p className="text-muted-foreground text-sm mt-4 leading-relaxed">
+              Run a few $10k orders first to understand behavior.
+            </p>
+          </div>
+        </SectionBlock>
+
+        <SectionBlock title="Starting the Bot & Monitoring">
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            Click Start Trading. Track everything on the Orders page. Look at the Fill Quantity section — the orange dotted line shows maximum exposure tolerance. The white line shows current exposure.
+          </p>
+          <SectionImage src={monitorImages[0]} alt="Orders monitoring view" />
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            For a Grid+ bot, buy price (green dot) is always lower than sell price (red dot). If price moves down after hitting the green dot, the bot will stall.
+          </p>
+          <SectionImage src={monitorImages[1]} alt="Grid bot order visualization" />
+        </SectionBlock>
 
       </div>
     </div>

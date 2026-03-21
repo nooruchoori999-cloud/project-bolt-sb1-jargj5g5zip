@@ -1,0 +1,53 @@
+Perfect! Here’s your final prompt ready to paste into Replit Agent:
+
+📋 Copy & paste into Replit Agent:
+
+Do not redesign anything. Keep all existing styles and components exactly the same.
+Replace the “Your First Bot” / Get Started page with the following real content. Where I indicate [IMAGE], add a rounded, full-width image block with that URL. Make images responsive and styled consistently.
+Note: One image uses a /view link — convert it to: https://drive.google.com/uc?export=view&id=1PuO0q7OoXVY7lRn4sxDU7Gz_eTQr6Nj0
+
+PAGE TITLE: How to Start Your First Bot with Tread
+INTRO: Before we get into how to use Tread, the first step is creating an account. Use this referral link: https://app.tread.fi/referral/59S1TB1X — Complete the signup process, set your credentials, and log in.
+SECTION: Adding Your Trading Account
+Tread supports HyperliquidX, Aster DEX, Pacifica, Paradex, Extended, and NadoHQ. For this tutorial we’ll use Paradex — it’s the cheapest place to start as it has zero trading fees and no builder fee from Tread. With other exchanges you pay: Exchange trading fees + 0.02% builder fee to Tread on every trade. So for beginners, Paradex makes the most sense.
+SECTION: Connecting Paradex
+Click the wallet icon, then click “Connect Perp Dex account”. Choose Paradex from the dropdown. Choose an account name, click Connect Wallet, select your wallet, and sign the transaction. Your wallet is now linked.
+[IMAGE: https://drive.google.com/uc?export=view&id=1Si6g8zAomzjB3ZHqJJr9CwwnbPb9X1tA]
+SECTION: Setting Up the Market Maker Bot
+Go to the Bot section and click Market Maker Bot. Under Account, select your Paradex account. Choose your trading pair.
+[IMAGE: https://drive.google.com/uc?export=view&id=1dwqxiKQ3-HMy-lLFtQ6VF5755-yDQOt2]
+SECTION: Choosing the Right Pair & Time
+Look for clear ranging price action. On Paradex, BTCUSD usually works well. Avoid running during NY market open (9:30 AM NY time). Instead use: NY afternoon after 11:30 AM NY time, around 2:30 PM NY time, or London session after 5:00 AM NY time.
+[IMAGE: https://drive.google.com/uc?export=view&id=1snPoU5D_Mfy1p4mjYbhrupVD0JFW6MHS]
+SECTION: Margin & Leverage
+Margin determines how much balance you use and how much volume you target. Example: $10,000 volume at 20x leverage = ~$25 margin needed. Always keep 2x buffer — have $50 balance for a $25 margin order.
+SECTION: Participation Rate
+[IMAGE: https://drive.google.com/uc?export=view&id=1pT7ZVaDiyAh-M2HC9it19cu0uHoXVlBl]
+Aggressive — builds position quickly around one price point, best in tight ranges. Normal — balanced approach. Passive — builds slowly like a ladder, max exposure ~$450–$500 on a $10k order, best for larger ranges and orders below $10k.
+SECTION: Reference Price Modes
+There are 5 modes. Understanding the difference is the gap between farming volume and locking in profit.
+[IMAGE: https://drive.google.com/uc?export=view&id=1PuO0q7OoXVY7lRn4sxDU7Gz_eTQr6Nj0]
+MID — Best for volume, not PNL. Works in trending or ranging markets but usually incurs small negative PNL. Easiest for beginners. Supports directional bias: Long, Short, or Neutral.
+[IMAGE: https://drive.google.com/uc?export=view&id=1jF-E7PWYtYl3-iYKDw7SZ3fLyL9usbO5]
+GRID — Most popular. Locks in profit at a specific spread. Grid +1 means every buy is lower than sell, locking in 1 basis point per cycle. Works best in sideways markets. Spread ranges: +1 to +50 (locks profit, higher stall risk), -1 to -50 (small losses, higher fill rate).
+RGRID — Opposite of Grid. Designed for clean directional moves, not choppy markets. If price is trending with speed on a 1 min chart, RGRID is built for that.
+[IMAGE: https://drive.google.com/uc?export=view&id=1fRXaxe4GNnoRwuw_6nNAPgxba8SZRoG6]
+[IMAGE: https://drive.google.com/uc?export=view&id=1ggmz43wAH7DLblt3V2jiLPR8aeXMRj4K]
+RSI (SIGNAL) — Uses RSI indicator from kiyotaka.ai. Buys when RSI is low, sells when RSI is high. Good for mean reverting trends.
+[IMAGE: https://drive.google.com/uc?export=view&id=1gAg7i0d_8v8I98j-jqArVHSKA92fmUAG]
+[IMAGE: https://drive.google.com/uc?export=view&id=1SEyudPNxPDj2G9iyhFCNZDq4h-Y5yKEK]
+BLEND — A Mid bot that uses blended reference price from other venues. Useful for low liquidity tokens where you prefer quoting based on price from a higher liquidity exchange.
+SECTION: Stop Loss & Grid Reset Threshold
+[IMAGE: https://drive.google.com/uc?export=view&id=1snPoU5D_Mfy1p4mjYbhrupVD0JFW6MHS]
+Stop Loss: If set to 10%, once loss exceeds 10% of margin the bot cancels orders and closes exposure. With $25 margin, SL = $2.50. Note: bot exits using maker-based cleanup logic over 1–2 minutes, so realized loss may slightly exceed SL during violent moves.
+Grid Reset Threshold (grid bots only): If set to 0.5%, bot accepts the loss when price moves 0.5% away from average entry and restarts around current price. Prevents one bad move from hitting full SL immediately.
+[IMAGE: https://drive.google.com/uc?export=view&id=1L1OS8WwG1xDg4LbRSDH4INW0Vo6IN3yV]
+SECTION: Beginner-Safe Settings
+10–15x leverage, Grid +1 spread, 0.1% grid reset threshold, 10% stop loss. Run a few $10k orders first to understand behavior.
+SECTION: Starting the Bot & Monitoring
+Click Start Trading. Track everything on the Orders page. Look at the Fill Quantity section — the orange dotted line shows maximum exposure tolerance. The white line shows current exposure.
+[IMAGE: https://drive.google.com/uc?export=view&id=1_pTj4X_Jzp0lmSsJENfQTrW_DIkedsy0]
+For a Grid+ bot, buy price (green dot) is always lower than sell price (red dot). If price moves down after hitting the green dot, the bot will stall.
+[IMAGE: https://drive.google.com/uc?export=view&id=14jwfxoiMP_ll23aI3xdirK4F27XdjYCp]
+
+⚠️ One warning: Google Drive images sometimes don’t load on websites due to sharing permissions. If images don’t show up after, make sure each image is set to “Anyone with the link can view” in Google Drive. Let me know how it goes!​​​​​​​​​​​​​​​​
