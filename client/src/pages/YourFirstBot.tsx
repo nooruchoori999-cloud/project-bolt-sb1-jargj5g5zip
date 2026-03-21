@@ -14,13 +14,16 @@ const sections: Section[] = [
     title: 'Connecting Paradex',
     content:
       'Click the wallet icon, then click "Connect Perp Dex account". Choose Paradex from the dropdown. Choose an account name, click Connect Wallet, select your wallet, and sign the transaction. Your wallet is now linked.',
-    images: ['https://i.postimg.cc/jdDmFQ1J/cnnect-wallet.png'],
+    images: [
+      'https://i.postimg.cc/jdDmFQ1J/cnnect-wallet.png',
+      'https://i.postimg.cc/bNZWBH59/mmbot.png',
+    ],
   },
   {
     title: 'Setting Up the Market Maker Bot',
     content:
       'Go to the Bot section and click Market Maker Bot. Under Account, select your Paradex account. Choose your trading pair.',
-    images: ['https://i.postimg.cc/bNZWBH59/mmbot.png'],
+    images: ['https://i.postimg.cc/NfKSz7n1/botcondition.jpg'],
   },
   {
     title: 'Choosing the Right Pair & Time',
@@ -78,12 +81,15 @@ const monitorImages = [
   'https://i.postimg.cc/jdDmFQ1h/pnl.jpg',
 ];
 
-function SectionImage({ src, alt }: { src: string; alt: string }) {
+function SectionImage({ src, alt, size = 'medium' }: { src: string; alt: string; size?: 'full' | 'medium' }) {
+  const sizeClass = size === 'medium'
+    ? 'max-w-xl mx-auto'
+    : 'max-w-2xl mx-auto';
   return (
     <img
       src={src}
       alt={alt}
-      className="w-full rounded-xl border border-border/40 my-4 object-contain"
+      className={`block w-full rounded-xl border border-border/40 my-4 object-contain ${sizeClass}`}
       data-testid="img-section"
     />
   );
