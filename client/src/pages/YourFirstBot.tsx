@@ -20,13 +20,13 @@ const sections: Section[] = [
     title: 'Setting Up the Market Maker Bot',
     content:
       'Go to the Bot section and click Market Maker Bot. Under Account, select your Paradex account. Choose your trading pair.',
-    images: ['https://drive.google.com/uc?export=view&id=1dwqxiKQ3-HMy-lLFtQ6VF5755-yDQOt2'],
+    images: ['https://i.postimg.cc/bNZWBH59/mmbot.png'],
   },
   {
     title: 'Choosing the Right Pair & Time',
     content:
       'Look for clear ranging price action. On Paradex, BTCUSD usually works well. Avoid running during NY market open (9:30 AM NY time). Instead use: NY afternoon after 11:30 AM NY time, around 2:30 PM NY time, or London session after 5:00 AM NY time.',
-    images: ['https://drive.google.com/uc?export=view&id=1snPoU5D_Mfy1p4mjYbhrupVD0JFW6MHS'],
+    images: ['https://i.postimg.cc/c4v2bMzw/connect-perp-dex-account.png'],
   },
   {
     title: 'Margin & Leverage',
@@ -39,27 +39,27 @@ const refModes = [
   {
     name: 'MID',
     desc: 'Best for volume, not PNL. Works in trending or ranging markets but usually incurs small negative PNL. Easiest for beginners. Supports directional bias: Long, Short, or Neutral.',
-    images: ['https://drive.google.com/uc?export=view&id=1PuO0q7OoXVY7lRn4sxDU7Gz_eTQr6Nj0'],
+    images: ['https://i.postimg.cc/4NjqkHC7/Pr.png'],
   },
   {
     name: 'GRID',
     desc: 'Most popular. Locks in profit at a specific spread. Grid +1 means every buy is lower than sell, locking in 1 basis point per cycle. Works best in sideways markets. Spread ranges: +1 to +50 (locks profit, higher stall risk), -1 to -50 (small losses, higher fill rate).',
-    images: ['https://drive.google.com/uc?export=view&id=1jF-E7PWYtYl3-iYKDw7SZ3fLyL9usbO5'],
+    images: ['https://i.postimg.cc/J4sv2cFc/MIDGRID.png'],
   },
   {
     name: 'RGRID',
     desc: 'Opposite of Grid. Designed for clean directional moves, not choppy markets. If price is trending with speed on a 1 min chart, RGRID is built for that.',
     images: [
-      'https://drive.google.com/uc?export=view&id=1fRXaxe4GNnoRwuw_6nNAPgxba8SZRoG6',
-      'https://drive.google.com/uc?export=view&id=1ggmz43wAH7DLblt3V2jiLPR8aeXMRj4K',
+      'https://i.postimg.cc/m209YBMG/gridmode.png',
+      'https://i.postimg.cc/KvCwS3XT/rgrid2.png',
     ],
   },
   {
     name: 'RSI (SIGNAL)',
     desc: 'Uses RSI indicator from kiyotaka.ai. Buys when RSI is low, sells when RSI is high. Good for mean reverting trends.',
     images: [
-      'https://drive.google.com/uc?export=view&id=1gAg7i0d_8v8I98j-jqArVHSKA92fmUAG',
-      'https://drive.google.com/uc?export=view&id=1SEyudPNxPDj2G9iyhFCNZDq4h-Y5yKEK',
+      'https://i.postimg.cc/pX34b5N8/rsi.png',
+      'https://i.postimg.cc/L6GwKgdL/SIGNAL.png',
     ],
   },
   {
@@ -69,13 +69,13 @@ const refModes = [
 ];
 
 const stopLossImages = [
-  'https://drive.google.com/uc?export=view&id=1snPoU5D_Mfy1p4mjYbhrupVD0JFW6MHS',
-  'https://drive.google.com/uc?export=view&id=1L1OS8WwG1xDg4LbRSDH4INW0Vo6IN3yV',
+  'https://i.postimg.cc/NfZSq2hR/SL.png',
+  'https://i.postimg.cc/QxFwykzc/grid-reset.png',
 ];
 
 const monitorImages = [
-  'https://drive.google.com/uc?export=view&id=1_pTj4X_Jzp0lmSsJENfQTrW_DIkedsy0',
-  'https://drive.google.com/uc?export=view&id=14jwfxoiMP_ll23aI3xdirK4F27XdjYCp',
+  'https://i.postimg.cc/zvz5hbDk/EXPOSURE.jpg',
+  'https://i.postimg.cc/jdDmFQ1h/pnl.jpg',
 ];
 
 function SectionImage({ src, alt }: { src: string; alt: string }) {
@@ -135,7 +135,6 @@ export default function YourFirstBot() {
         ))}
 
         <SectionBlock title="Participation Rate">
-          <SectionImage src="https://drive.google.com/uc?export=view&id=1pT7ZVaDiyAh-M2CH9it19cu0uHoXVlBl" alt="Participation Rate" />
           <p className="text-muted-foreground leading-relaxed">
             <span className="text-foreground font-semibold">Aggressive</span> — builds position quickly around one price point, best in tight ranges.{' '}
             <span className="text-foreground font-semibold">Normal</span> — balanced approach.{' '}
@@ -164,6 +163,57 @@ export default function YourFirstBot() {
               </div>
             ))}
           </div>
+        </SectionBlock>
+
+        <SectionBlock title="Spread">
+          <p className="text-muted-foreground leading-relaxed mb-6">
+            Spread is one of the most important settings — it defines how far your orders are placed from the reference price.
+          </p>
+          <div className="space-y-6">
+            <div className="bg-card border border-card-border rounded-xl p-6" data-testid="card-spread-mid">
+              <div className="inline-flex items-center px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-semibold mb-3">
+                Mid Mode
+              </div>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-1">
+                Reference price = current mid price
+              </p>
+              <ul className="space-y-1 text-muted-foreground text-sm mb-2">
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">•</span>
+                  <span><span className="text-foreground font-medium">Mid +1</span> → orders at ±0.01%</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">•</span>
+                  <span><span className="text-foreground font-medium">Mid +2</span> → orders at ±0.02%</span>
+                </li>
+              </ul>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Orders automatically adjust as the mid price moves.
+              </p>
+            </div>
+            <div className="bg-card border border-card-border rounded-xl p-6" data-testid="card-spread-grid">
+              <div className="inline-flex items-center px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-semibold mb-3">
+                Grid Mode
+              </div>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-1">
+                Reference price = average entry price
+              </p>
+              <ul className="space-y-1 text-muted-foreground text-sm mb-2">
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">•</span>
+                  <span><span className="text-foreground font-medium">Grid +1</span> → targets +0.01% from entry</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">•</span>
+                  <span><span className="text-foreground font-medium">Grid +2</span> → targets +0.02% from entry</span>
+                </li>
+              </ul>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                If price reverses before hitting the level, the bot may stay stuck until reset or SL.
+              </p>
+            </div>
+          </div>
+          <SectionImage src="https://i.postimg.cc/9FsK5w3G/SPREAD.png" alt="Spread settings" />
         </SectionBlock>
 
         <SectionBlock title="Stop Loss & Grid Reset Threshold">
