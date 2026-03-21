@@ -29,7 +29,6 @@ const sections: Section[] = [
     title: 'Choosing the Right Pair & Time',
     content:
       'Look for clear ranging price action. On Paradex, BTCUSD usually works well. Avoid running during NY market open (9:30 AM NY time). Instead use: NY afternoon after 11:30 AM NY time, around 2:30 PM NY time, or London session after 5:00 AM NY time.',
-    images: ['https://i.postimg.cc/c4v2bMzw/connect-perp-dex-account.png'],
   },
   {
     title: 'Margin & Leverage',
@@ -42,18 +41,18 @@ const refModes = [
   {
     name: 'MID',
     desc: 'Best for volume, not PNL. Works in trending or ranging markets but usually incurs small negative PNL. Easiest for beginners. Supports directional bias: Long, Short, or Neutral.',
-    images: ['https://i.postimg.cc/4NjqkHC7/Pr.png'],
+    images: ['https://i.postimg.cc/J4sv2cFc/MIDGRID.png'],
   },
   {
     name: 'GRID',
     desc: 'Most popular. Locks in profit at a specific spread. Grid +1 means every buy is lower than sell, locking in 1 basis point per cycle. Works best in sideways markets. Spread ranges: +1 to +50 (locks profit, higher stall risk), -1 to -50 (small losses, higher fill rate).',
-    images: ['https://i.postimg.cc/J4sv2cFc/MIDGRID.png'],
+    images: ['https://i.postimg.cc/m209YBMG/gridmode.png'],
   },
   {
     name: 'RGRID',
     desc: 'Opposite of Grid. Designed for clean directional moves, not choppy markets. If price is trending with speed on a 1 min chart, RGRID is built for that.',
     images: [
-      'https://i.postimg.cc/m209YBMG/gridmode.png',
+      'https://i.postimg.cc/L6GwKgd1/RGRID.png',
       'https://i.postimg.cc/KvCwS3XT/rgrid2.png',
     ],
   },
@@ -61,8 +60,8 @@ const refModes = [
     name: 'RSI (SIGNAL)',
     desc: 'Uses RSI indicator from kiyotaka.ai. Buys when RSI is low, sells when RSI is high. Good for mean reverting trends.',
     images: [
-      'https://i.postimg.cc/pX34b5N8/rsi.png',
       'https://i.postimg.cc/L6GwKgdL/SIGNAL.png',
+      'https://i.postimg.cc/pX34b5N8/rsi.png',
     ],
   },
   {
