@@ -16,19 +16,20 @@ const sections: Section[] = [
       'Click the wallet icon, then click "Connect Perp Dex account". Choose Paradex from the dropdown. Choose an account name, click Connect Wallet, select your wallet, and sign the transaction. Your wallet is now linked.',
     images: [
       'https://i.postimg.cc/jdDmFQ1J/cnnect-wallet.png',
-      'https://i.postimg.cc/bNZWBH59/mmbot.png',
+      'https://i.postimg.cc/GmpdMyCb/connect-perp-dex-accoun1t.png',
     ],
   },
   {
     title: 'Setting Up the Market Maker Bot',
     content:
       'Go to the Bot section and click Market Maker Bot. Under Account, select your Paradex account. Choose your trading pair.',
-    images: ['https://i.postimg.cc/NfKSz7n1/botcondition.jpg'],
+    images: ['https://i.postimg.cc/bNZWBH59/mmbot.png'],
   },
   {
     title: 'Choosing the Right Pair & Time',
     content:
       'Look for clear ranging price action. On Paradex, BTCUSD usually works well. Avoid running during NY market open (9:30 AM NY time). Instead use: NY afternoon after 11:30 AM NY time, around 2:30 PM NY time, or London session after 5:00 AM NY time.',
+    images: ['https://i.postimg.cc/NfKSz7n1/botcondition.jpg'],
   },
   {
     title: 'Margin & Leverage',
@@ -140,11 +141,12 @@ export default function YourFirstBot() {
         ))}
 
         <SectionBlock title="Participation Rate">
-          <p className="text-muted-foreground leading-relaxed">
+          <p className="text-muted-foreground leading-relaxed mb-2">
             <span className="text-foreground font-semibold">Aggressive</span> — builds position quickly around one price point, best in tight ranges.{' '}
             <span className="text-foreground font-semibold">Normal</span> — balanced approach.{' '}
             <span className="text-foreground font-semibold">Passive</span> — builds slowly like a ladder, max exposure ~$450–$500 on a $10k order, best for larger ranges and orders below $10k.
           </p>
+          <SectionImage src="https://i.postimg.cc/4NjqkHC7/Pr.png" alt="Participation Rate settings" />
         </SectionBlock>
 
         <SectionBlock title="Reference Price Modes">
