@@ -14,7 +14,7 @@ const sections: Section[] = [
     title: 'Connecting Paradex',
     content:
       'Click the wallet icon, then click "Connect Perp Dex account". Choose Paradex from the dropdown. Choose an account name, click Connect Wallet, select your wallet, and sign the transaction. Your wallet is now linked.',
-    images: ['https://i.postimg.cc/mtGmcMBb/cnnect-wallet.png'],
+    images: ['https://i.postimg.cc/jdDmFQ1J/cnnect-wallet.png'],
   },
   {
     title: 'Setting Up the Market Maker Bot',
