@@ -39,9 +39,9 @@ export default function MidBotPage() {
             ))}
           </ul>
           <img
-            src="https://i.postimg.cc/34yScD2j/image.png"
+            src="https://i.postimg.cc/zzY8tp1q/exposure.jpg"
             alt="Mid bot inventory management diagram"
-            className="w-full rounded-xl mb-6 object-cover"
+            className="w-full rounded-xl mb-6"
             onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
           />
           <ul className="space-y-3">
@@ -65,9 +65,9 @@ export default function MidBotPage() {
                 <span className="text-muted-foreground"><span className="text-foreground font-medium">Mid Bot</span> → uses current mid price</span>
               </div>
               <img
-                src="https://i.postimg.cc/JDy62Bjq/image.png"
+                src="https://i.postimg.cc/Tdvf7QXY/Mid-bot.png"
                 alt="Mid bot reference price illustration"
-                className="w-full rounded-xl object-cover"
+                className="w-full rounded-xl"
                 onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
               />
             </li>
@@ -77,9 +77,9 @@ export default function MidBotPage() {
                 <span className="text-muted-foreground"><span className="text-foreground font-medium">Grid Bot</span> → uses averages of your entry price</span>
               </div>
               <img
-                src="https://i.postimg.cc/jwWgFJyH/image.png"
+                src="https://i.postimg.cc/xfVnxgSn/grid.png"
                 alt="Grid bot reference price illustration"
-                className="w-full rounded-xl object-cover"
+                className="w-full rounded-xl"
                 onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
               />
             </li>
@@ -204,9 +204,9 @@ export default function MidBotPage() {
             ))}
           </ul>
           <img
-            src="https://i.postimg.cc/47KLShpw/image.png"
+            src="https://i.postimg.cc/BSf4YNGv/middgood.jpg"
             alt="Mid bot managing inventory during drawdown"
-            className="w-full rounded-xl object-cover"
+            className="w-full rounded-xl"
             onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
           />
         </section>
@@ -231,9 +231,9 @@ export default function MidBotPage() {
             ))}
           </ul>
           <img
-            src="https://i.postimg.cc/wytfGsDk/image.png"
+            src="https://i.postimg.cc/Tdvf7QX2/gridfail.jpg"
             alt="Grid bot stuck position illustration"
-            className="w-full rounded-xl mb-8 object-cover"
+            className="w-full rounded-xl mb-8"
             onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
           />
           <p className="text-muted-foreground leading-relaxed">
@@ -319,9 +319,9 @@ export default function MidBotPage() {
                 ))}
               </ul>
               <img
-                src="https://i.postimg.cc/ZB97My6x/image.png"
+                src="https://i.postimg.cc/Tdvf7QXd/longbias.jpg"
                 alt="Bullish bias profit scenario"
-                className="w-full rounded-xl object-cover"
+                className="w-full rounded-xl"
                 onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
               />
             </div>
@@ -342,9 +342,9 @@ export default function MidBotPage() {
                 ))}
               </ul>
               <img
-                src="https://i.postimg.cc/CBZPQfb7/image.png"
+                src="https://i.postimg.cc/byfpCLjw/longfail.jpg"
                 alt="Bullish bias loss scenario"
-                className="w-full rounded-xl object-cover"
+                className="w-full rounded-xl"
                 onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
               />
             </div>
@@ -544,15 +544,15 @@ export default function MidBotPage() {
           </p>
           <div className="space-y-4">
             <img
-              src="https://i.postimg.cc/9R48nqyy/image.png"
+              src="https://i.postimg.cc/4fRsLwTG/biasa1.jpg"
               alt="Mid bot directional bias example 1"
-              className="w-full rounded-xl object-cover"
+              className="w-full rounded-xl"
               onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
             />
             <img
-              src="https://i.postimg.cc/2bqcKBn4/image.png"
+              src="https://i.postimg.cc/0k1PWZqx/bias2.jpg"
               alt="Mid bot directional bias example 2"
-              className="w-full rounded-xl object-cover"
+              className="w-full rounded-xl"
               onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
             />
           </div>
