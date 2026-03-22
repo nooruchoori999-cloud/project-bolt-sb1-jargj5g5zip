@@ -15,7 +15,10 @@ export default function RSIBotPage() {
             A Smarter Way to Trade Pullbacks
           </p>
           <p className="mt-4 text-muted-foreground leading-relaxed max-w-3xl">
-            TreadFi's Signal Mode is basically a mid-based market making strategy with directional bias. Instead of placing orders symmetrically like a normal mid bot, it uses RSI (Relative Strength Index) to slightly tilt your positioning.
+            TreadFi's Signal Mode is basically a mid-based market making strategy with directional bias.
+          </p>
+          <p className="mt-4 text-muted-foreground leading-relaxed max-w-3xl">
+            Instead of placing orders symmetrically like a normal mid bot, it uses RSI (Relative Strength Index) to slightly tilt your positioning.
           </p>
           <p className="mt-4 text-muted-foreground leading-relaxed max-w-3xl">
             So you're still market making… but now you're doing it with an edge.
@@ -49,9 +52,9 @@ export default function RSIBotPage() {
           <h2 className="text-2xl font-bold text-foreground mb-6">How RSI Changes the Bot's Behavior</h2>
           <p className="text-muted-foreground leading-relaxed mb-8">The logic is simple.</p>
 
-          <div className="space-y-6">
+          <div className="space-y-6 mb-8">
             <div className="bg-card border border-card-border rounded-xl p-6">
-              <p className="text-foreground font-semibold mb-3">When RSI is High (&gt;50)</p>
+              <p className="text-foreground font-semibold mb-3">When RSI is High (&gt;50):</p>
               <ul className="space-y-2 mb-4">
                 {[
                   'Market is showing bullish momentum',
@@ -79,7 +82,7 @@ export default function RSIBotPage() {
             </div>
 
             <div className="bg-card border border-card-border rounded-xl p-6">
-              <p className="text-foreground font-semibold mb-3">When RSI is Low</p>
+              <p className="text-foreground font-semibold mb-3">When RSI is Low:</p>
               <ul className="space-y-2 mb-4">
                 {[
                   'Market is showing weakness',
@@ -107,9 +110,9 @@ export default function RSIBotPage() {
             </div>
           </div>
 
-          <div className="bg-card border border-card-border rounded-xl p-5 mt-6 mb-8">
+          <div className="bg-card border border-card-border rounded-xl p-5 mb-8">
             <p className="text-foreground font-semibold mb-3">In Simple Terms:</p>
-            <ul className="space-y-2">
+            <ul className="space-y-2 mb-3">
               {['Buy when RSI is low', 'Sell when RSI is high'].map((point, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <span className="mt-2 block w-1.5 h-1.5 rounded-full flex-shrink-0 gradient-bg-cyan-emerald" />
@@ -117,11 +120,11 @@ export default function RSIBotPage() {
                 </li>
               ))}
             </ul>
-            <p className="text-muted-foreground text-sm mt-3">But instead of market orders, you're doing it through smart limit placement.</p>
+            <p className="text-muted-foreground text-sm">But instead of market orders, you're doing it through smart limit placement.</p>
           </div>
 
           <img
-            src="https://postimg.cc/v1HT8xfw"
+            src="https://i.postimg.cc/v1HT8xfw"
             alt="RSI signal mode buy/sell placement illustration"
             className="w-full rounded-xl"
             onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
@@ -131,7 +134,8 @@ export default function RSIBotPage() {
         {/* Why This Is Different From Grid Bots */}
         <section className="mb-16 border-t border-border/30 pt-14">
           <h2 className="text-2xl font-bold text-foreground mb-6">Why This Is Different From Grid Bots</h2>
-          <div className="grid sm:grid-cols-2 gap-4">
+          <p className="text-muted-foreground leading-relaxed mb-6">This is important.</p>
+          <div className="grid sm:grid-cols-2 gap-4 mb-4">
             <div className="bg-card border border-card-border rounded-xl p-5">
               <p className="text-foreground font-semibold mb-3">Grid bots:</p>
               <ul className="space-y-2">
@@ -161,8 +165,8 @@ export default function RSIBotPage() {
               </ul>
             </div>
           </div>
-          <div className="bg-card border border-card-border rounded-xl p-5 mt-4">
-            <ul className="space-y-2">
+          <div className="bg-card border border-card-border rounded-xl p-5">
+            <ul className="space-y-2 mb-3">
               {['No grid anchoring', 'No need for resets'].map((point, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <span className="mt-2 block w-1.5 h-1.5 rounded-full flex-shrink-0 gradient-bg-cyan-emerald" />
@@ -170,15 +174,16 @@ export default function RSIBotPage() {
                 </li>
               ))}
             </ul>
-            <p className="text-muted-foreground text-sm mt-3">It stays flexible because it's always reacting to current price.</p>
+            <p className="text-muted-foreground text-sm">It stays flexible because it's always reacting to current price.</p>
           </div>
         </section>
 
         {/* Where the Edge Comes From */}
         <section className="mb-16 border-t border-border/30 pt-14">
           <h2 className="text-2xl font-bold text-foreground mb-6">Where the Edge Comes From</h2>
+          <p className="text-muted-foreground leading-relaxed mb-6">The edge comes from timing pullbacks.</p>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            The edge comes from timing pullbacks. When price moves too far in one direction, RSI reflects that momentum and the bot positions for the snap-back move.
+            When price moves too far in one direction: RSI reflects that momentum, and the bot positions for the snap-back move.
           </p>
           <div className="bg-card border border-card-border rounded-xl p-5">
             <p className="text-foreground font-semibold mb-2">But here's the catch:</p>
@@ -186,7 +191,7 @@ export default function RSIBotPage() {
             <ul className="space-y-2">
               {[
                 'Orders are still based on spread',
-                'If price doesn\'t retrace quickly → no fills',
+                "If price doesn't retrace quickly → no fills",
               ].map((point, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <span className="mt-2 block w-1.5 h-1.5 rounded-full flex-shrink-0 gradient-bg-cyan-emerald" />
@@ -200,23 +205,21 @@ export default function RSIBotPage() {
         {/* Spread Still Matters */}
         <section className="mb-16 border-t border-border/30 pt-14">
           <h2 className="text-2xl font-bold text-foreground mb-6">Spread Still Matters (A Lot)</h2>
-          <p className="text-muted-foreground leading-relaxed mb-6">
-            Even with RSI, spread is still your main control.
-          </p>
-          <div className="bg-card border border-card-border rounded-xl p-5 mb-8">
-            <p className="text-foreground font-semibold mb-2">Example: +10 spread</p>
+          <p className="text-muted-foreground leading-relaxed mb-6">Even with RSI, spread is still your main control.</p>
+          <div className="bg-card border border-card-border rounded-xl p-5 mb-6">
+            <p className="text-foreground font-semibold mb-2">For example: +10 spread</p>
             <p className="text-muted-foreground text-sm">
-              Orders are placed 0.1% away from current mid price. If RSI is above 50, the bot places a sell order at current mid price and a buy order at 0.1% from current price. If the market pulls back fast, you capture a 0.1% price movement in your favor.
+              Orders are placed 0.1% away from current mid price. That is if RSI above 50, bot places sell order at current mid price and places a buy order at 0.1% from current price. So if the market pulls back fast, you capture a 0.1% price movement in your favor.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 gap-4 mb-8">
+          <div className="grid sm:grid-cols-2 gap-4 mb-6">
             <div className="bg-card border border-card-border rounded-xl p-5">
-              <p className="text-foreground font-semibold mb-1">Higher spread ✅</p>
+              <p className="text-foreground font-semibold mb-1">Higher spread</p>
               <p className="text-muted-foreground text-sm">Bigger profit per trade</p>
             </div>
             <div className="bg-card border border-card-border rounded-xl p-5">
-              <p className="text-foreground font-semibold mb-1">Trade-off ❌</p>
-              <p className="text-muted-foreground text-sm">Requires stronger, faster pullbacks</p>
+              <p className="text-foreground font-semibold mb-1">But requires</p>
+              <p className="text-muted-foreground text-sm">Stronger, faster pullbacks</p>
             </div>
           </div>
           <div className="bg-card border border-card-border rounded-xl p-5">
@@ -250,7 +253,7 @@ export default function RSIBotPage() {
             ))}
           </ul>
 
-          <div className="grid sm:grid-cols-2 gap-4 mb-8">
+          <div className="grid sm:grid-cols-2 gap-4 mb-6">
             <div className="bg-card border border-card-border rounded-xl p-5">
               <p className="text-foreground font-semibold mb-3">Good conditions ✅</p>
               <ul className="space-y-2">
@@ -282,7 +285,7 @@ export default function RSIBotPage() {
           </div>
 
           <img
-            src="https://postimg.cc/GBht3TY6"
+            src="https://i.postimg.cc/GBht3TY6"
             alt="RSI signal mode best conditions chart"
             className="w-full rounded-xl"
             onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
@@ -292,8 +295,8 @@ export default function RSIBotPage() {
         {/* The Real Limitation */}
         <section className="mb-16 border-t border-border/30 pt-14">
           <h2 className="text-2xl font-bold text-foreground mb-6">The Real Limitation</h2>
-          <div className="bg-card border border-card-border rounded-xl p-5 mb-8">
-            <p className="text-foreground font-semibold mb-3">Signal Mode is still reactive — not predictive.</p>
+          <p className="text-muted-foreground leading-relaxed mb-6">Signal Mode still isn't predictive. It's reactive.</p>
+          <div className="bg-card border border-card-border rounded-xl p-5 mb-6">
             <p className="text-muted-foreground text-sm mb-3">RSI tells you:</p>
             <p className="text-muted-foreground text-sm mb-4 pl-4 border-l-2 border-primary/30">"Price has moved a lot"</p>
             <p className="text-muted-foreground text-sm mb-3">But it doesn't guarantee:</p>

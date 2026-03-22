@@ -30,7 +30,7 @@ function Router() {
         <Route path="/modes/grid" component={GridBotPage} />
         <Route path="/modes/mid" component={MidBotPage} />
         <Route path="/modes/rgrid" component={RGridBotPage} />
-        <Route path="/modes/rsi">{() => <MMBotMode mode="RSI" />}</Route>
+        <Route path="/modes/rsi" component={RSIBotPage} />
         <Route path="/modes/blend" component={BlendBotPage} />
         <Route component={NotFound} />
       </Switch>
