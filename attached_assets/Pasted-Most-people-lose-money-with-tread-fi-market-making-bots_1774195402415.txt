@@ -1,0 +1,135 @@
+Most people lose money with ‪@tread_fi ‬market-making bots not because the bot doesn’t work, but because they run it at the wrong time, in the wrong market conditions, and with mismatched settings.
+This article explains how I personally select trading ranges and configure MM bot settings in a way that minimizes stop-loss hits and improves consistency.
+Time Is the Most Important Factor
+Before looking at charts or indicators, I always look at time.
+There are specific periods during the day when markets move aggressively. Running an MM bot during these windows is risky because sudden volatility can easily push price into your stop loss.
+I avoid running MM bots during:
+* 		30–40 minutes before and afte red level news
+* 		New York market open: 8:30 – 10:30 NY time
+* 		New York lunch volatility: 1:30 – 2:30 NY time
+* 		London / Europe open: 2:00 – 4:00 NY
+* 		Asia open: 19:00 – 21:00 NY
+* Red-level news on Forex Factory: DONT run bot from 10 minutes before the release up to 30 minutes after.
+These sessions often produce fast, impulsive moves driven by liquidity shifts and market opens — exactly the type of movement that can wipe MM positions.
+Understanding Market Behavior for MM Bots
+Outside these high-volatility windows, the market usually behaves in one of the following ways:
+1. Trending With Pullbacks
+Price moves directionally but keeps making small pullbacks.
+This is actually good for MM bots when using passive settings.
+In this scenario, the bot:
+* 		Gradually averages into positions
+* 		Builds exposure slowly up to max exposure
+* 		Closes positions during small retracements
+This back-and-forth movement allows the bot to work efficiently without overloading exposure.
+
+[https://postimg.cc/7GYhKGm2]
+Slow BTC trending market on a weekend. Ideal for passive setting as it averages in your entry.
+2. Sideways Market With Tight Ranges
+This is where aggressive settings perform best.
+When price chops within a small range:
+* 		The bot buys and sells frequently
+* 		Captures tight spreads
+* 		Generates more volume and fees
+Aggressive mode is ideal only when the range is small and clearly defined.
+
+[https://postimg.cc/gXkjgXNr]
+3. Large Ranges
+For larger ranges, passive settings are safer.
+Using aggressive mode in wide ranges stacks too much exposure around a single price. If price moves slightly away from the average entry, the stop loss can get hit quickly.
+Passive mode ladders entries more evenly, resulting in a better average entry price and improved risk control.
+How I Actually Determine Trading Ranges
+Once I’m outside the high-volatility time windows, I don’t immediately deploy the bot.
+I wait for price behavior to confirm a range.
+There are two main setups I look for:
+1. Consolidation After Key Levels
+This is one of my most reliable range signals.
+I look for price to:
+* 		Reach a previously consolidated area
+* 		Sweep or tap an important high or low
+* 		Then slow down
+The key confirmation is multiple inside candles.
+Typically:
+* 		5–6 consecutive inside or overlapping candles
+* 		Small candle bodies
+* 		Reduced volatility
+* 		Clear rejection of expansion
+This tells me that:
+* 		Aggressive participants are done
+* 		Liquidity is balanced
+* 		Price is likely to oscillate within a defined range
+This type of structure is ideal for MM bots because price moves back and forth instead of expanding impulsively.
+Look at the below exmaple. Market aggressively dropped during london open. 
+Then took an important level and also reached a previously consolidated area. This is where market pumped last time aggressively, so these areas tend to have consolidation when price reaches there again. Once market started giving me multiple inside candles. I deployed my bot, you can see the results here. All this happened during 4:00 to 6:00 UTC, which tend to be slow time for markets.
+[https://postimg.cc/dkt35k47]
+
+2. Trending Market With Controlled Pullbacks
+The second setup is when the market is trending, but not impulsively.
+What I want to see:
+* 		Directional bias (up or down)
+* 		Regular pullbacks
+* 		No large single-candle expansions
+* 		Price constantly retracing and continuing
+This kind of back-and-forth trending behavior creates a dynamic range.
+With passive MM settings, the bot:
+* 		Averages into positions during trend continuation
+* 		Builds exposure gradually
+* 		Closes positions on small retracements
+As long as the trend remains controlled and not aggressive, this environment works well for market making.
+
+[https://postimg.cc/XG7qsGQB]
+Matching Market Behavior With MM Settings
+Once the range is identified, settings matter.
+Sideways, tight ranges
+Use aggressive settings:
+* 		Frequent fills
+* 		Higher turnover
+* 		Better fee capture
+Larger or dynamic ranges
+Use passive settings:
+* 		Better average entry
+* 		Reduced concentration of exposure
+* 		Lower risk of SL being hit on small moves
+Aggressive mode in large ranges often stacks exposure too close to one price  that’s where most SLs come from.
+How I Calculate Range, Margin, and Stop Loss
+This is the most important part.
+Most MM bots will use around 4–5% of your total notional size as maximum exposure at any given time.
+Example:
+* 		Bot order size: $10,000
+* 		Max exposure at any time: ~$450 (with a small buffer)
+
+[https://postimg.cc/jwd2MwZP]
+Order breakdow for a 11k notional PAXG order with paradex
+Now assume:
+* 		Margin: $20
+* 		Stop loss: 10% → $2
+To calculate how much price can move against you:
+2/450 = 0.45%
+This means price can move ~0.45% away from your average entry before the stop loss is hit.
+That 0.45% becomes your effective trading range.
+
+
+This is how I calculate trading range percentage, look at the current range and add some buffer, that should give you some safety from those wicks. In this example I would be looking at 0.6% range, so my max exposure should have a room of 0.6% price change before it hit SL amount.
+
+[https://postimg.cc/dkt35k4d]
+Matching the Range With the Chart
+Once you know your maximum allowable range:
+* 		Open the chart
+* 		Observe how price behaves during your chosen time window
+* 		Ask whether that percentage range is realistic
+If the market frequently exceeds that range, you must adjust your settings.
+How to Increase Your Range Safely
+If you want more room — say 0.6% instead of 0.45%:
+* 		0.6% of $450 ≈ $2.7 SL
+* 		If SL is 10%, margin ≈ $27
+You can tweak leverage if you dont want to change margin to get desired range.
+By adjusting stop loss and margin, you directly control how much room price has before hitting your SL.
+This approach lets you tune the bot logically instead of guessing settings.
+Final Thoughts
+Successful market making isn’t about copying someone else’s settings.
+It’s about:
+* 		Right pair
+* 		Choosing the right time
+* 		Understanding market behavior
+* 		Matching range, exposure, and stop loss
+* 		Selecting aggressive vs passive modes correctly
+Get these right, and MM bots become far more consistent and predictable.
