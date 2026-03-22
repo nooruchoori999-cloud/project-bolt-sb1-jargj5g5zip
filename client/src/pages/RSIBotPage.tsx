@@ -121,7 +121,7 @@ export default function RSIBotPage() {
           </div>
 
           <img
-            src="https://i.postimg.cc/w9GQ928X/Screenshot-2026-03-22-at-7-43-11-PM.png"
+            src="https://postimg.cc/v1HT8xfw"
             alt="RSI signal mode buy/sell placement illustration"
             className="w-full rounded-xl"
             onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
@@ -282,7 +282,7 @@ export default function RSIBotPage() {
           </div>
 
           <img
-            src="https://i.postimg.cc/5fRSfgdz/Screenshot-2026-03-22-at-7-53-01-PM.png"
+            src="https://postimg.cc/GBht3TY6"
             alt="RSI signal mode best conditions chart"
             className="w-full rounded-xl"
             onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
@@ -338,7 +338,7 @@ export default function RSIBotPage() {
           <p className="text-muted-foreground leading-relaxed mb-6">
             If you use it in the right conditions — structured markets with clean pullbacks — it can be a very efficient way to:
           </p>
-          <ul className="space-y-3 mb-8">
+          <ul className="space-y-3">
             {[
               'Capture quick reversals',
               'Improve your fill quality',
@@ -350,22 +350,6 @@ export default function RSIBotPage() {
               </li>
             ))}
           </ul>
-          <div className="bg-card border border-card-border rounded-xl overflow-hidden">
-            <table className="w-full text-sm">
-              <tbody>
-                {[
-                  { mode: 'Pure Market Maker', role: 'symmetric, no bias' },
-                  { mode: 'Signal Mode (RSI)', role: 'mid-based + directional lean' },
-                  { mode: 'Full Directional', role: 'conviction-based, high risk' },
-                ].map((row, i, arr) => (
-                  <tr key={i} className={i < arr.length - 1 ? 'border-b border-border/30' : ''}>
-                    <td className="px-5 py-3.5 font-mono text-primary text-xs">{row.mode}</td>
-                    <td className="px-5 py-3.5 text-muted-foreground">→ {row.role}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
         </section>
 
       </div>
