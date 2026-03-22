@@ -1,3 +1,6 @@
+import rsiSignalChart from "@assets/rsi-signal-chart.png";
+import rsiConditionsChart from "@assets/rsi-conditions-chart.png";
+
 export default function RSIBotPage() {
   return (
     <div className="min-h-screen bg-background">
@@ -124,10 +127,9 @@ export default function RSIBotPage() {
           </div>
 
           <img
-            src="https://i.postimg.cc/v1HT8xfw"
+            src={rsiSignalChart}
             alt="RSI signal mode buy/sell placement illustration"
             className="w-full rounded-xl"
-            onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
           />
         </section>
 
@@ -285,10 +287,9 @@ export default function RSIBotPage() {
           </div>
 
           <img
-            src="https://i.postimg.cc/GBht3TY6"
+            src={rsiConditionsChart}
             alt="RSI signal mode best conditions chart"
             className="w-full rounded-xl"
-            onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
           />
         </section>
 
