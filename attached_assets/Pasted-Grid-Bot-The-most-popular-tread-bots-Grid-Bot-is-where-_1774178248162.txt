@@ -1,0 +1,169 @@
+Grid Bot - The most popular tread bots
+
+Grid Bot  is where most people make money, and also where most people lose money.
+Grid is used to lock in profit at a specific spread.
+For example:
+Grid +1 means every buy price is lower than the sell price, locking in 1 basis point profit per cycle.
+However, if price moves against you before your TP fills:
+– Your bot can stall
+– And eventually hit stop loss
+This is why grid bots work best in sideways, zig-zag markets, not trending markets.
+Spread ranges:
+– +1 to +50 → locks profit but higher chance of stalling
+– -1 to -50 → accepts small losses to avoid stalling
+Negative spreads like -1 are popular because:
+– Less stalling
+– Higher fill probability
+
+
+
+Grid bots perform well in slow-moving markets:
+* When price mean-reverts
+* When trends are gradual
+* When the market trades within tight, well-defined ranges
+[https://postimg.cc/KKcR3fvD]
+
+
+
+However, grid bots have a critical disadvantage.
+When price moves violently against your position, a grid bot does not realign with the current market price. Instead, it continues to wait for price to return to its predefined take-profit levels. In fast or aggressive markets, this can be fatal  price can hit your stop loss in a blink, leaving no room for recovery.
+
+[https://postimg.cc/d7JTmv4v]
+
+So what is the mechanism behind a grid bot?
+
+As we discussed in our mid bot article, the reference price is the main difference between the different modes in TreadFi. It determines where in the market orders are placed.
+
+The original MM bot uses the mid price as a reference and places limit orders of varying quantities at different levels in the order book.
+
+The main mechanism of the MM bot is:
+	•	Deciding where in the book to place orders (to get the best fills)
+	•	Deciding how much to place (to stay delta neutral)
+
+⸻
+
+How the Grid Bot Works
+
+The grid bot is PnL-aware.
+
+It does everything the MM bot does, but instead of just using the mid price, it uses a lagging executed price of the exposure.
+
+In the example:
+
+[https://postimg.cc/p9k5s717]
+	•	Green line = lagging average sell price − spread → highest price the bot will buy at
+	•	Red line = lagging average buy price + spread → lowest price the bot will sell at
+
+This ensures that:
+	•	Greens are always, on average, lower than the reds
+	•	Which ensures positive PnL while trading
+
+⸻
+
+Best Case Scenario
+
+The ideal scenario is when price oscillates within a range.
+
+The grid bot is then able to:
+	•	Buy low
+	•	Sell high
+
+Depending on the duration of your order, the most optimal condition is around 10 oscillations throughout the order.
+[https://postimg.cc/B8J1csM9]
+
+
+In reality, your order will look more irregular, with oscillations of different sizes. However, due to the grid mechanism:
+	•	Reds (sells) generally stay above
+	•	Greens (buys) stay below
+[https://postimg.cc/DW7bdFBT]
+
+⸻
+
+Why Doesn’t This Always Work?
+
+Imagine this scenario:
+	•	The bot keeps buying as price goes down
+	•	The cost basis for sells keeps moving down with it
+
+But…
+
+Price never goes back up to sell.
+
+Now:
+	•	The bot is stuck with long exposure
+	•	In a trending market
+[https://postimg.cc/7CqTMDm4]
+
+⸻
+
+Grid Reset
+
+Grid Reset is a feature that activates when price moves beyond a certain threshold.
+[https://postimg.cc/rdqtCcQL]
+
+At that point:
+	•	The bot gives up the grid-based PnL pricing
+	•	And resumes a normal mid-based MM strategy
+
+In this case:
+	•	Greens may move above reds
+	•	The bot sacrifices some gains
+	•	To manage risk and potentially recover
+
+⸻
+
+Managing Grid Reset
+
+You can configure grid reset both at entry and during runtime.
+
+If you want the bot to be more patient and wait for price to return:
+	•	Increase the grid reset threshold
+	•	Increase the stop loss (SL) %
+
+Grid reset is calculated as a percentage of how far price can move against your average executed price, before it realizes loss and start in a new cycle.
+⸻
+
+How to Run a Successful Grid Bot
+	•	Use it in quiet, sideways markets (e.g., equity perps(xyz100, SP500), commodities like gold $XAU / $PAXG)
+	•	Focus on liquid assets like $BTC, $ETH, $SOL
+	•	Avoid volatile periods (Fed announcements, US market open, etc.)
+	•	The longer the bot runs, the more risk it is exposed to
+	•	Run +1 spread or higher for better PnL
+	•	Running grid +0 does not allow the bot to collect spreads during oscillations
+	•	This increases the chance of reset or SL without meaningful profit
+
+
+Here’s a clean, lightly refined version with your structure intact 👇
+
+⸻
+
+How does spread work for a Grid bot?
+
+Spread determines your locked-in profit. It defines how far away the bot places orders relative to your average executed price.
+
+In simple terms:
+	•	The spread decides at what distance the bot takes profit
+
+A higher spread means:
+	•	The bot needs a larger price move
+	•	So it will wait longer before locking in profit
+
+⸻
+
+Example:
+
+If you run Grid +5:
+	•	The bot will place a sell order 0.05% above your average buy price
+	•	And similarly, a buy order below your average sell price
+
+⸻
+
+Trade-off:
+	•	Higher spread → higher profit per trade
+	•	But → higher chance of stalling if price doesn’t reach your take-profit levels
+
+So while larger spreads increase potential profit, they also increase the risk of the bot getting stuck without executing trades.
+
+Here are some of the ideal price action for grid bot.
+[https://postimg.cc/nsT935w6]
+[https://postimg.cc/T5bwvHC0]
