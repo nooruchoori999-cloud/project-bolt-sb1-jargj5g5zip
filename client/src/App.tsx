@@ -14,6 +14,7 @@ import GridBotPage from "@/pages/GridBotPage";
 import MidBotPage from "@/pages/MidBotPage";
 import RGridBotPage from "@/pages/RGridBotPage";
 import BlendBotPage from "@/pages/BlendBotPage";
+import RSIBotPage from "@/pages/RSIBotPage";
 import YourFirstBot from "@/pages/YourFirstBot";
 
 function Router() {

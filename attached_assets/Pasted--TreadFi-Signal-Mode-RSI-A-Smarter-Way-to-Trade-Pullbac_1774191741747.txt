@@ -1,0 +1,194 @@
+
+TreadFi Signal Mode (RSI): A Smarter Way to Trade Pullbacks
+
+TreadFi’s Signal Mode is basically a mid-based market making strategy with directional bias.
+
+Instead of placing orders symmetrically like a normal mid bot, it uses RSI (Relative Strength Index) to slightly tilt your positioning.
+
+So you’re still market making…
+but now you’re doing it with an edge.
+
+⸻
+
+What Signal Mode Actually Does
+
+At its core, Signal Mode:
+	•	Uses mid price as the reference (just like a mid bot)
+	•	Applies a technical signal (currently RSI) from kiyotaka.ai
+	•	Skews your buy/sell placement based on that signal
+
+So instead of being neutral, the bot becomes:
+
+Slightly directional — but still controlled
+
+⸻
+
+How RSI Changes the Bot’s Behavior
+
+The logic is simple.
+
+When RSI is High (>50):
+	•	Market is showing bullish momentum
+	•	Bot assumes price may be overbought
+
+So it:
+	•	Places sell orders closer to mid (easier to get filled)
+	•	Pushes buy orders further away
+
+👉 You’re prioritizing sells, expecting a pullback
+
+⸻
+
+When RSI is Low:
+	•	Market is showing weakness
+	•	Bot assumes price may be oversold
+
+So it:
+	•	Places buy orders closer to mid
+	•	Pushes sell orders further away
+
+👉 You’re prioritizing buys, expecting a bounce
+
+⸻
+
+In Simple Terms:
+
+Buy when RSI is low
+Sell when RSI is high
+
+But instead of market orders, you’re doing it through smart limit placement.
+
+[https://postimg.cc/v1HT8xfw]
+
+⸻
+
+Why This Is Different From Grid Bots
+
+This is important.
+
+Grid bots:
+	•	Use fixed executed price levels
+	•	Can get stuck if price trends
+
+Signal Mode:
+	•	Uses live mid price as reference
+	•	Continuously adjusts
+
+So:
+	•	No grid anchoring
+	•	No need for resets
+
+It stays flexible because it’s always reacting to current price.
+
+⸻
+
+Where the Edge Comes From
+
+The edge comes from timing pullbacks.
+
+When price moves too far in one direction:
+	•	RSI reflects that momentum
+	•	The bot positions for the snap-back move
+
+But here’s the catch:
+
+The pullback needs to happen fast.
+
+Because:
+	•	Orders are still based on spread
+	•	If price doesn’t retrace quickly → no fills
+
+⸻
+
+Spread Still Matters (A Lot)
+
+Even with RSI, spread is still your main control.
+
+For example:
+	•	+10 spread → orders are placed 0.1% away from current mid price. That is if RSI above 50, bot places sell order at current mid price and place a buy order at 0.1% from current price. So If market pull back fast, you capture a 0.1% price movement in your favor.
+
+So:
+	•	Higher spread = bigger profit per trade
+	•	But requires stronger, faster pullbacks
+
+That’s why the recommended range is:
+
++3 to +10 bps
+
+It balances:
+	•	Fill probability
+	•	Profit per trade
+
+⸻
+
+When This Strategy Works Best
+
+From experience, this performs best when:
+	•	Market has clean structure
+	•	Price moves with pullbacks
+	•	Not just straight trending
+
+Good conditions:
+	•	NY session (more structured moves)
+	•	Liquid assets
+
+Avoid:
+	•	First hour of NY open (too volatile)
+	•	Aggressive one-sided trends
+
+Because if price just keeps running:
+
+You won’t get the pullbacks you need
+→ And you’ll likely hit stop loss
+[https://postimg.cc/GBht3TY6]
+⸻
+
+The Real Limitation
+
+Signal Mode still isn’t predictive.
+
+It’s reactive.
+
+RSI tells you:
+	•	“Price has moved a lot”
+
+But it doesn’t guarantee:
+	•	“Price will reverse right now”
+
+So if the market keeps pushing:
+	•	Your bias can be wrong
+	•	And exposure builds on one side
+
+⸻
+Passive Participation works best with RSI.
+
+Passive participation works best with RSI, as it allows you to gradually scale into positions.
+
+If you deploy all your orders at once, RSI can stay overbought or oversold and continue trending, which increases the risk of hitting your stop loss.
+
+Instead, by scaling in around the 50–60 RSI range, you give yourself more room to manage the trade if it moves against you.
+Final Thought
+
+Signal Mode sits somewhere between:
+	•	A pure market maker
+	•	And a light directional strategy
+
+It doesn’t try to predict the market fully…
+but it helps you lean in the right direction.
+
+If you use it in the right conditions:
+	•	Structured markets
+	•	Clean pullbacks
+
+It can be a very efficient way to:
+	•	Capture quick reversals
+	•	Improve your fill quality
+	•	Add an edge to mid-based strategies
+
+⸻
+
+If you want next, I can:
+	•	Turn this into a high-retention reel script (hook + storytelling)
+	•	Or compare Mid vs Grid vs Signal in one clean breakdown
+
+Just tell me 👍
