@@ -116,13 +116,13 @@ export default function Navigation() {
             </Link>
 
             <a
-              href="https://app.tread.fi"
+              href="https://app.tread.fi/referral/59S1TB1X"
               target="_blank"
               rel="noopener noreferrer"
               data-testid="link-launch-app"
               className="px-4 py-2 gradient-bg-cyan-emerald text-white rounded-md text-sm font-semibold hover:opacity-90 transition-opacity shadow-lg shadow-primary/20"
             >
-              Launch App
+              Launch TreadFi Bot
             </a>
           </div>
 
@@ -202,12 +202,12 @@ export default function Navigation() {
             </Link>
 
             <a
-              href="https://app.tread.fi"
+              href="https://app.tread.fi/referral/59S1TB1X"
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full px-4 py-2.5 gradient-bg-cyan-emerald text-white rounded-md text-sm font-semibold text-center hover:opacity-90 transition-opacity mt-2"
             >
-              Launch App
+              Launch TreadFi Bot
             </a>
           </div>
         </div>

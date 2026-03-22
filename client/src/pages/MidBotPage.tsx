@@ -11,6 +11,13 @@ export default function MidBotPage() {
           <h1 className="text-5xl sm:text-6xl font-bold text-foreground mb-6 tracking-tight">
             Mid Bots
           </h1>
+          <p className="mt-6 mb-6 text-muted-foreground leading-relaxed max-w-3xl">
+            Before we get into how to use Tread, the first step is creating an account. Use this referral link:{' '}
+            <a href="https://app.tread.fi/referral/59S1TB1X" target="_blank" rel="noopener noreferrer" className="text-primary underline">
+              https://app.tread.fi/referral/59S1TB1X
+            </a>{' '}
+            — Complete the signup process, set your credentials, and log in.
+          </p>
           <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
             A Complete Guide to Mid Bot in Tread
           </p>
