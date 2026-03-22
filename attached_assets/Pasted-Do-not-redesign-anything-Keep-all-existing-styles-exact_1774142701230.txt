@@ -1,0 +1,158 @@
+Do not redesign anything. Keep all existing styles exactly the same. Replace ALL dummy content on the MID bot page with the following real content. Where there is an image URL in brackets, add a rounded responsive image using that URL.
+PAGE TITLE: Mid Bots - A Complete Guide to Mid Bot in Tread
+If you’ve ever run a grid bot in a fast market and got stopped out instantly, this is exactly what you should be using instead.
+SECTION: What Is a Mid Bot (Simple Explanation)
+A mid bot places buy and sell orders based on the current mid price of the market. On Tread, all bot modes are built around one core idea: Place buy and sell limit orders around a reference price.
+These bots:
+	∙	Use only limit orders (like real market makers)
+	∙	Continuously provide liquidity
+	∙	Manage your inventory (exposure)
+[IMAGE: https://postimg.cc/34yScD2j]
+	∙	Prevent you from getting stuck too heavily on one side
+SECTION: The Key Difference: Reference Price
+Each mode is defined by what reference price it uses.
+	∙	Mid Bot → uses current mid price
+[IMAGE: https://postimg.cc/JDy62Bjq]
+	∙	Grid Bot → uses averages of your entry price
+[IMAGE: https://postimg.cc/jwWgFJyH]
+This one difference completely changes how they behave.
+SECTION: How a Mid Bot Works (Example)
+Let’s say:
+	∙	Current mid price = 65,000
+	∙	You’re running mid +1 (0.01% spread)
+The bot will:
+	∙	Place a buy order 0.01% below mid
+	∙	Place a sell order 0.01% above mid
+SECTION: What Happens After First Fill
+Let’s say your buy gets filled first → now you are net long.
+Scenario 1: Price Moves Up (Ideal)
+	∙	Your sell order gets filled
+	∙	Position closes in profit
+	∙	Bot continues cycling
+Scenario 2: Price Moves Down (Important Part)
+This is where mid bots shine. If price drops:
+	∙	Your sell order doesn’t get filled
+	∙	You are temporarily in drawdown
+But the bot does NOT stay stuck. Instead:
+	∙	It updates the reference price to the new mid
+	∙	Places a new sell order closer to current price (still 0.01% away)
+SECTION: Why This Matters
+The bot follows price. So even if price moves against you:
+	∙	Your exit keeps getting closer to market price
+	∙	You are not waiting for a full reversal
+	∙	Losses are controlled and managed dynamically
+This is how mid bots work:
+	∙	Actively manage inventory
+	∙	Reduce risk during drawdowns
+	∙	Stay relevant in moving markets
+[IMAGE: https://postimg.cc/47KLShpw]
+SECTION: How Grid Bots Differ
+Grid bots behave very differently. Orders are placed at average entry levels and your exits are PNL focused. They do NOT adjust with price.
+So if price moves away:
+	∙	Your position gets stuck
+	∙	Exit levels remain far away
+	∙	You wait for price to come back OR stop loss / grid reset
+[IMAGE: https://postimg.cc/wytfGsDk]
+Mid bots don’t eliminate losses. But they actively manage them. Instead of hoping price comes back, the bot works to close your position near current price.
+SECTION: Where Mid Bots Work Best
+Mid bots are NOT magic. They perform best in:
+	1.	Controlled Trending Markets — Price is moving up or down but with regular pullbacks. Not aggressive spikes.
+	2.	Choppy / Sideways Markets — Constant small movements, frequent opportunities to trade.
+	3.	Short-Term Opportunities (15–20 mins) — When you have a clear directional view.
+SECTION: The Real Edge: Directional Bias
+Instead of being neutral, you can tell the bot: Bullish bias, Bearish bias, or Neutral.
+SECTION: What Directional Bias Actually Does
+Bullish Bias (Example) — The bot:
+	∙	Accumulates more long exposure during the first half of the bot order
+	∙	Keeps you net long ~90% of the time
+	∙	Avoids building meaningful short exposure
+But the key part most people miss: It doesn’t hold that exposure forever. During the second half of the bot order, the bot gradually unwinds those long positions and starts reducing exposure as the cycle progresses.
+SECTION: What This Means in Practice
+If price moves in your direction (up):
+	∙	Your longs are built earlier at lower prices
+	∙	They are unwound later at higher prices
+	∙	So your average exit > average entry → You end up in profit
+[IMAGE: https://postimg.cc/ZB97My6x]
+If price moves against you (down):
+	∙	Your longs are built at higher prices
+	∙	They are unwound at lower prices → You take a loss
+[IMAGE: https://postimg.cc/CBZPQfb7]
+Simple Way to Think About It:
+	∙	First half = accumulation phase
+	∙	Second half = distribution phase
+Your PnL depends on what price does between those two phases.
+SECTION: Important Insight
+Your profit is not just about direction — it’s about where price is during the second half compared to the first half.
+	∙	Higher → profit (bullish bias)
+	∙	Lower → loss
+	∙	Same → close to breakeven
+SECTION: Normal Mid Bot vs Biased Mid Bot
+Without bias: Long → neutral → short → repeat. Pure market making. No directional edge.
+With bullish bias: Long → partial exit → long again. Rarely goes short. Builds net long exposure.
+If price goes up: Exit > average entry → you make extra directional profit on top of spread capture, trading volume, and reward points.
+SECTION: The Trade-Off (Very Important)
+Directional bias increases both:
+Upside ✅
+	∙	Higher PnL when right
+	∙	More volume
+	∙	Better rewards
+Risk ❌
+	∙	Bigger losses when wrong
+	∙	Exposure is concentrated
+This is NOT safer than neutral mode. It’s a conviction-based strategy.
+SECTION: When to Use Directional Bias
+Use it only when:
+	∙	You expect a clear directional move
+	∙	The market is already showing strength (not random chop)
+	∙	Your timeframe matches your bot speed
+SECTION: What Actually Matters
+What you should care about is how long your bot takes to fill ~60–70% of its notional. That is your real timeframe.
+A mid bot with bias works in two phases:
+	∙	First half → builds exposure
+	∙	Second half → unwinds exposure
+For the strategy to work: Price must move in your direction by the time the bot starts unwinding.
+SECTION: Practical Examples
+Smaller Size + Aggressive Settings:
+	∙	Target: $15K–$20K, high participation rate, liquid market
+	∙	Fill time ≈ 15–20 minutes
+	∙	Price should be above your entry after ~15–20 mins (bullish bias)
+Larger Size + Passive Settings:
+	∙	Higher notional, slower participation rate
+	∙	Fill time = 30–60+ minutes
+	∙	Your directional view must hold for a longer duration
+Simple Rule: Don’t think in minutes. Think in fill progress.
+	∙	0–50% filled → accumulation phase
+	∙	50–100% filled → unwind phase
+Your edge comes from what price does between these two phases. Directional bias is not just about being right on direction. It’s about being right on direction AND timing relative to your bot speed. If your timing is off, even a correct bias can lose money.
+Avoid using it when: Market is unpredictable, high volatility sessions (news, opens), or you don’t have a clear bias.
+Here are a few more examples of mid bots with directional bias. The resulting PnL is largely driven by how far price moves after the bot begins placing orders.
+[IMAGE: https://postimg.cc/9R48nqyy]
+[IMAGE: https://postimg.cc/2bqcKBn4]
+SECTION: Mid Bot Settings Mindset
+Instead of copying settings, think like this:
+	∙	Aggressive Settings → best for tight ranges, more trades, higher volume
+	∙	Passive Settings → best for trends, better average entries, lower risk of SL
+SECTION: Common Mistakes With Mid Bots
+	1.	Using bias without a real view — this turns into gambling
+	2.	Running during high volatility windows — fast moves = instant SL
+	3.	Over-leveraging — mid bots still carry exposure risk
+	4.	Expecting guaranteed profit — this is still trading, not automation magic
+SECTION: Simple Mental Model
+	∙	Grid Bot → Range tool
+	∙	Mid Bot → Adaptive tool
+	∙	Mid + Bias → Conviction tool
+SECTION: Final Thoughts
+Mid bots are not better than grid bots — they are just built for a different job.
+If you:
+	•	Understand market timing
+	•	Can identify short-term direction
+	•	Manage your risk properly
+
+Then a mid bot can:
+	•	Trade efficiently
+	•	Generate consistent volume
+	•	Capture directional moves
+
+And most importantly:
+
+👉 It allows you to combine market making + trading edge in one system.
