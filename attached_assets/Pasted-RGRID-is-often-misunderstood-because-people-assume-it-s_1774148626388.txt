@@ -1,0 +1,234 @@
+RGRID is often misunderstood because people assume it’s just a “reverse grid bot.” It’s not that simple.
+This guide explains RGRID in simple terms: how it works, when to run it, when to avoid it, and what actually creates the edge.
+What Is RGRID — In Simple Words
+According to @tread_fi  founder @davidyjeong , RGRID is designed to behave opposite to a traditional grid bot.
+* Grid bots thrive in choppy, sideways markets
+* RGRID thrives in clean, directional moves
+If a normal grid keeps getting stopped out in a trend, RGRID is built to turn that same directional behavior into profit capture instead of stop-loss damage.
+But this does not mean RGRID is safer. It just means it needs a different environment.
+[https://postimg.cc/Dmz65NqC]
+[https://postimg.cc/YjSR8P1s]
+
+
+
+How RGRID Actually Works (Mechanics Explained Simply)
+RGRID logic is built around one central reference point:
+Your average exposure price (combined average of current buys and sells)
+Unlike a normal grid bot that places fixed ladder orders above and below price, RGRID continuously recalculates its order levels based on your live average exposure.
+According to the documentation:
+* Buy orders are placed at:average exposure × (1 + spread)
+* Sell orders are placed at:average exposure × (1 − spread)
+Orders only execute when price crosses those calculated levels.
+Right now, RGRID spread is set to 0.
+That simplifies the logic:
+* If price moves above your average exposure price → bot places buy orders
+* If price moves below your average exposure price → bot places sell orders
+Now let's understand core mechanics of RGRID with an example.
+
+[https://postimg.cc/LhsDvWtd]
+Think of this chart as showing three things at the same time:
+* how the bot builds position
+* where it buys and sells
+* when it resets profit
+
+🟩 Green/Red Dotted Line = Average Exposure Price
+This is the core anchor of RGRID.
+* It represents your current average position price
+* The bot makes decisions based on this line
+* It keeps shifting as the bot trades
+Think of it as the bot’s “center of gravity.”
+⚪ Grey Line = Current Market Price
+This is just the live price moving up and down.
+RGRID reacts to how price behaves relative to the average exposure line.
+🔹 How RGRID Trades Around This Line
+✅ When price goes ABOVE the exposure line → Bot BUYS
+* As market price crosses above the average exposure
+* RGRID places buy orders
+* It adds in the direction of movement
+This is opposite of a normal grid (which usually sells above).
+✅ When price goes BELOW the exposure line → Bot SELLS
+* When price drops below the exposure average
+* RGRID places sell orders
+* It reduces or flips exposure
+So the bot is always reacting to which side of the average price the market is on.
+🔹 Why It’s Called “Reverse Grid” Behavior
+In a normal grid:
+* Above = sell
+* Below = buy
+* Designed for chop
+In RGRID:
+* Above = buy
+* Below = sell
+* Designed for directional movement
+That’s the reversal.
+
+[https://postimg.cc/3Ww19qgq]
+🔹 Top Panel — Exposure & Limits
+In the top chart:
+⚪ White Stepped Line = Net Exposure
+* Shows how large the bot’s position is over time
+* When it rises → exposure increasing
+* When it drops → exposure decreasing
+🟧 Dashed Bands = Exposure Limits
+These are safety boundaries.
+When max exposure is hit:
+* Bot stops adding more size
+* It waits for profit reset instead of growing risk further
+🔹 Profit Reset 
+Here’s what happens:
+1. Bot builds position around the exposure line
+2. Market trends away cleanly
+3. Distance reaches your Profit Reset %
+4. Bot closes the position in profit
+5. Exposure resets to zero
+6. Average price jumps to current market
+7. New RGRID cycle begins
+This is the moment RGRID “locks the win.”
+🔹 Why RGRID Loses in Ranging Markets (As Shown in Notes)
+When market ranges tightly:
+* Price keeps crossing above/below exposure line
+* Bot keeps buying and selling repeatedly
+* No sustained move away from average
+* Profit reset never triggers
+* Small losses stack up
+That’s why -
+RGRID needs clean movement  not internal chop.
+In short,
+RGRID behaves like a dynamic mid-point trader:
+* Uses your average exposure as the anchor
+* Buys above it
+* Sells below it
+* Builds position gradually
+* Waits for expansion
+* Closes everything when profit reset distance is reached
+Example 1: How RGRID Generates Positive PnL
+[https://postimg.cc/mhrjVnQ6]
+
+This example shows a full RGRID profit cycle, from position building to profit reset.
+* Price moves above the average exposure line, so the bot keeps buying and building a long position.
+* Net exposure (white line in the top panel) increases until it reaches the max exposure limit.
+* During this directional move, PnL rises because price continues trending away from the average.
+Next phase:
+* Price continues far enough from the average exposure price to hit the Profit Reset % target.
+* The bot then sells to close the position in profit.
+* Exposure drops back down and the average resets to the new market price.
+* That completes one profitable RGRID cycle.
+After that:
+* Market starts ranging again.
+* RGRID behaves like a mid-based trader (buy above / sell below average).
+* In this ranging phase, PnL slowly gets eaten, which shows why RGRID works best when a clean trend appears after position building.
+In one line:
+RGRID builds during movement, locks profit on expansion, and gives back edge during chop, timing and structure decide profitability.
+[https://postimg.cc/mhrjVnQ6]
+
+Example2: When RGRID Loses — Sideways & Mean-Reverting Market
+
+[https://postimg.cc/7bL9XR38]
+This example shows RGRID running during a sideways, slow, mean-reverting market — which is its weakest environment.
+What’s happening here:
+* Price keeps moving slightly above and below the average exposure line
+* The bot keeps buying above average and selling below average
+* Small micro-trends appear, but they don’t extend
+* Each push quickly mean-reverts back into the range
+Because there is no strong continuation:
+* Profit Reset % never gets hit
+* Positions keep getting adjusted back and forth
+* Fees and small adverse moves stack up
+* Net PnL slowly trends downward
+Even though there are mini trends, they are:
+* too slow
+* too choppy
+* too mean-reverting
+RGRID needs fast, directional expansion, not slow rotational movement.
+In one line:
+RGRID bleeds in chop and thrives in expansion, speed and continuation matter more than direction alone.
+The Most Important Edge: Identifying Trendy Price Action
+The real edge with RGRID is not the settings, it’s the market condition.
+Most traders look at higher timeframes to judge trend. That works for swing trading, but not for RGRID execution.
+For RGRID, the decision must come from very short-term structure.
+The most reliable lens:
+👉 1-minute timeframe price action
+Anything higher and the signal becomes too slow and too averaged out. RGRID needs micro-structure trend, not macro trend.
+You want to see price behavior that looks like:
+* Continuous directional movement
+* Small or shallow pullbacks
+* Minimal consolidation inside the move
+* Order-flow driven pushes
+* A “TWAP-like” steady grind in one direction
+The move should feel like:
+price is being executed steadily rather than debated.
+When you look at the 1-minute chart, the structure should show:
+* consecutive pushes
+* weak retracements
+* no repeated back-and-forth inside the same band
+Ideal Price Action(Chart)Structure for RGRID
+[https://postimg.cc/F1KpG6y4]
+
+The chart above shows a textbook structure where RGRID performs best.
+Notice the highlighted zone  price is moving in a steady, directional manner with very little internal friction. The move feels almost like a continuous TWAP execution rather than a battle between buyers and sellers.
+Key characteristics of this structure:
+* Strong directional move
+* Minimal pullbacks between pushes
+* No repeated sideways compression
+* No heavy rejection wicks inside the move
+* Momentum flows cleanly from one level to the next
+This is what I call “low internal resistance” price action.
+Why “Left-Side Cleanliness” Matters
+One important concept when evaluating RGRID conditions is what’s on the left side of the chart.
+In the example, the left side is relatively clean, there is no dense consolidation cluster or heavy trading range acting as friction. That means:
+* Fewer trapped positions
+* Less opposing liquidity
+* Lower mean-reversion pressure
+* Smoother continuation probability
+When the left side is crowded with consolidation, price tends to keep snapping back into those areas. That behavior hurts RGRID because the bot depends on continuation, not repeated rotation.
+When the left side is clean, price doesn’t keep revisiting prior ranges, it accepts new levels quickly. That’s where RGRID thrives.
+What Time Does RGRID Work Best?
+RGRID performs best during high-participation market sessions, especially:
+* London Open
+* New York Open
+These sessions typically produce:
+* Strong order flow
+* Directional continuation after the opening impulse
+* Sustained short-term trends
+* Momentum-driven execution
+This is exactly the environment RGRID is designed for.
+Why Market Opens Favor RGRID
+At London and New York open, markets often show:
+1. Initial volatility spike
+2. Quick direction establishment
+3. Follow-through trend moves
+4. Reduced micro mean-reversion (for a period)
+After the first burst of volatility, price frequently transitions into a steady directional push, the “micro-trend” behavior that RGRID captures well.
+This creates:
+* Cleaner 1-minute structure
+* Lower internal chop
+* More continuation than rotation
+Which is ideal for RGRID logic.
+Exact Contrast With Grid Bots
+This is where RGRID and traditional grid bots behave like opposites.
+Grid bots perform worst during London/NY opens because:
+* Breakouts keep extending
+* Pullbacks are shallow
+* Mean reversion fails
+* Stop losses get hit repeatedly
+RGRID performs best during London/NY opens because:
+* Momentum extends
+* Continuation beats reversion
+* Stop-style behavior turns into profit capture
+Why RGRID Works Best With Passive Participation Rate
+RGRID performs best when configured with a passive participation rate, not an aggressive one.
+
+[https://postimg.cc/kD5swHxZ]
+Even though RGRID is designed for trending moves, its strength is not in chasing price, it’s in position building during quiet structure and monetizing expansion when breakout happens.
+With a passive participation rate:
+* Orders get filled gradually
+* Exposure builds slowly during ranging or low-volatility phases
+* Risk grows in a more measured way
+Then when a directional breakout starts, RGRID’s directional logic begins working in your favor, and the move away from your average exposure allows the profit reset trigger to close the cycle in profit.
+Short Conclusion
+RGRID is not a replacement for grid — it’s a different weapon.
+Grid harvests chop.
+RGRID harvests expansion.
+It builds during structure and gets paid during continuation. Your real edge is not configuration — it’s choosing the right market condition and session timing.
+If you found this helpful, you can support my work by using my referral code when you start trading on Tread.
+

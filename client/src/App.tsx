@@ -11,6 +11,7 @@ import Glossary from "@/pages/Glossary";
 import FAQ from "@/pages/FAQ";
 import MMBotMode from "@/pages/MMBotMode";
 import MidBotPage from "@/pages/MidBotPage";
+import RGridBotPage from "@/pages/RGridBotPage";
 import YourFirstBot from "@/pages/YourFirstBot";
 
 function Router() {
@@ -25,7 +26,7 @@ function Router() {
         <Route path="/get-started" component={YourFirstBot} />
         <Route path="/modes/grid">{() => <MMBotMode mode="GRID" />}</Route>
         <Route path="/modes/mid" component={MidBotPage} />
-        <Route path="/modes/rgrid">{() => <MMBotMode mode="RGRID" />}</Route>
+        <Route path="/modes/rgrid" component={RGridBotPage} />
         <Route path="/modes/rsi">{() => <MMBotMode mode="RSI" />}</Route>
         <Route path="/modes/blend">{() => <MMBotMode mode="BLEND" />}</Route>
         <Route component={NotFound} />
