@@ -248,6 +248,13 @@ export default function RGridBotPage() {
               </div>
             </div>
 
+            <img
+              src="https://i.postimg.cc/zzY8tp1q/exposure.jpg"
+              alt="RGRID top panel exposure and limits"
+              className="w-full rounded-xl"
+              onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+            />
+
             <div className="bg-card border border-card-border rounded-xl p-5">
               <p className="text-foreground font-semibold mb-3">🔹 Profit Reset</p>
               <p className="text-muted-foreground text-sm mb-3">Here's what happens:</p>
@@ -317,7 +324,7 @@ export default function RGridBotPage() {
         <section className="mb-16 border-t border-border/30 pt-14">
           <h2 className="text-2xl font-bold text-foreground mb-6">Example 1: How RGRID Generates Positive PnL</h2>
           <img
-            src="https://i.postimg.cc/8G9gHTSF/6.jpg"
+            src="https://i.postimg.cc/szqCc3rY/5.png"
             alt="RGRID positive PnL example"
             className="w-full rounded-xl mb-8"
             onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
@@ -371,7 +378,7 @@ export default function RGridBotPage() {
             </p>
           </div>
           <img
-            src="https://i.postimg.cc/8G9gHTSF/6.jpg"
+            src="https://i.postimg.cc/szqCc3rY/5.png"
             alt="RGRID positive PnL cycle detail"
             className="w-full rounded-xl"
             onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
