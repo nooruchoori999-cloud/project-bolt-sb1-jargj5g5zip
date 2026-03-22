@@ -1,0 +1,106 @@
+Frequently Asked Questions (FAQ)
+
+⸻
+
+Can I be profitable with Tread MM Bot?
+
+Yes, many users are profitable with Tread. However, the success rate is similar to normal trading — most users still lose money.
+
+There’s no secret formula. Profitability comes from:
+	•	Running the bot in the right market conditions
+	•	Using the right settings
+	•	Managing risk properly
+
+One important factor to consider:
+	•	You also earn points from DEXs and TreadFi, which may convert into tokens during TGE.
+
+In some cases, users can still come out ahead overall even with slightly negative trading PnL due to these incentives.
+Early Hyperliquid market makers are a good example — many were profitable overall despite negative PnL from pure market making.
+
+⸻
+
+Why is my actual loss higher than my stop loss?
+
+In MM bots, stop loss works differently from instant execution.
+	•	Once the max loss threshold is reached, the bot sends a cleanup TWAP order
+	•	This process usually takes 1–2 minutes (sometimes faster)
+	•	During this time, if the market moves aggressively, your loss can exceed the defined stop loss
+
+This is expected behavior.
+
+It happens because:
+	•	The bot exits using maker-based execution
+	•	Not instant market orders
+
+⸻
+
+Which bot settings should I use?
+
+There is no one-size-fits-all setup.
+
+Performance depends on:
+	•	Market conditions
+	•	Pair liquidity
+	•	Volatility
+	•	Your risk tolerance
+
+You need to adjust your settings based on the environment you are trading in.
+
+⸻
+
+Can Tread be considered wash trading?
+
+No.
+	•	Around 90% of Tread orders are maker orders, meaning real liquidity is provided and risk is taken
+	•	Wash trading typically involves instant entry and exit with no exposure
+	•	Tread is officially supported by platforms like Paradex, Pacifica, Extended, and Nado
+
+⸻
+
+Does PnL include fees?
+
+No.
+
+PnL does not include fees.
+
+Total result should be calculated as:
+
+Total PnL = Trading PnL − Fees
+
+The fee shown on the MM page includes:
+	•	Exchange fees
+	•	TreadFi fees
+
+⸻
+
+What are the fees on different platforms?
+	•	Hyperliquid (HIP-3) → 0.26 bps exchange + 2 bps Tread = 0.0226%
+	•	Hyperliquid (Normal pairs) → 0.013% + 2 bps = 0.033%
+	•	Nado → 1 bps + 2 bps = 0.03%
+	•	Pacifica → 1.5 bps + 2 bps = 0.035%
+	•	Extended → 0 + 2 bps = 0.02%
+	•	Paradex → 0.3 bps, no Tread fee = 0.003%
+	•	Aster → 0% total fee
+	•	Kodiak → 1.3 bps = 0.013%
+
+⸻
+
+Which bot mode should I choose?
+
+This depends entirely on market conditions:
+	•	RGrid → Better for trending markets
+	•	Mid / Grid / Blend / Signal → Better for ranging, low-volatility environments
+
+Choosing the wrong mode for the market is one of the main reasons users lose money.
+
+⸻
+
+What are some tips to be profitable?
+	•	Focus on market conditions first, not just settings
+	•	Avoid running bots during high volatility events
+	•	Use proper spreads and risk controls
+	•	Monitor exposure buildup
+	•	Don’t rely only on PnL — consider points and incentives
+
+You can also explore optimized strategies and timings here:
+👉 https://treadtools.vercel.app/
