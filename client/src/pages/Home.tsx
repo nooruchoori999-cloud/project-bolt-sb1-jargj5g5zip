@@ -104,7 +104,7 @@ export default function Home() {
             </p>
 
             <Link
-              to="/lessons"
+              to="/get-started"
               data-testid="link-start-learning"
               className="group inline-flex items-center gap-2 px-8 py-4 gradient-bg-cyan-emerald text-white rounded-md font-semibold hover:opacity-90 transition-all duration-200 shadow-lg shadow-primary/20"
             >
@@ -113,20 +113,6 @@ export default function Home() {
             </Link>
           </div>
         </section>
-
-        <div className="grid sm:grid-cols-3 gap-px bg-border/30 rounded-xl overflow-hidden mb-16 border border-border/30">
-          {[
-            { label: 'Lessons', value: '6', desc: 'Free modules' },
-            { label: 'Strategy', value: '100%', desc: 'Your control' },
-            { label: 'Time to Start', value: '15m', desc: 'First lesson' },
-          ].map((stat) => (
-            <div key={stat.label} className="bg-card px-8 py-6 text-center">
-              <div className="text-3xl font-bold gradient-text-cyan-emerald mb-1">{stat.value}</div>
-              <div className="text-sm font-semibold text-foreground">{stat.label}</div>
-              <div className="text-xs text-muted-foreground mt-0.5">{stat.desc}</div>
-            </div>
-          ))}
-        </div>
 
         {sections.map((section, idx) => {
           const Icon = section.icon;
