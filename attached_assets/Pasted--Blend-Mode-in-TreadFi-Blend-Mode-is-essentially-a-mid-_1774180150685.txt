@@ -1,0 +1,93 @@
+
+
+Blend Mode in TreadFi
+
+Blend Mode is essentially a mid-based market making strategy, but instead of using just the standard mid price from one exchange, it uses a blended mid price.
+
+In simple terms:
+
+You’re still running a mid bot — but your reference price is smarter.
+
+⸻
+
+What Is Blend Mode?
+
+Blend Mode allows you to quote prices based on a combination of two exchanges:
+	•	The exchange you are market making on
+	•	Another exchange of your choice (usually more liquid)
+
+You can control how much weight each price has in the final reference.
+
+⸻
+
+Blend Weight Settings
+
+You can adjust how the pricing is calculated:
+	•	0% → Uses only the price from your trading exchange
+	•	50% (default) → Equal-weighted average between both exchanges
+	•	100% → Uses only the external reference exchange price
+
+This gives you flexibility depending on how reliable your local market is.
+
+⸻
+
+How It Behaves
+
+Instead of quoting purely based on your exchange’s mid price, the bot:
+	•	Takes your exchange price
+	•	Takes a reference price from another exchange
+	•	Blends them together
+
+Orders are then placed around this blended price, and they update dynamically as both markets move.
+
+So even though:
+	•	You are executing trades on one exchange
+
+Your pricing is:
+
+Influenced by a broader, more accurate market view
+
+⸻
+
+Why This Matters
+
+In theory, the same asset should have the same price across exchanges.
+
+But in reality:
+	•	Smaller exchanges can be more volatile
+	•	Low liquidity can cause price distortions
+	•	Temporary price gaps (inefficiencies) happen
+
+Blend Mode helps you avoid reacting to these misleading local moves.
+
+Instead, it positions your orders based on where price should be, not just where it currently is.
+
+⸻
+
+Use Case: Taking Advantage of Price Differences
+
+Let’s say you’re market making ETH on a smaller exchange:
+	•	Local mid price → $2,000 (volatile, thin liquidity)
+	•	Reference exchange price → $2,050 (stable, high volume)
+
+With Blend Mode (50%):
+	•	Blended price → $2,025
+
+Now your bot quotes around $2,025 instead of $2,000.
+
+So instead of following the local market blindly, you:
+	•	Anticipate price convergence
+	•	Position yourself ahead of the move
+
+⸻
+
+Final Thought
+
+
+With Blend Mode, Instead of relying on a single exchange, you:
+	•	Anchor your strategy to a broader price signal
+	•	Reduce noise from low liquidity
+	•	Position for more efficient execution
+
+It’s a small tweak in setup…
+but it can make a big difference in how your bot performs.

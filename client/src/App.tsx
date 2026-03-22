@@ -13,6 +13,7 @@ import MMBotMode from "@/pages/MMBotMode";
 import GridBotPage from "@/pages/GridBotPage";
 import MidBotPage from "@/pages/MidBotPage";
 import RGridBotPage from "@/pages/RGridBotPage";
+import BlendBotPage from "@/pages/BlendBotPage";
 import YourFirstBot from "@/pages/YourFirstBot";
 
 function Router() {
@@ -29,7 +30,7 @@ function Router() {
         <Route path="/modes/mid" component={MidBotPage} />
         <Route path="/modes/rgrid" component={RGridBotPage} />
         <Route path="/modes/rsi">{() => <MMBotMode mode="RSI" />}</Route>
-        <Route path="/modes/blend">{() => <MMBotMode mode="BLEND" />}</Route>
+        <Route path="/modes/blend" component={BlendBotPage} />
         <Route component={NotFound} />
       </Switch>
     </div>
