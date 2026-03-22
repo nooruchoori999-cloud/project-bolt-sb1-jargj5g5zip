@@ -389,7 +389,7 @@ export default function RGridBotPage() {
         <section className="mb-16 border-t border-border/30 pt-14">
           <h2 className="text-2xl font-bold text-foreground mb-6">Example 2: When RGRID Loses — Sideways & Mean-Reverting Market</h2>
           <img
-            src="https://i.postimg.cc/MwNJDzSy/7.png"
+            src="https://i.postimg.cc/8G9gHTSF/6.jpg"
             alt="RGRID loss in sideways market example"
             className="w-full rounded-xl mb-8"
             onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
