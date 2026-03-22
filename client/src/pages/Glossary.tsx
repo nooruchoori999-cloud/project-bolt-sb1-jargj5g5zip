@@ -5,64 +5,49 @@ import { Input } from '@/components/ui/input';
 
 const terms = [
   {
-    term: 'Bid-Ask Spread',
-    definition: 'The difference between the highest price a buyer is willing to pay (bid) and the lowest price a seller is willing to accept (ask). Market makers profit from this spread.',
+    term: 'Margin',
+    definition: 'The balance you allocate in your exchange account for the bot to use. It determines how much capital is available to open and manage positions. The total exposure of your position is called Notional. Calculated as: Notional = Margin × (2 × Leverage). Example: $100 margin with 10× leverage = 100 × (2 × 10) = $2000 notional exposure.',
     category: 'Basics',
   },
   {
-    term: 'Market Depth',
-    definition: "A measure of the market's ability to sustain large orders without significantly impacting the price. Deeper markets have more liquidity at various price levels.",
-    category: 'Basics',
-  },
-  {
-    term: 'Liquidity Provider',
-    definition: 'An entity or individual that adds liquidity to a market by placing both buy and sell orders, making it easier for other traders to execute trades.',
+    term: 'Volume',
+    definition: 'The total trading volume the bot aims to execute during a run. It represents how much value (in trades) the bot will process over time.',
     category: 'Trading',
   },
   {
-    term: 'Slippage',
-    definition: 'The difference between the expected price of a trade and the actual price at which it executes, often occurring in volatile or low-liquidity markets.',
-    category: 'Risk',
-  },
-  {
-    term: 'Grid Trading',
-    definition: 'A strategy that places multiple buy and sell orders at predetermined price intervals, creating a grid of orders to profit from market volatility.',
-    category: 'Strategy',
-  },
-  {
-    term: 'Inventory Risk',
-    definition: 'The risk that a market maker faces from holding positions that may decrease in value. Proper inventory management is crucial for successful market making.',
-    category: 'Risk',
-  },
-  {
-    term: 'Perpetual DEX',
-    definition: 'A decentralized exchange that offers perpetual futures contracts — derivatives with no expiry date. TreadFi primarily targets liquidity provision on these platforms.',
-    category: 'DeFi',
-  },
-  {
-    term: 'Adverse Selection',
-    definition: 'The risk of being picked off by better-informed traders. When a market maker places an order, they risk trading against someone with superior market information.',
-    category: 'Risk',
-  },
-  {
-    term: 'Fee Rebates',
-    definition: 'Incentives paid by exchanges to market makers for providing liquidity. These rebates can significantly improve overall profitability beyond just the bid-ask spread.',
-    category: 'DeFi',
-  },
-  {
-    term: 'Position Sizing',
-    definition: 'The process of determining how much capital to allocate to a given trade or market. Proper position sizing limits downside exposure while maximizing opportunity.',
-    category: 'Strategy',
-  },
-  {
-    term: 'Market Impact',
-    definition: 'The effect a trade has on the price of an asset. Larger orders cause greater market impact, especially in low-liquidity environments.',
+    term: 'Participation Rate',
+    definition: 'The rate at which your bot participates in market volume. It controls how aggressively the bot places orders relative to overall market activity, helping balance between faster execution and minimizing market impact.',
     category: 'Trading',
   },
   {
-    term: 'PnL (Profit & Loss)',
-    definition: 'The realized and unrealized gains or losses of a trading strategy. For market makers, total PnL includes trading PnL plus any incentives or rebates received.',
+    term: 'Reference Price',
+    definition: 'The price the bot uses as a base to place its buy and sell orders. Different modes (mid, grid, blend, signal) use different methods to determine this reference.',
+    category: 'Strategy',
+  },
+  {
+    term: 'Directional Bias',
+    definition: 'A slight preference in the bot\'s positioning toward buying or selling. Instead of being fully neutral, the bot leans in one direction based on signals or settings.',
+    category: 'Strategy',
+  },
+  {
+    term: 'Spread',
+    definition: 'The distance between buy and sell orders relative to the reference price. It determines how much profit is targeted per trade and how far orders are placed from the market price.',
     category: 'Basics',
+  },
+  {
+    term: 'Stop Loss (SL)',
+    definition: 'A risk control that closes positions when losses reach a defined percentage of margin. Example: 5% SL on $100 margin = bot stops at $5 loss.',
+    category: 'Risk',
+  },
+  {
+    term: 'Take Profit (TP)',
+    definition: 'A target level where the bot closes positions once a certain profit is reached. It locks in gains based on a predefined percentage or condition.',
+    category: 'Risk',
+  },
+  {
+    term: 'Grid Reset',
+    definition: "A safety mechanism that activates when price moves too far from the bot's grid levels. It abandons the current grid pricing and switches back to mid-based pricing to reduce exposure and regain control.",
+    category: 'Strategy',
   },
 ];
 

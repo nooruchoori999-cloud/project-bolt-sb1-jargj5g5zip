@@ -1,0 +1,11 @@
+Do not redesign anything. Keep all existing styles exactly the same. Replace ALL dummy content on the Glossary page with the following real terms and definitions. Style each term as a clear heading with the definition below it, consistent with the existing page design.
+GLOSSARY TERMS:
+Margin — The balance you allocate in your exchange account for the bot to use. It determines how much capital is available to open and manage positions. The total exposure of your position is called Notional. Calculated as: Notional = Margin × (2 × Leverage). Example: $100 margin with 10× leverage = 100 × (2 × 10) = $2000 notional exposure.
+Volume — The total trading volume the bot aims to execute during a run. It represents how much value (in trades) the bot will process over time.
+Participation Rate — The rate at which your bot participates in market volume. It controls how aggressively the bot places orders relative to overall market activity, helping balance between faster execution and minimizing market impact.
+Reference Price — The price the bot uses as a base to place its buy and sell orders. Different modes (mid, grid, blend, signal) use different methods to determine this reference.
+Directional Bias — A slight preference in the bot’s positioning toward buying or selling. Instead of being fully neutral, the bot leans in one direction based on signals or settings.
+Spread — The distance between buy and sell orders relative to the reference price. It determines how much profit is targeted per trade and how far orders are placed from the market price.
+Stop Loss (SL) — A risk control that closes positions when losses reach a defined percentage of margin. Example: 5% SL on $100 margin = bot stops at $5 loss.
+Take Profit (TP) — A target level where the bot closes positions once a certain profit is reached. It locks in gains based on a predefined percentage or condition.
+Grid Reset — A safety mechanism that activates when price moves too far from the bot’s grid levels. It abandons the current grid pricing and switches back to mid-based pricing to reduce exposure and regain control.
