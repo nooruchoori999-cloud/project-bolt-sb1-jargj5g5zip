@@ -126,9 +126,9 @@ export default function Lesson2Page() {
           </div>
 
           <img
-            src="https://i.postimg.cc/4x44Q8Ls/Screenshot-2026-03-28-at-12-20-27-PM.png"
+            src="https://i.postimg.cc/xnMkYhLJ/Screenshot-2026-03-28-at-12-20-27-PM.png"
             alt="TreadTools win-rate predictor input form"
-            className="w-full rounded-xl mb-6"
+            className="rounded-xl mb-6 max-w-full mx-auto block"
           />
 
           <p className="text-muted-foreground leading-relaxed mb-4">
@@ -153,9 +153,9 @@ export default function Lesson2Page() {
           </div>
 
           <img
-            src="https://i.postimg.cc/5299SP7N/Screenshot-2026-03-28-at-12-32-32-PM.png"
+            src="https://i.postimg.cc/z8KL56TW/Screenshot-2026-03-28-at-12-32-32-PM.png"
             alt="TreadTools win-rate predictor outcome results"
-            className="w-full rounded-xl"
+            className="rounded-xl max-w-full mx-auto block"
           />
         </section>
 
@@ -193,9 +193,9 @@ export default function Lesson2Page() {
           </p>
 
           <img
-            src="https://i.postimg.cc/fRWWfH2W/Screenshot-2026-03-28-at-12-34-36-PM.png"
+            src="https://i.postimg.cc/NBmyYSRX/Screenshot-2026-03-28-at-12-34-36-PM.png"
             alt="TreadTools Find Best Config button"
-            className="w-full rounded-xl mb-6"
+            className="rounded-xl mb-6 max-w-full mx-auto block"
           />
 
           <div className="bg-card border border-card-border rounded-xl p-6 mb-6">
@@ -218,9 +218,9 @@ export default function Lesson2Page() {
           </div>
 
           <img
-            src="https://i.postimg.cc/qvBBxmb7/Screenshot-2026-03-28-at-12-36-20-PM.png"
+            src="https://i.postimg.cc/yscJBt00/Screenshot-2026-03-28-at-12-36-20-PM.png"
             alt="TreadTools best config results"
-            className="w-full rounded-xl mb-4"
+            className="rounded-xl mb-4 max-w-full mx-auto block"
           />
 
           <div className="bg-card border border-card-border rounded-xl p-5">
