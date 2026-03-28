@@ -117,7 +117,7 @@ export default function Lesson2Page() {
           </div>
 
           <img
-            src="https://i.postimg.cc/rKbL892P/Screenshot-2026-03-28-at-12-20-27-PM.png"
+            src="https://i.postimg.cc/4x44Q8Ls/Screenshot-2026-03-28-at-12-20-27-PM.png"
             alt="TreadTools win-rate predictor input form"
             className="w-full rounded-xl mb-6"
           />
@@ -144,7 +144,7 @@ export default function Lesson2Page() {
           </div>
 
           <img
-            src="https://i.postimg.cc/fJFhwvQ6/Screenshot-2026-03-28-at-12-32-32-PM.png"
+            src="https://i.postimg.cc/5299SP7N/Screenshot-2026-03-28-at-12-32-32-PM.png"
             alt="TreadTools win-rate predictor outcome results"
             className="w-full rounded-xl"
           />
@@ -184,7 +184,7 @@ export default function Lesson2Page() {
           </p>
 
           <img
-            src="https://i.postimg.cc/N5VwgxvZ/Screenshot-2026-03-28-at-12-34-36-PM.png"
+            src="https://i.postimg.cc/fRWWfH2W/Screenshot-2026-03-28-at-12-34-36-PM.png"
             alt="TreadTools Find Best Config button"
             className="w-full rounded-xl mb-6"
           />
@@ -209,7 +209,7 @@ export default function Lesson2Page() {
           </div>
 
           <img
-            src="https://i.postimg.cc/SJ5pyGp0/Screenshot-2026-03-28-at-12-36-20-PM.png"
+            src="https://i.postimg.cc/qvBBxmb7/Screenshot-2026-03-28-at-12-36-20-PM.png"
             alt="TreadTools best config results"
             className="w-full rounded-xl mb-4"
           />
