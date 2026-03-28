@@ -39,6 +39,15 @@ export default function Lesson2Page() {
           </div>
         </div>
 
+        {/* Referral intro */}
+        <p className="text-muted-foreground leading-relaxed mb-14">
+          Before we get into how to use Tread, the first step is creating an account. Use this referral link:{' '}
+          <a href="https://app.tread.fi/referral/59S1TB1X" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+            https://app.tread.fi/referral/59S1TB1X
+          </a>{' '}
+          — Complete the signup process, set your credentials, and log in.
+        </p>
+
         {/* Section: What this tool actually does */}
         <section className="mb-12 border-t border-border/30 pt-12">
           <h2 className="text-2xl font-bold text-foreground mb-4">What This Tool Actually Does</h2>
