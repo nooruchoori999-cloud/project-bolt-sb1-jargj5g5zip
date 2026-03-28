@@ -17,6 +17,7 @@ import BlendBotPage from "@/pages/BlendBotPage";
 import RSIBotPage from "@/pages/RSIBotPage";
 import YourFirstBot from "@/pages/YourFirstBot";
 import Lesson1Page from "@/pages/Lesson1Page";
+import Lesson2Page from "@/pages/Lesson2Page";
 
 function Router() {
   return (
@@ -26,6 +27,7 @@ function Router() {
         <Route path="/" component={Home} />
         <Route path="/lessons" component={Lessons} />
         <Route path="/lessons/1" component={Lesson1Page} />
+        <Route path="/lessons/2" component={Lesson2Page} />
         <Route path="/glossary" component={Glossary} />
         <Route path="/faq" component={FAQ} />
         <Route path="/get-started" component={YourFirstBot} />

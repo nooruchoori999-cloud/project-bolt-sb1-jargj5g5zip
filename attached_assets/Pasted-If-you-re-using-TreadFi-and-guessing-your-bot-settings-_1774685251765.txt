@@ -1,0 +1,134 @@
+If you’re using TreadFi and guessing your bot settings…
+You’re already behind.
+There’s a new tool that changes the game:
+👉 https://treadtools.vercel.app/win-rate
+Let me break it down.
+🧠 What this tool actually does
+This isn’t just another calculator.
+It uses machine learning trained on 90 days of real user bot trading data to figure out:
+* 		What settings actually worked
+* 		
+* 		Which configs were profitable
+* 		
+* 		What patterns repeat
+* 		
+But here’s the interesting part 👇
+It doesn’t stop at historical data.
+⚡ Real-time market validation
+Once it finds a “good” setup from past data, it:
+* 		Checks the last 90 minutes (1-minute candles)
+* 		
+* 		Analyzes current market conditions
+* 		
+* 		Validates whether that setup still makes sense right now
+* 		
+So you’re not just trading based on the past…
+You’re trading with context.
+🔧 What you can do with it
+1. Test your own setup
+You can input:
+* 		Exchange
+* 		
+* 		Pair
+* 		
+* 		Mode
+* 		
+* 		Spread
+* 		
+* 		Leverage
+* 		
+* 		Duration
+* 		
+* 		Bias
+* 		
+* 		SL / TP
+* 		
+
+[https://postimg.cc/rKbL892P]
+And click on predict outcome and it will tell you:
+* 		✅ Probability of hitting TP (profit)
+* 		
+* 		❌ Probability of hitting SL (loss)
+* 		
+* 		% probability of ending in profit
+* 		
+* 		% probability of ending in loss
+* 		
+* 		Strategy ranking vs other winning configurations
+* 		
+* 		Strategy ranking vs other winning configurations
+* 		
+* 		🏆 A tier rating (S → D)
+* 		
+
+[https://postimg.cc/fJFhwvQ6]
+This is powerful because:
+You can validate your setup before risking capital.
+🏆 Understanding the Tier System
+* 		S Tier → Highest probability setups (best edge)
+* 		
+* 		A Tier → Strong setups (good chance of profit)
+* 		
+* 		B/C Tier → Average
+* 		
+* 		D Tier → Weak setups (avoid)
+* 		
+👉 Simple rule:
+Stick to S & A tier configs if you want better odds of staying green.
+🤖 2. Let the tool find the BEST config for you
+Don’t want to guess anything?
+Just:
+* 		Select exchange + pair
+* 		
+* 		Click “Find Best Config”
+* 		
+
+[https://postimg.cc/N5VwgxvZ]
+
+Provide a caption (optional)
+It will give you:
+* 		The top-performing setup
+* 		
+* 		Its tier rating
+* 		
+* 		The exact settings that historically performed best
+* 		
+
+[https://postimg.cc/SJ5pyGp0]
+All based on:
+* 		90 days of trading data
+* 		
+* 		current 90-minute market conditions
+* 		
+If grid reset (for Grid bots) or TP reset (for RGrid) isn’t available in these configs, just stick with the default settings for those.
+⚠️ Important: This is NOT a guarantee
+Let’s be clear:
+This tool gives probabilities, not certainties.
+Markets change.
+But from my testing:
+👉 It’s been surprisingly reliable
+👉 Especially when sticking to S & A tier setups
+🎯 Why this matters
+Most people lose on TreadFi because:
+* 		They over-randomize settings
+* 		
+* 		They don’t understand market conditions
+* 		
+* 		They run bots blindly
+* 		
+This tool solves all three.
+It tells you:
+“This setup has edge”
+or
+“You’re likely walking into a loss”
+🧩 Final Thoughts
+If you’re serious about using TreadFi profitably:
+* 		Stop guessing
+* 		
+* 		Start validating
+* 		
+Use data.
+Use probability.
+Use tools like this.
+Because in this game…
+Edge is everything.

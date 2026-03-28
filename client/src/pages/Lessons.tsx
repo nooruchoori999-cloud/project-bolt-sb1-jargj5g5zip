@@ -13,6 +13,16 @@ const lessons = [
     level: 'Intermediate',
     path: '/lessons/1',
   },
+  {
+    id: 2,
+    number: 'Lesson 2',
+    title: 'How to Use the TreadTools Win-Rate Predictor to Validate Your Bot Setup',
+    description:
+      'If you\'re guessing your bot settings, you\'re already behind. This tool uses machine learning trained on 90 days of real trading data to validate your setup and tell you the probability of profit before you risk a single dollar.',
+    duration: '8 min read',
+    level: 'Intermediate',
+    path: '/lessons/2',
+  },
 ];
 
 export default function Lessons() {
