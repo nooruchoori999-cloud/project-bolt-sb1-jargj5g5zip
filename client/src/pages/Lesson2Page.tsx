@@ -19,7 +19,7 @@ export default function Lesson2Page() {
             Lesson 2
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4 tracking-tight">
-            How to Use the TreadTools Win-Rate Predictor to Validate Your Bot Setup
+            How to Find High-Probability TreadFi MM BOT Setups Using This ML Tool
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mb-6">
             If you're using TreadFi and guessing your bot settings, you're already behind. There's a new tool that uses machine learning trained on real trading data to validate your setup before you risk capital.
@@ -117,7 +117,7 @@ export default function Lesson2Page() {
           </div>
 
           <img
-            src="https://postimg.cc/rKbL892P"
+            src="https://i.postimg.cc/rKbL892P/Screenshot-2026-03-28-at-12-20-27-PM.png"
             alt="TreadTools win-rate predictor input form"
             className="w-full rounded-xl mb-6"
           />
@@ -144,7 +144,7 @@ export default function Lesson2Page() {
           </div>
 
           <img
-            src="https://postimg.cc/fJFhwvQ6"
+            src="https://i.postimg.cc/fJFhwvQ6/Screenshot-2026-03-28-at-12-32-32-PM.png"
             alt="TreadTools win-rate predictor outcome results"
             className="w-full rounded-xl"
           />
@@ -184,7 +184,7 @@ export default function Lesson2Page() {
           </p>
 
           <img
-            src="https://postimg.cc/N5VwgxvZ"
+            src="https://i.postimg.cc/N5VwgxvZ/Screenshot-2026-03-28-at-12-34-36-PM.png"
             alt="TreadTools Find Best Config button"
             className="w-full rounded-xl mb-6"
           />
@@ -209,7 +209,7 @@ export default function Lesson2Page() {
           </div>
 
           <img
-            src="https://postimg.cc/SJ5pyGp0"
+            src="https://i.postimg.cc/SJ5pyGp0/Screenshot-2026-03-28-at-12-36-20-PM.png"
             alt="TreadTools best config results"
             className="w-full rounded-xl mb-4"
           />
