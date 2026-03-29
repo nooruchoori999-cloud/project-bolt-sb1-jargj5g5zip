@@ -16,7 +16,12 @@ const terms = [
   },
   {
     term: 'Participation Rate',
-    definition: 'The rate at which your bot participates in market volume. It controls how aggressively the bot places orders relative to overall market activity, helping balance between faster execution and minimizing market impact.',
+    definition: 'Participation Rate controls how quickly the bot builds your position toward maximum exposure. For a $10k notional order, $500 will be max exposure.',
+    content: [
+      { label: 'Aggressive', text: 'the bot fills rapidly, meaning most of your exposure gets built around a single price point. Fast execution but concentrated entry.' },
+      { label: 'Passive', text: 'the bot fills slowly, laddering into the position over time. If price moves against you during this period, you naturally get a better average entry because you\'re buying at multiple price levels instead of one.' },
+    ],
+    note: 'Aggressive is not always better. In a fast moving market, passive participation can actually protect you — turning adverse price movement into a lower average entry rather than immediate drawdown at a single price point.',
     category: 'Trading',
   },
   {
@@ -143,6 +148,21 @@ export default function Glossary() {
                   </Badge>
                 </div>
                 <p className="text-muted-foreground leading-relaxed text-sm">{item.definition}</p>
+                {'content' in item && item.content && (
+                  <ul className="mt-3 space-y-2">
+                    {(item.content as { label: string; text: string }[]).map((pt, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <span className="mt-2 block w-1.5 h-1.5 rounded-full flex-shrink-0 gradient-bg-cyan-emerald" />
+                        <span className="text-muted-foreground text-sm">
+                          <span className="text-foreground font-semibold">{pt.label}</span> — {pt.text}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {'note' in item && item.note && (
+                  <p className="mt-3 text-muted-foreground text-sm italic">{item.note as string}</p>
+                )}
               </div>
             );
           })}
