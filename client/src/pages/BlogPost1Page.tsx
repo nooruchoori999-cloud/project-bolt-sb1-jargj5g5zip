@@ -19,10 +19,10 @@ export default function BlogPost1Page() {
             Market Making
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4 tracking-tight">
-            Is Tread.fi Really Doing What Institutional Market Makers Do?
+            Is Treadfi Really Doing What Institutional Market Makers Do?
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mb-6">
-            Every time a new market making tool emerges in the crypto space, the same question follows: is this wash trading? This article breaks down exactly what Tread.fi does, why it's legitimate, and why the volume it generates is not only real, but essential for healthy markets.
+            Every time a new market making tool emerges in the crypto space, the same question follows: is this wash trading? This article breaks down exactly what treadfi does, why it's legitimate, and why the volume it generates is not only real, but essential for healthy markets.
           </p>
           <div className="flex items-center gap-4 text-xs text-muted-foreground">
             <div className="flex items-center gap-1.5">
@@ -54,7 +54,7 @@ export default function BlogPost1Page() {
 
         {/* Section: Institutional vs Tread.fi */}
         <section className="mb-12 border-t border-border/30 pt-12">
-          <h2 className="text-2xl font-bold text-foreground mb-6">Institutional Market Makers vs. Tread.fi</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-6">Institutional Market Makers vs. treadfi</h2>
           <p className="text-muted-foreground leading-relaxed mb-6">
             Here is what sophisticated institutional market makers like Wintermute, Jump Trading, and GSR actually do:
           </p>
@@ -78,7 +78,7 @@ export default function BlogPost1Page() {
           </div>
 
           <div className="bg-card border border-card-border rounded-xl p-6 mb-6">
-            <p className="text-foreground font-semibold mb-4">Now look at tread.fi:</p>
+            <p className="text-foreground font-semibold mb-4">Now look at treadfi:</p>
             <ul className="space-y-2.5">
               {[
                 'Connects to exchanges via API ✅',
@@ -137,7 +137,7 @@ export default function BlogPost1Page() {
 
         {/* Section: How Tread.fi Actually Works */}
         <section className="mb-12 border-t border-border/30 pt-12">
-          <h2 className="text-2xl font-bold text-foreground mb-4">How Tread.fi Actually Works</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-4">How treadfi Actually Works</h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
             It is not a vault. It is not a fund. There is no one managing your money on your behalf.
           </p>

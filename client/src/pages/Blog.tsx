@@ -6,9 +6,9 @@ const posts = [
   {
     id: 1,
     category: 'Market Making',
-    title: 'Is Tread.fi Really Doing What Institutional Market Makers Do?',
+    title: 'Is Treadfi Really Doing What Institutional Market Makers Do?',
     excerpt:
-      'Every time a new market making tool emerges in the crypto space, the same question follows: is this wash trading? This article breaks down exactly what Tread.fi does, why it\'s legitimate, and why the volume it generates is not only real, but essential for healthy markets.',
+      'Every time a new market making tool emerges in the crypto space, the same question follows: is this wash trading? This article breaks down exactly what treadfi does, why it\'s legitimate, and why the volume it generates is not only real, but essential for healthy markets.',
     duration: '8 min read',
     path: '/blog/1',
   },
