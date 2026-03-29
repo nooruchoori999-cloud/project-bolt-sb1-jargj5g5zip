@@ -18,6 +18,8 @@ import RSIBotPage from "@/pages/RSIBotPage";
 import YourFirstBot from "@/pages/YourFirstBot";
 import Lesson1Page from "@/pages/Lesson1Page";
 import Lesson2Page from "@/pages/Lesson2Page";
+import Blog from "@/pages/Blog";
+import BlogPost1Page from "@/pages/BlogPost1Page";
 
 function Router() {
   return (
@@ -28,6 +30,8 @@ function Router() {
         <Route path="/lessons" component={Lessons} />
         <Route path="/lessons/1" component={Lesson1Page} />
         <Route path="/lessons/2" component={Lesson2Page} />
+        <Route path="/blog" component={Blog} />
+        <Route path="/blog/1" component={BlogPost1Page} />
         <Route path="/glossary" component={Glossary} />
         <Route path="/faq" component={FAQ} />
         <Route path="/get-started" component={YourFirstBot} />
