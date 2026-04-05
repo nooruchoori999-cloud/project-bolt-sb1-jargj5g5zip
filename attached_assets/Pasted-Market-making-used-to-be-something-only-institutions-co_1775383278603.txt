@@ -1,0 +1,204 @@
+Market making used to be something only institutions could do efficiently. But tools like TreadFi are changing that, allowing retail users to capture incentives without taking significant market risk.
+In this article, I’ll break down exactly how I generated an 1160% APY using a delta-neutral strategy on the ZAMA/USDC pair using @tread_fi 
+Before we get into how to do this campaign with @tread_fi , the first step is creating an account. Use this referral link: https://app.tread.fi/referral/59S1TB1X — Complete the signup process, set your credentials, and log in.
+What Is TreadFi?
+TreadFi has built a powerful market-making platform that allows users to place automated orders on orderbooks.
+The key idea:
+Projects want deeper liquidity → so they offer rewards
+You provide liquidity → you earn incentives
+This creates an opportunity for retail traders to earn yield simply by placing orders.
+The Opportunity: ZAMA/USDC Campaign
+I participated in a campaign run by @useMonarch and @tread_fi , which offered:
+* 		$2,500 weekly rewards
+* 		
+* 		Incentives for placing orders on the ZAMA/USDC spot pair
+* 		
+* 		Rewards based on order placement and spread quality
+* 		
+https://x.com/tread_fi/status/2033709586130387232
+The Challenge
+As a retail trader, market making manually is tough because:
+* 		You get filled → you take price risk
+* 		
+* 		You mismanage spreads → you lose money
+* 		
+* 		Execution inefficiency eats profits
+* 		
+So the goal was clear:
+👉 Earn rewards
+👉 Avoid price exposure
+The Solution: Delta Neutral Strategy
+To eliminate price risk, I used a delta-neutral (DN) setup:
+* 		Buy ZAMA on spot on @HyperliquidX 
+* 		
+* 		Short ZAMA on perps on @Aster_DEX 
+* 		
+* 		Net exposure = ~0
+* 		
+If you dont already have an Aster account, use this link to sign up with Aster.
+https://www.asterdex.com/en/referral/79B524
+This way, I’m not betting on price direction—just farming rewards.
+Step-by-Step Setup
+1. Capital Requirement
+Minimum: $2,000
+* 		$1,000 in USDC
+* 		
+* 		$1,000 in ZAMA
+* 		
+2. Create a Delta Neutral Position
+Using TreadFi’s DN bot:
+* 		Deposit $2,000 USDC into your Hyperliquid spot account, and around 1000 USDC ( you can just put 100-200 too, but you will have to balance marign manully to avoid liquidation if price moves against your perps position) in @Aster_DEX as a margin for aster perps.
+* 		
+* 		Go to the DN bot page (https://app.tread.fi/delta_neutral_bot)
+* 		
+* 		Configure:
+* 		
+Long Side (Spot):
+* 		Pair: ZAMA/USDC
+* 		
+Short Side (Perps):
+* 		Platform: Aster
+* 		
+* 		Pair: ZAMA Perpetual
+* 		
+* 		Set:
+* 		
+* 		Notional: $1,000
+* 		
+* 		TWAP duration: 60 minutes
+* 		
+* 		Stop loss: Uncapped
+* 		
+* 		Start the bot
+* 		
+
+[https://postimg.cc/vgmk2XZw]
+After execution: (Will take 60 minute)
+* 		You hold ZAMA on spot
+* 		
+* 		You’re short ZAMA on perps
+* 		
+* 		Your position is delta neutral
+* 		
+3. Start Market Making
+Now go to the Volume Bot: (https://app.tread.fi/volume_bot)
+* 		Select ZAMA campaign
+* 		
+
+[https://postimg.cc/8JC9XwzT]
+* 		Book as many time slots as possible
+* 		
+
+[https://postimg.cc/XGvm1xYbv]
+Spread Strategy
+You’ll see options like:
+* 		Blend +10
+* 		
+* 		Blend +20
+* 		
+* 		Blend +50
+* 		
+
+[https://postimg.cc/62Qgbzp9]
+Spread define how far your orders are from market price.
+My Strategy (Key Insight)
+I used:
+👉 Highest spread (Blend +50)
+Why?
+* 		Lower chance of getting filled
+* 		
+* 		Minimal price exposure
+* 		
+* 		Still eligible for rewards
+* 		
+Even though tighter spreads give higher rewards, they also increase risk.
+My goal was simple:
+👉 Earn rewards without getting filled
+[https://postimg.cc/zbPMsWyZ]
+Managing Fills (Important)
+Even with high spreads, ZAMA is illiquid—so fills can happen.
+What happens if you get filled?
+You become unbalanced:
+* 		Example: More ZAMA, less USDC
+* 		
+Now you have price exposure.
+How to Handle It
+You have 3 options:
+1. Let the Bot Handle It
+* 		Can result in small profit or loss
+* 		
+* 		I mostly used this approach
+* 		
+2. Manual Rebalancing
+* 		Sell excess ZAMA
+* 		
+* 		Restore balance
+* 		
+3. Adjust Bot Spread Manually
+* 		Go to orders page(https://app.tread.fi/volume_bot) and click on your order
+* 		
+[https://postimg.cc/gXB5CRxm]
+
+* 		Move to tighter spread (Blend +0)
+* 		
+
+[https://postimg.cc/dkSXbdhJ]
+* 		Let bot rebalance faster
+* 		
+* 		Then once its rebalanced to 50-50, change it back to Blend+50
+* 		
+
+Pro Tips (From Experience)
+* 		You get filled more when new time slots start
+* 		
+* 		Other users rebalance → your orders get hit
+* 		
+What I did:
+* 		Paused bot for first 30 minutes of new slots
+* 		
+* 		Avoided high volatility periods
+* 		
+Goal:
+👉 Stay unfilled as much as possible
+Results
+* 		Weekly reward captured
+* 		
+* 		Minimal trading losses (~$10–$25)
+* 		
+* 		Total weekly profit ≈ $100 on $2,000
+* 		
+
+[https://postimg.cc/gXB5CRxz]
+That translates to:
+👉 ~1160% APY
+Closing the Position
+Once the campaign ends:
+* 		Go to DN bot (https://app.tread.fi/delta_neutral_bot)
+* 		
+* 		Unwind your DN position by clicking two arrows on your DN position
+* 		
+
+[https://postimg.cc/R6b8kfWMv]
+* 		Bot will:
+* 		Sell ZAMA spot
+* 		Close perps short
+* 		
+You’re back fully in USDC.
+Final Thoughts
+This strategy highlights a powerful shift in crypto:
+* 		Retail traders can now access market-making opportunities
+* 		
+* 		Incentive programs create real yield
+* 		
+* 		Tools like TreadFi remove execution complexity
+* 		
+However:
+⚠️ Returns vary
+⚠️ Market conditions matter
+⚠️ Risk still exists if mismanaged
+Key Takeaway
+You don’t need to predict the market to make money.
+With the right setup, you can:
+👉 Stay delta neutral
+👉 Provide liquidity
+👉 Earn incentives consistently

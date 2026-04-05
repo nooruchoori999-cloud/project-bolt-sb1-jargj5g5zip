@@ -20,6 +20,7 @@ import Lesson1Page from "@/pages/Lesson1Page";
 import Lesson2Page from "@/pages/Lesson2Page";
 import Blog from "@/pages/Blog";
 import BlogPost1Page from "@/pages/BlogPost1Page";
+import BlogPost2Page from "@/pages/BlogPost2Page";
 
 function Router() {
   return (
@@ -32,6 +33,7 @@ function Router() {
         <Route path="/lessons/2" component={Lesson2Page} />
         <Route path="/blog" component={Blog} />
         <Route path="/blog/1" component={BlogPost1Page} />
+        <Route path="/blog/2" component={BlogPost2Page} />
         <Route path="/glossary" component={Glossary} />
         <Route path="/faq" component={FAQ} />
         <Route path="/get-started" component={YourFirstBot} />
