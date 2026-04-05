@@ -348,6 +348,15 @@ export default function BlogPost2Page() {
           <p className="text-muted-foreground leading-relaxed mb-6">
             Even though tighter spreads give higher rewards, they also increase risk.
           </p>
+          <div className="flex justify-center mb-6">
+            <blockquote
+              className="twitter-tweet"
+              data-theme="dark"
+              data-width="550"
+            >
+              <a href="https://twitter.com/tread_fi/status/2037182769663795680"></a>
+            </blockquote>
+          </div>
           <div className="bg-card border border-card-border rounded-xl p-5 mb-6">
             <p className="text-foreground font-semibold">My goal was simple: earn rewards without getting filled.</p>
           </div>
