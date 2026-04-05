@@ -1,8 +1,20 @@
+import { useEffect } from 'react';
 import { Clock, ArrowLeft, Tag } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'wouter';
 
 export default function BlogPost2Page() {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://platform.twitter.com/widgets.js';
+    script.async = true;
+    script.charset = 'utf-8';
+    document.body.appendChild(script);
+    return () => {
+      if (document.body.contains(script)) document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -89,14 +101,15 @@ export default function BlogPost2Page() {
               ))}
             </ul>
           </div>
-          <a
-            href="https://x.com/tread_fi/status/2033709586130387232"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary hover:underline text-sm"
-          >
-            https://x.com/tread_fi/status/2033709586130387232
-          </a>
+          <div className="flex justify-center">
+            <blockquote
+              className="twitter-tweet"
+              data-theme="dark"
+              data-width="550"
+            >
+              <a href="https://twitter.com/tread_fi/status/2033709586130387232"></a>
+            </blockquote>
+          </div>
         </section>
 
         {/* Section: The Challenge */}
@@ -521,7 +534,7 @@ export default function BlogPost2Page() {
             </ul>
 
             <img
-              src="https://i.postimg.cc/NFgcrkYr/Screenshot-2026-04-05-at-1-24-29-PM.png"
+              src="https://i.postimg.cc/SS9N3gvV/Screenshot-2026-04-05-at-1-24-29-PM.png"
               alt="Unwind DN position on TreadFi"
               className="rounded-xl max-w-full mx-auto block mb-4"
             />

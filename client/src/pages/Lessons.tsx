@@ -23,6 +23,16 @@ const lessons = [
     level: 'Intermediate',
     path: '/lessons/2',
   },
+  {
+    id: 3,
+    number: 'Lesson 3',
+    title: 'How I Earned 1160% APY on TreadFi Market Making on ZAMA/USDC (Delta Neutral Strategy)',
+    description:
+      'Market making used to be something only institutions could do efficiently. Here\'s a full walkthrough of the delta-neutral strategy I used to earn 1160% APY on the ZAMA/USDC pair — earning rewards without taking significant market risk.',
+    duration: '8 min read',
+    level: 'Intermediate',
+    path: '/blog/2',
+  },
 ];
 
 export default function Lessons() {
