@@ -348,15 +348,27 @@ export default function BlogPost2Page() {
           <p className="text-muted-foreground leading-relaxed mb-6">
             Even though tighter spreads give higher rewards, they also increase risk.
           </p>
-          <div className="flex justify-center mb-6">
-            <blockquote
-              className="twitter-tweet"
-              data-theme="dark"
-              data-width="550"
-            >
-              <a href="https://twitter.com/tread_fi/status/2037182769663795680"></a>
-            </blockquote>
-          </div>
+          <a
+            href="https://x.com/tread_fi/status/2037182769663795680"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block mb-6 group"
+          >
+            <div className="bg-card border border-primary/20 rounded-xl p-5 hover:border-primary/50 transition-colors">
+              <div className="flex items-center gap-2 mb-3">
+                <svg viewBox="0 0 24 24" className="w-4 h-4 fill-foreground flex-shrink-0" aria-label="X (Twitter)"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.741l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                <span className="text-xs font-semibold text-foreground">tread.fi</span>
+                <span className="text-xs text-muted-foreground">@tread_fi</span>
+              </div>
+              <p className="text-sm text-foreground leading-relaxed">
+                The heuristics for rewards are:<br />
+                <br />
+                50% based on % of boosted total traded volume<br />
+                50% based on % of quoted depth (does not need to be traded volume)
+              </p>
+              <p className="text-xs text-muted-foreground mt-3 group-hover:text-primary transition-colors">View on X →</p>
+            </div>
+          </a>
           <div className="bg-card border border-card-border rounded-xl p-5 mb-6">
             <p className="text-foreground font-semibold">My goal was simple: earn rewards without getting filled.</p>
           </div>
