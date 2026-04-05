@@ -268,7 +268,7 @@ export default function BlogPost2Page() {
               className="rounded-xl max-w-full mx-auto block mb-6"
             />
 
-            <ul className="space-y-2">
+            <ul className="space-y-2 mb-4">
               {['Book as many time slots as possible'].map((pt, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <span className="mt-2 block w-1.5 h-1.5 rounded-full flex-shrink-0 gradient-bg-cyan-emerald" />
@@ -276,6 +276,12 @@ export default function BlogPost2Page() {
                 </li>
               ))}
             </ul>
+
+            <img
+              src="https://i.postimg.cc/QtgDtyLH/Screenshot-2026-04-05-at-1-19-24-PM.png"
+              alt="Book time slots on TreadFi volume bot"
+              className="rounded-xl max-w-full mx-auto block"
+            />
           </div>
         </section>
 
@@ -513,6 +519,12 @@ export default function BlogPost2Page() {
                 </li>
               ))}
             </ul>
+
+            <img
+              src="https://i.postimg.cc/NFgcrkYr/Screenshot-2026-04-05-at-1-24-29-PM.png"
+              alt="Unwind DN position on TreadFi"
+              className="rounded-xl max-w-full mx-auto block mb-4"
+            />
             <p className="text-foreground font-semibold mb-3">The bot will:</p>
             <ul className="space-y-2">
               {['Sell ZAMA spot', 'Close perps short'].map((pt, i) => (
