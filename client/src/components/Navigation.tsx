@@ -16,6 +16,7 @@ const botModes = [
   { path: '/modes/rgrid', label: 'RGRID' },
   { path: '/modes/rsi', label: 'RSI' },
   { path: '/modes/blend', label: 'BLEND' },
+  { path: '/modes/polymarket', label: 'Polymarket' },
 ];
 
 export default function Navigation() {

@@ -33,6 +33,16 @@ const lessons = [
     level: 'Intermediate',
     path: '/blog/2',
   },
+  {
+    id: 4,
+    number: 'Lesson 4',
+    title: 'TreadFi × Polymarket: Market Making on Prediction Markets',
+    description:
+      'TreadFi\'s Polymarket integration unlocks a completely new way to interact with prediction markets — from placing bets with institutional-grade execution algorithms, to running automated MM bots and earning liquidity rewards.',
+    duration: '10 min read',
+    level: 'Advanced',
+    path: '/modes/polymarket',
+  },
 ];
 
 export default function Lessons() {

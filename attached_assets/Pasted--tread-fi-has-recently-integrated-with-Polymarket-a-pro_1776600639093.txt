@@ -1,0 +1,338 @@
+@tread_fi  has recently integrated with @Polymarket  — a process that took months to complete and has turned into one of the most significant integrations for TreadFi so far.
+This integration unlocks a completely new way to interact with Polymarket — not just placing bets, but doing it smarter, more efficiently, and even algorithmically.
+What Does the TreadFi × Polymarket Integration Offer?
+Before we get into how to use Tread, the first step is creating an account. Use this referral link: https://app.tread.fi/referral/59S1TB1X — Complete the signup process, set your credentials, and log in.
+1) Place Bets on Polymarket via TreadFi
+You can now directly place prediction market bets on Polymarket using the TreadFi interface.
+Why is this different from using Polymarket directly?
+First — Region Accessibility
+Many users prefer this setup because it can bypass regional restrictions. If you’re in a restricted region, you can still access Polymarket markets through TreadFi’s frontend.
+Second — Institutional-Grade Execution
+TreadFi allows you to use advanced execution algorithms like:
+* 		VWAP (Volume Weighted Average Price)
+* 		
+* 		TWAP (Time Weighted Average Price)
+* 		
+* 		Aggressive Maker strategies
+* 		
+These tools let you scale into positions with minimal market impact, which is critical when entering low-liquidity prediction markets without causing price slippage.
+2) Market Making on Polymarket
+The real unlock here is the ability to market make on Polymarket’s order book using TreadFi’s MM bot.
+This is what most advanced users are interested in — generating yield by providing liquidity rather than just betting.
+Step 1: Setting Up Your TreadFi Wallet (Important)
+Before you start market making, there’s a critical setup step.
+Unlike regular usage, Polymarket requires manual transaction signing for every trade, which makes it unsuitable for automated strategies like market making.
+To solve this, TreadFi uses a special embedded wallet system.
+Key Rule:
+You cannot import your existing Polymarket wallet.
+You must create a new wallet inside TreadFi that is compatible with automation.
+TreadFi does not take custody of your private key — this setup is purely for enabling seamless execution.
+Step 2: Create Your TreadFi Wallet
+* 		Go to tread.fi
+* 		
+* 		Click on Wallet 
+* 		
+
+[https://i.postimg.cc/j2HXVQ9G/Screenshot-2026-04-19-at-3-51-58-PM.png]
+Provide a caption (optional)
+* 		Select Create Wallet
+* 		
+
+[https://postimg.cc/xNdHMH9G]
+Provide a caption (optional)
+* 		Once created, click Export Private Key
+* 		
+
+[https://postimg.cc/y3N9c97m]
+
+Provide a caption (optional)
+* 		Store your private key securely (this is extremely important)
+* 		
+Step 3: Fund Your Wallet
+* 		Click on Receive
+* 		
+
+[https://postimg.cc/GTpYGYbq]
+
+Provide a caption (optional)
+* 		Copy your EVM address
+* 		
+
+[https://postimg.cc/9wfTZTc1]
+Provide a caption (optional)
+* 		Transfer USDC to this address using any supported network
+* 		
+Step 4: Transfer Funds to Polymarket
+Once your USDC arrives in your TreadFi wallet:
+* 		Click on Transfer
+* 		
+
+[https://postimg.cc/JHhJZJR6]
+
+Provide a caption (optional)
+* 		Move funds from TreadFi Wallet → Polymarket
+* 		
+
+[https://postimg.cc/hQGxTxK2]
+
+Provide a caption (optional)
+* 		Confirm the transfer
+* 		
+
+[https://postimg.cc/wRBJLJ9P]
+
+Provide a caption (optional)
+After this, your funds will be available on Polymarket.
+What’s Next?
+At this stage, your setup is complete:
+* 		Wallet created
+* 		
+* 		Funds deposited
+* 		
+* 		Polymarket connected
+* 		
+You’re now ready to:
+* 		📷 Place bets using advanced execution
+* 		
+* 		Or move to the next level — ￼ market making using TreadFi’s MM bot
+* 		
+How to Place Bets on Polymarket Using TreadFi (Frontend Guide)
+Once your wallet is funded and connected, you can start placing bets on Polymarket directly through TreadFi.
+Step 1: Navigate to Prediction Markets
+* 		Go to the TreadFi dashboard
+* 		
+* 		Click on “Predict” from the menu
+* 		
+
+[https://postimg.cc/FkKc3ch2]
+
+Provide a caption (optional)
+This will open up all available Polymarket markets.
+Step 2: Choose Your Market
+Browse through the available markets and select the one you want to participate in.
+
+[https://postimg.cc/RJ0fKfMx]
+
+Provide a caption (optional)
+Step 3: Choose Your Order Type
+TreadFi gives you three different ways to enter a position:
+
+[https://postimg.cc/bSvbkbzj]
+
+Provide a caption (optional)
+1) Market Orders
+A market order executes instantly at the best available price.
+* 		Fast execution
+* 		
+* 		Can lead to slippage, especially in low liquidity markets
+* 		
+Best used when speed matters more than price precision.
+2) Limit Orders
+A limit order lets you specify the exact price at which you want to buy or sell.
+* 		Full price control
+* 		
+* 		No unexpected slippage
+* 		
+* 		Execution only happens if the market reaches your price
+* 		
+Best used when you want precision and patience.
+3) ALGO Orders (TreadFi Edge 🚀)
+This is where TreadFi stands out.
+Instead of manually placing orders, you can use advanced execution algorithms designed for institutional-level trading.
+
+[https://postimg.cc/CdMb3ybd]
+
+Provide a caption (optional)
+VWAP (Volume Weighted Average Price)
+VWAP allows you to execute orders gradually over time.
+* 		Splits your order into smaller chunks
+* 		
+* 		Executes more during high liquidity periods
+* 		
+* 		Minimizes market impact and slippage
+* 		
+Perfect if you’re entering with size and don’t want to move the market.
+TWAP (Time Weighted Average Price)
+TWAP executes your order at a fixed rate over time.
+* 		Predictable execution schedule
+* 		
+* 		Does not adjust based on market conditions
+* 		
+* 		Simple and consistent
+* 		
+Ideal for steady accumulation without overthinking market volume.
+Aggressive Maker Strategy
+The Aggressive Maker strategy is built for traders who want:
+* 		Strong presence on the order book
+* 		
+* 		High probability of execution
+* 		
+* 		Faster fills while still acting as a liquidity provider
+* 		
+This strikes a balance between passive and aggressive execution.
+Why Use These Algos?
+These tools are especially useful if:
+* 		You’re entering with large capital
+* 		
+* 		You want minimal price impact
+* 		
+* 		You want professional-grade execution
+* 		
+Instead of manually placing orders and moving the market, these strategies help you enter efficiently and intelligently.
+Using TreadFi, you’re not just placing bets — you’re executing them like a professional trader.
+* 		Market → Fast but can slip
+* 		
+* 		Limit → Precise but requires patience
+* 		
+* 		Algo → Smart execution with minimal impact
+* 		
+This is how you can place bets on Polymarket using TreadFi.
+How to Use MM Bots on Polymarket with TreadFi
+This is the most important feature of the TreadFi × Polymarket integration — and something that is not available on any other Polymarket frontend.
+With TreadFi, you can automate market making on Polymarket, allowing you to provide liquidity and potentially earn consistent returns.
+There are two ways to run an MM bot:
+1) Reward Markets (Incentivized Market Making)
+These are markets where you get paid incentives for providing liquidity.
+How to access:
+* 		Go to Predict
+* 		
+* 		Open the Rewards tab
+* 		
+
+[https://postimg.cc/Zvq3p3TT]
+
+Provide a caption (optional)
+* 		Choose a market offering MM incentives
+* 		
+Key characteristics:
+* 		Requires higher capital (~$150–$250+, depending on share price)
+* 		
+* 		Only limit orders qualify
+* 		
+* 		Must meet minimum share size requirements
+* 		
+Setup:
+* 		Select the market
+* 		
+* 		Configure your bot parameters (spread, mode, etc.)
+* 		
+
+[https://postimg.cc/Z0Y6Gk6B]
+
+Provide a caption (optional)
+* 		Start the MM bot
+* 		
+
+[https://postimg.cc/nMVqy8qq]
+
+Provide a caption (optional)
+Who is this for?
+* 		Advanced users
+* 		
+* 		Traders looking to farm rewards + fees
+* 		
+⚠️ Note:
+While rewards can be attractive, the higher capital requirement and stricter conditions make this less suitable for beginners.
+2) Any Market (Non-Reward Market Making)
+This is the most flexible way to market make and ideal for getting started.
+How to access:
+* 		Go to Predict
+* 		
+* 		Select any market
+* 		
+* 		Click MM (top right of the market page)
+* 		
+Choosing Your Side
+You can choose:
+* 		Yes
+* 		
+* 		No
+* 		
+Both sides mirror the same order book, so the choice depends on your preference or strategy.
+Capital Requirement
+* 		Minimum margin: ~$10
+* 		
+* 		Much lower barrier compared to reward markets
+* 		
+MM Modes Available
+TreadFi provides multiple strategies to run your bot:
+Final Setup
+Once you choose your mode:
+* 		Set your spread
+* 		
+* 		Define Stop Loss (SL)
+* 		
+* 		Define Take Profit (TP)
+* 		
+* 		Click Start MM Bot
+* 		
+* 		Reward Markets → Higher capital, incentivized, advanced
+* 		
+* 		Any Market → Low capital, flexible, beginner-friendly
+* 		
+This flexibility is what makes TreadFi a powerful tool — you can start small, test strategies, and scale up as you gain confidence.
+Minimum Margin for Reward Eligibility
+On Polymarket, every reward market has a minimum shares requirement that your orders must meet to be eligible for incentives.
+This value usually ranges between 200–250 shares, depending on the market.
+
+[https://postimg.cc/8fCWMWTm]
+
+Provide a caption (optional)
+Instead of overcomplicating the calculation, a simple and practical approach is:
+👉 Using $200–$250 margin per market is generally enough to meet the minimum share requirement and qualify for rewards.
+This works across most markets and ensures your MM bot stays consistently eligible without needing constant adjustments.
+
+Strategies for Market Making on Polymarket
+Market making on Polymarket is still very new, and there’s no “perfect strategy” yet.
+The market structure is quite different from traditional trading:
+* 		Prone to manipulation
+* 		
+* 		High chances of adverse selection
+* 		
+* 		Liquidity can shift quickly
+* 		
+So while a lot of strategies are still being tested, here are a few approaches that have shown promising results so far when using TreadFi.
+1) RGRID for Trending Markets
+One key behavior in Polymarket is that prices often move directionally rather than staying range-bound.
+Because of this, RGRID (Reactive Grid) tends to perform better than static strategies.
+Why RGRID works:
+* 		Adjusts dynamically to price movement
+* 		
+* 		Follows trends instead of fighting them
+* 		
+* 		Captures momentum more effectively than standard grid
+* 		
+Where this has worked well:
+BTC 15-Minute Markets
+* 		These markets tend to trend strongly once a direction is established
+* 		
+* 		RGRID can ride these moves and generate consistent profits
+* 		
+
+[https://postimg.cc/Jt7jfwjb]
+
+Provide a caption (optional)
+Sports Markets (e.g., Football Matches)
+* 		Prices often stay flat initially
+* 		
+* 		Then move aggressively in one direction (goal, momentum shift, etc.)
+* 		
+* 		RGRID adapts quickly and benefits from these sudden trends
+* 		
+
+[https://postimg.cc/t7RFK0Ft]
+
+Provide a caption (optional)
+Key Insight
+Unlike traditional market making where you benefit from sideways action:
+👉 On Polymarket, trend-following MM strategies are often more effective
+Important Note
+These strategies are still evolving.
+* 		Results can vary by market
+* 		
+* 		Conditions change quickly
+* 		
+* 		Continuous testing is required
+* 		
+What works today may not work tomorrow — so treat this as a starting point, not a fixed system.
+As more data comes in, strategies will get sharper — but for now, RGRID in trending markets is one of the most practical approaches.
