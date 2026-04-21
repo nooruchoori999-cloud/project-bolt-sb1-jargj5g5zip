@@ -1,0 +1,64 @@
+What if I told you that you could earn a solid 400–500% APY — market making on your stablecoins? Yes, it's possible, and it's happening right now through TreadFi's campaign partnership with Paragon.
+By placing limit orders around @tradeparagon  trading pairs, you can qualify for $15,000 USD in rewards per week. And before you think it's already too diluted — TreadFi hasn't marketed this enough, and slots arent fully filled yet eventhough only 25 spots/slots are available. And most people assume it's too complex. The truth? It only takes a couple of clicks.
+How Does It Work?
+TreadFi uses an API to market make on Hyperliquid on your behalf. Your money never leaves your Hyperliquid account — you are not depositing anything onto TreadFi. This eliminates the smart contract risk that most DeFi strategies carry.
+The two primary risks to be aware of are:
+* 		Smart Contract Risk — Minimal, since your funds stay in your HL account.
+* 		
+* 		PnL / Price Exposure Risk — If your limit orders get filled, you may have brief price exposure. However, there are simple tricks to minimize this (covered below).
+* 		
+Getting Started
+Step 1 — Set Up Your Accounts
+* 		Create a TreadFi account using this referral link: https://app.tread.fi/referral/59S1TB1X
+* 		
+* 		Make sure you have a Hyperliquid (HL) Perps account with:Minimum 1,000 USDC to participate in at least one campaign
+* 		3,000 USDC if you want to participate in all available campaigns
+* 		
+* 		
+* 		
+Step 2 — Access the Campaigns
+Once both accounts are ready, head to the TreadFi MM Bot page:
+👉 https://app.tread.fi/volume_bot
+Click on Campaigns. 
+
+[01]
+You'll see four options. You can skip the Zama campaign for now (it's a separate campaign with a different structure). The three Paragon campaigns to focus on are:
+BTCD:PERP-USDC (Week 1) — hosted on Hyperliquid, offering $5,000 USDC per week with a minimum capital requirement of $1,000 USDC.
+OTHERS:PERP-USDC (Week 1) — hosted on Hyperliquid, offering $5,000 USDC per week with a minimum capital requirement of $1,000 USDC.
+TOTAL2:PERP-USDC (Week 3) — hosted on Hyperliquid, offering $5,000 USDC per week with a minimum capital requirement of $1,000 USDC.
+You can join one, two, or all three — personally, I enroll in all to maximize rewards.
+Step 3 — Configure Your Slots
+Click on any campaign, and you'll be able to choose from 28 slots for the week.
+
+[02]
+Provide a caption (optional)
+Step 4  → Select your spread (I choose 50 bps)
+
+[03]
+Provide a caption (optional)
+Important: Rewards are distributed based on:
+* 		50% Volume — the total trading volume your orders generate
+* 		
+* 		50% Order Uptime — how long your orders sit in the order book
+* 		
+This means you don't need to get filled to earn rewards.
+How to Minimize Price Exposure
+To avoid getting filled (and taking on price risk), choose a higher spread. The spread determines how far your orders are placed from the current mid price — the higher the spread, the less likely you are to get filled.
+My personal recommendation: set the spread to 50 bps (40 bps also feels safe). After selecting your spread, click Schedule — and you're done.
+What If You Do Get Filled?
+If a large price candle hits and fills your order, you can immediately close the position using a market order to stay delta neutral. Keep in mind that closing via market order typically incurs a 0.08% fee. In practice, at 50 bps spread, fills are rare unless there's significant market-moving news.
+Step 5 → Click Schedule
+
+[04]
+Provide a caption (optional)
+Step 6 → Done. Passive from here
+"I received $130 for a single week, quoting 1,000 USDC across 28 slots at 50 bps spread. That's an exceptional return for a week's work. I did experience some minor negative exposure, but nothing significant."
+
+[05]
+
+Provide a caption (optional)
+That translates to roughly $520/month on just $1,000 USDC — without actively trading.
+Summary
+This strategy uses TreadFi's market making bot on Hyperliquid as part of the TreadFi × Paragon campaign. The total weekly rewards pool is $15,000 USDC across three pairs, with a minimum capital requirement of $1,000 USDC. The recommended spread is 50 bps. Since funds stay in your HL account at all times, custody risk is essentially zero. Setup takes just a few minutes and the strategy runs passively from there.
+If you're holding stables and not putting them to work, this is one of the most capital-efficient strategies available right now. Give it a try.
+Referral link: https://app.tread.fi/referral/59S1TB1X

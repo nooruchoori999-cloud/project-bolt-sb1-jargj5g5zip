@@ -21,6 +21,15 @@ const posts = [
     duration: '8 min read',
     path: '/blog/2',
   },
+  {
+    id: 3,
+    category: 'Market Making',
+    title: 'How to Earn 400–500% APY Market Making on Your Stablecoins (TreadFi × Paragon Campaign)',
+    excerpt:
+      'By placing limit orders around Paragon trading pairs on Hyperliquid, you can qualify for $15,000 USD in rewards per week — and your funds never leave your account. Here\'s the exact step-by-step setup.',
+    duration: '6 min read',
+    path: '/blog/3',
+  },
 ];
 
 export default function Blog() {
