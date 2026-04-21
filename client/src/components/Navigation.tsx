@@ -8,6 +8,7 @@ const navLinks = [
   { path: '/blog', label: 'Blog' },
   { path: '/glossary', label: 'Glossary' },
   { path: '/faq', label: 'FAQ' },
+  { path: '/modes/dn-bot', label: 'DN Bot' },
 ];
 
 const botModes = [
@@ -17,7 +18,6 @@ const botModes = [
   { path: '/modes/rsi', label: 'RSI' },
   { path: '/modes/blend', label: 'BLEND' },
   { path: '/modes/polymarket', label: 'Polymarket' },
-  { path: '/modes/dn-bot', label: 'DN Bot' },
 ];
 
 export default function Navigation() {
