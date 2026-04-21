@@ -17,6 +17,7 @@ const botModes = [
   { path: '/modes/rsi', label: 'RSI' },
   { path: '/modes/blend', label: 'BLEND' },
   { path: '/modes/polymarket', label: 'Polymarket' },
+  { path: '/modes/dn-bot', label: 'DN Bot' },
 ];
 
 export default function Navigation() {

@@ -22,6 +22,7 @@ import Blog from "@/pages/Blog";
 import BlogPost1Page from "@/pages/BlogPost1Page";
 import BlogPost2Page from "@/pages/BlogPost2Page";
 import PolymarketPage from "@/pages/PolymarketPage";
+import DNBotPage from "@/pages/DNBotPage";
 
 function Router() {
   return (
@@ -44,6 +45,7 @@ function Router() {
         <Route path="/modes/rsi" component={RSIBotPage} />
         <Route path="/modes/blend" component={BlendBotPage} />
         <Route path="/modes/polymarket" component={PolymarketPage} />
+        <Route path="/modes/dn-bot" component={DNBotPage} />
         <Route component={NotFound} />
       </Switch>
     </div>
