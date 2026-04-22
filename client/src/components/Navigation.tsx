@@ -9,6 +9,7 @@ const navLinks = [
   { path: '/glossary', label: 'Glossary' },
   { path: '/faq', label: 'FAQ' },
   { path: '/modes/dn-bot', label: 'DN Bot' },
+  { path: '/stats', label: 'TreadFi Stats' },
 ];
 
 const botModes = [
