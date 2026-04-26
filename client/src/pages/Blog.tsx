@@ -30,6 +30,15 @@ const posts = [
     duration: '6 min read',
     path: '/blog/3',
   },
+  {
+    id: 4,
+    category: 'Market Making',
+    title: 'Aftermath × Tread Guide: Earn a Share of 60K SUI Every 2 Weeks',
+    excerpt:
+      'Aftermath Finance is now integrated with TreadFi — offering negative maker rebates, 60,000 SUI in bi-weekly rewards, Aftermath points, and a 2x TreadFi points multiplier. Here\'s the complete setup guide.',
+    duration: '7 min read',
+    path: '/blog/4',
+  },
 ];
 
 export default function Blog() {

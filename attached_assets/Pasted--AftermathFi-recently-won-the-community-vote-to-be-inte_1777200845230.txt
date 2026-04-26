@@ -1,0 +1,129 @@
+@AftermathFi  recently won the community vote to be integrated with @tread_fi  — and it's now live. If you're looking for a place to run your TreadFi market making bot with strong incentives, Aftermath is worth your attention.
+
+[1]
+Provide a caption (optional)
+Aftermath is a fully on-chain DEX native to the Sui ecosystem, heavily backed by the Sui team, and currently the protocol generating the most volume on Sui. Here's why it's an attractive farm:
+* 		Negative maker rebate of -0.005% — you get paid when your limit orders are matched, instead of paying a fee. Most DEXs charge a 0.1% maker fee.
+* 		
+* 		60,000 SUI in rewards every two weeks, distributed based on your volume generated on Aftermath.
+* 		
+* 		Aftermath points dropped to your wallet every two weeks.
+* 		
+* 		TreadFi points with a current 2x multiplier.
+* 		
+That's four separate incentive streams running simultaneously on top of your market making activity.
+Get started with Aftermath: https://aftermath.finance/?ref=noorucn1
+Get started with TreadFi: https://app.tread.fi/referral/59S1TB1X
+Step 1 — Set Up a Sui Wallet
+Since Aftermath is fully on-chain, you'll need a Sui-compatible wallet. TreadFi currently supports OKX Wallet for Aftermath, so that's what I recommend.
+* 		Download the OKX Wallet extension.
+* 		
+* 		Switch the network to Sui — this will generate a fresh Sui wallet address.
+* 		
+
+[2]
+Provide a caption (optional)
+* 		Copy your Sui wallet address.
+* 		
+
+[3]
+Provide a caption (optional)
+Step 2 — Bridge USDC to Sui
+You'll need USDC on the Sui network to use as margin.
+* 		Go to jumper.exchange.
+* 		
+* 		Bridge USDC from Arbitrum to Sui.
+* 		
+
+[4]
+Provide a caption (optional)
+* 		Wait approximately 20 minutes for the bridge to complete.
+* 		
+Step 3 — Set Up Your Aftermath Account
+Once your USDC arrives in your Sui wallet:
+* 		Go to aftermath.finance and connect your OKX wallet.
+* 		
+* 		Click the gas icon and set USDC as your gas token — this ensures USDC is used for transaction fees instead of SUI.
+* 		
+
+[5]
+Provide a caption (optional)
+* 		Click Create Account and sign the transaction.
+* 		
+
+[6]
+Provide a caption (optional)
+* 		Note: Sometime USDC gas doesnt work an may also need a small amount of SUI for gas (around $1 worth is enough). You can bridge SUI the same way via Jumper, or withdraw from Binance directly to your Sui address.
+* 		
+* 		Important: Since Aftermath is fully on-chain, TreadFi needs an agent wallet to place and manage orders without requiring manual approval for every transaction.
+* 		
+Step 4 — Top Up Your Agent Wallet with Gas
+Aftermath charges a small gas fee per bot request. From testing, each full bot run costs approximately 1.5–2.5 SUI in gas, regardless of the volume size. Whether you're running 10k or 200k in notional volume, the gas cost is the same — so larger positions are more gas-efficient.
+Good news: The founder has confirmed gas costs will be reduced by approximately 50% in the coming days.
+To top up gas on your agent wallet:
+* 		Click the Zap button in the top right corner.
+* 		
+
+[7]
+Provide a caption (optional)
+* 		Enable One Click Trading and click Zap.
+* 		
+* 		Select USDC, enter 5 USDC (recommended), and click Enable, then Deposit.
+* 		
+
+[8]
+Provide a caption (optional)
+Your agent wallet now has SUI for gas.
+To withdraw gas back at any time, click Zap → Withdraw and pull your SUI back to your main wallet.
+Step 5 — Deposit USDC as Margin
+* 		Click Deposit (next to the Zap button).
+* 		
+
+[9
+Provide a caption (optional)
+* 		Select your USDC amount.
+* 		
+* 		Click Deposit Collateral and sign the transaction.
+* 		
+Your margin is now ready. To withdraw it back at any time, click Withdraw and select your USDC.
+Step 6 — Connect Aftermath to TreadFi
+* 		Go to app.tread.fi.
+* 		
+* 		Click the wallet icon.
+* 		
+[10]
+Provide a caption (optional)
+* 		Click Connect Perp DEX Account and select Aftermath.
+* 		
+
+[11][12]
+Provide a caption (optional)
+* 		Enter an account name — use a name, not numbers.
+* 		
+* 		Click Connect Wallet, connect your OKX wallet, and sign the 3 transactions.
+* 		
+
+[13]
+Provide a caption (optional)
+Aftermath is now linked to your TreadFi account.
+Step 7 — Run Your TreadFi Market Making Bot
+* 		Go to the MM Bots section: https://app.tread.fi/volume_bot
+* 		
+* 		Click Select Account and choose your Aftermath account.
+* 		
+* 		Select a trading pair — BTC is recommended as it's the most liquid pair on Aftermath.
+* 		
+* 		Select your margin amount and leverage.
+* 		
+* 		Choose a reference price mode. If you're new to TreadFi bots, use dGrid, select Crypto, set a 10% stop loss, and run it.
+* 		
+
+[14]
+Provide a caption (optional)
+If you want to explore other modes and strategies in depth, check out the TreadFi Academy: https://treadfiacademy--sportytechworld.replit.app/
+Summary
+Aftermath x TreadFi is one of the more compelling market making opportunities right now — negative maker rebates, SUI campaign rewards, Aftermath points, and TreadFi 2x points, all running simultaneously. 
+* 		Aftermath referral: https://aftermath.finance/?ref=noorucn1
+* 		
+* 		TreadFi referral: https://app.tread.fi/referral/59S1TB1X
+* 		
