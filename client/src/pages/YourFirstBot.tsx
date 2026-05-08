@@ -1,6 +1,9 @@
 interface Section {
   title: string;
-  content: string;
+  content?: string;
+  intro?: string;
+  steps?: string[];
+  bullets?: string[];
   images?: string[];
 }
 
@@ -12,8 +15,14 @@ const sections: Section[] = [
   },
   {
     title: 'Connecting Paradex',
-    content:
-      'Click the wallet icon, then click "Connect Perp Dex account". Choose Paradex from the dropdown. Choose an account name, click Connect Wallet, select your wallet, and sign the transaction. Your wallet is now linked.',
+    steps: [
+      'Click the wallet icon, then click "Connect Perp Dex account"',
+      'Choose Paradex from the dropdown',
+      'Choose an account name',
+      'Click Connect Wallet',
+      'Select your wallet and sign the transaction',
+      'Your wallet is now linked',
+    ],
     images: [
       'https://i.postimg.cc/jdDmFQ1J/cnnect-wallet.png',
       'https://i.postimg.cc/GmpdMyCb/connect-perp-dex-accoun1t.png',
@@ -21,14 +30,21 @@ const sections: Section[] = [
   },
   {
     title: 'Setting Up the Market Maker Bot',
-    content:
-      'Go to the Bot section and click Market Maker Bot. Under Account, select your Paradex account. Choose your trading pair.',
+    steps: [
+      'Go to the Bot section and click Market Maker Bot',
+      'Under Account, select your Paradex account',
+      'Choose your trading pair',
+    ],
     images: ['https://i.postimg.cc/bNZWBH59/mmbot.png'],
   },
   {
     title: 'Choosing the Right Pair & Time',
-    content:
-      'Look for clear ranging price action. On Paradex, BTCUSD usually works well. Avoid running during NY market open (9:30 AM NY time). Instead use: NY afternoon after 11:30 AM NY time, around 2:30 PM NY time, or London session after 5:00 AM NY time.',
+    intro: 'Look for clear ranging price action. On Paradex, BTCUSD usually works well. Avoid running during NY market open (9:30 AM NY time). Best windows to run:',
+    bullets: [
+      'NY afternoon — after 11:30 AM NY time',
+      'Around 2:30 PM NY time',
+      'London session — after 5:00 AM NY time',
+    ],
     images: ['https://i.postimg.cc/NfKSz7n1/botcondition.jpg'],
   },
   {
@@ -126,17 +142,46 @@ export default function YourFirstBot() {
               data-testid="link-referral"
             >
               https://app.tread.fi/referral/59S1TB1X
-            </a>{' '}
-            — Complete the signup process, set your credentials, and log in.
+            </a>
+            . Then complete the signup process, set your credentials, and log in.
           </p>
         </section>
 
         {sections.map((s, i) => (
           <SectionBlock key={i} title={s.title}>
-            <p className="text-muted-foreground leading-relaxed mb-2">{s.content}</p>
-            {s.images?.map((img, j) => (
-              <SectionImage key={j} src={img} alt={`${s.title} screenshot ${j + 1}`} />
-            ))}
+            <>
+              {s.content && (
+                <p className="text-muted-foreground leading-relaxed mb-2">{s.content}</p>
+              )}
+              {s.intro && (
+                <p className="text-muted-foreground leading-relaxed mb-3">{s.intro}</p>
+              )}
+              {s.steps && (
+                <ol className="space-y-2 mb-4">
+                  {s.steps.map((step, j) => (
+                    <li key={j} className="flex items-start gap-3">
+                      <span className="flex-shrink-0 w-6 h-6 rounded-md gradient-bg-cyan-emerald flex items-center justify-center text-white font-bold text-xs mt-0.5">
+                        {j + 1}
+                      </span>
+                      <span className="text-muted-foreground leading-relaxed">{step}</span>
+                    </li>
+                  ))}
+                </ol>
+              )}
+              {s.bullets && (
+                <ul className="space-y-2 mb-4">
+                  {s.bullets.map((bullet, j) => (
+                    <li key={j} className="flex items-start gap-3">
+                      <span className="mt-2 block w-1.5 h-1.5 rounded-full flex-shrink-0 gradient-bg-cyan-emerald" />
+                      <span className="text-muted-foreground">{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {s.images?.map((img, j) => (
+                <SectionImage key={j} src={img} alt={`${s.title} screenshot ${j + 1}`} />
+              ))}
+            </>
           </SectionBlock>
         ))}
 
@@ -261,9 +306,20 @@ export default function YourFirstBot() {
         </SectionBlock>
 
         <SectionBlock title="Starting the Bot & Monitoring">
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            Click Start Trading. Track everything on the Orders page. Look at the Fill Quantity section — the orange dotted line shows maximum exposure tolerance. The white line shows current exposure.
-          </p>
+          <ol className="space-y-2 mb-4">
+            {[
+              'Click Start Trading',
+              'Go to the Orders page to track everything',
+              'In the Fill Quantity section: the orange dotted line shows your maximum exposure tolerance; the white line shows current exposure',
+            ].map((step, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <span className="flex-shrink-0 w-6 h-6 rounded-md gradient-bg-cyan-emerald flex items-center justify-center text-white font-bold text-xs mt-0.5">
+                  {i + 1}
+                </span>
+                <span className="text-muted-foreground leading-relaxed">{step}</span>
+              </li>
+            ))}
+          </ol>
           <SectionImage src={monitorImages[0]} alt="Orders monitoring view" />
           <p className="text-muted-foreground leading-relaxed mb-4">
             For a Grid+ bot, buy price (green dot) is always lower than sell price (red dot). If price moves down after hitting the green dot, the bot will stall.
