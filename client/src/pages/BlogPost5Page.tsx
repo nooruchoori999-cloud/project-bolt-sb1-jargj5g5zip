@@ -1,6 +1,25 @@
 import { ArrowLeft, Clock, Tag } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'wouter';
+import img1 from '@assets/1_1780750279485.jpg';
+import img2 from '@assets/2_1780750279486.jpg';
+import img3 from '@assets/3_1780750279480.jpg';
+import img4 from '@assets/4_1780750279482.png';
+import img5 from '@assets/5_1780750279483.png';
+import img6 from '@assets/6_1780750279483.png';
+import img7 from '@assets/7_1780750279484.png';
+import img8 from '@assets/8_1780750279484.png';
+import img9 from '@assets/9_1780750279486.jpg';
+
+function ArticleImage({ src, alt }: { src: string; alt: string }) {
+  return (
+    <img
+      src={src}
+      alt={alt}
+      className="w-full rounded-xl border border-border/40 my-6 object-contain max-w-2xl mx-auto block"
+    />
+  );
+}
 
 export default function BlogPost5Page() {
   return (
@@ -71,6 +90,7 @@ export default function BlogPost5Page() {
               The Ondo team has confirmed that DMM volume is <span className="text-foreground font-semibold">not eligible</span> for incentive rewards. This means retail volume is competing against a much smaller pool than many people realize.
             </p>
           </div>
+          <ArticleImage src={img1} alt="Ondo team confirming DMM volume is excluded from trading rewards" />
         </section>
 
         {/* Rewards */}
@@ -97,6 +117,7 @@ export default function BlogPost5Page() {
                 That's a total incentive campaign worth millions of dollars.
               </p>
             </div>
+            <ArticleImage src={img2} alt="Ondo team confirming $100k week 1 and $250k/week 12-week program details" />
 
             <div className="bg-card border border-card-border rounded-xl p-6">
               <div className="inline-flex items-center px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-semibold mb-4">
@@ -106,6 +127,7 @@ export default function BlogPost5Page() {
                 The team was asked what Ondo Points would eventually represent given that Ondo already has a token. While details haven't been fully revealed yet, the team has indicated these points will have future utility.
               </p>
             </div>
+            <ArticleImage src={img3} alt="Ondo team response about what points will translate to" />
 
             <div className="bg-card border border-card-border rounded-xl p-6">
               <div className="inline-flex items-center px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-semibold mb-4">
@@ -177,19 +199,25 @@ export default function BlogPost5Page() {
         {/* Connecting Ondo to TreadFi */}
         <section className="mb-12 border-t border-border/30 pt-12">
           <h2 className="text-2xl font-bold text-foreground mb-4">Connecting Ondo to TreadFi</h2>
-          <ol className="space-y-2">
-            {[
-              'Inside TreadFi, go to Wallets → Connect Perp DEX Account',
-              'Connect your Ondo account',
-              'Once connected, you\'re ready to start generating volume',
-            ].map((step, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <span className="flex-shrink-0 w-6 h-6 rounded-md gradient-bg-cyan-emerald flex items-center justify-center text-white font-bold text-xs mt-0.5">
-                  {i + 1}
-                </span>
-                <span className="text-muted-foreground leading-relaxed">{step}</span>
-              </li>
-            ))}
+          <ol className="space-y-4">
+            <li className="flex items-start gap-3">
+              <span className="flex-shrink-0 w-6 h-6 rounded-md gradient-bg-cyan-emerald flex items-center justify-center text-white font-bold text-xs mt-0.5">1</span>
+              <span className="text-muted-foreground leading-relaxed">Inside TreadFi, go to Wallets → Connect Perp DEX Account</span>
+            </li>
+          </ol>
+          <ArticleImage src={img4} alt="TreadFi wallet icon location to connect a Perp DEX account" />
+          <ol className="space-y-4" start={2}>
+            <li className="flex items-start gap-3">
+              <span className="flex-shrink-0 w-6 h-6 rounded-md gradient-bg-cyan-emerald flex items-center justify-center text-white font-bold text-xs mt-0.5">2</span>
+              <span className="text-muted-foreground leading-relaxed">Connect your Ondo account</span>
+            </li>
+          </ol>
+          <ArticleImage src={img5} alt="TreadFi accounts panel showing Connect Perp DEX Account option" />
+          <ol className="space-y-4" start={3}>
+            <li className="flex items-start gap-3">
+              <span className="flex-shrink-0 w-6 h-6 rounded-md gradient-bg-cyan-emerald flex items-center justify-center text-white font-bold text-xs mt-0.5">3</span>
+              <span className="text-muted-foreground leading-relaxed">Once connected, you're ready to start generating volume</span>
+            </li>
           </ol>
         </section>
 
@@ -259,7 +287,9 @@ export default function BlogPost5Page() {
             ))}
           </div>
 
-          <div className="bg-card border border-card-border rounded-xl p-5 mt-6">
+          <ArticleImage src={img6} alt="TreadFi Market Making Bot settings screen with Ondo account selected" />
+
+          <div className="bg-card border border-card-border rounded-xl p-5">
             <p className="text-foreground font-semibold mb-1">Alternative Setup</p>
             <p className="text-muted-foreground text-sm leading-relaxed">
               You can also experiment with Reference Price = DGRID while keeping everything else the same. It's generally slower but can sometimes produce better profitability.
@@ -270,9 +300,10 @@ export default function BlogPost5Page() {
         {/* Method 2 */}
         <section className="mb-12 border-t border-border/30 pt-12">
           <h2 className="text-2xl font-bold text-foreground mb-4">Method 2: Delta Neutral Bot</h2>
-          <p className="text-muted-foreground leading-relaxed mb-6">
+          <p className="text-muted-foreground leading-relaxed mb-4">
             This is the preferred method for capturing Open Interest rewards. The Ondo team has confirmed that <span className="text-foreground font-semibold">position duration (OI) carries more weight than pure trading volume.</span>
           </p>
+          <ArticleImage src={img9} alt="Ondo team confirming OI has impact on rewards alongside volume" />
 
           <div className="bg-card border border-card-border rounded-xl p-6 mb-8">
             <p className="text-foreground font-semibold mb-3">Example Setup (Delta-Neutral)</p>
@@ -325,6 +356,8 @@ export default function BlogPost5Page() {
             ))}
           </ol>
 
+          <ArticleImage src={img7} alt="TreadFi Delta Neutral Bot setup with Ondo long and Hyperliquid short on GOOGLE" />
+
           <div className="bg-card border border-card-border rounded-xl p-5 mb-4">
             <p className="text-foreground font-semibold mb-1">Closing the Position</p>
             <p className="text-muted-foreground text-sm leading-relaxed">
@@ -361,7 +394,7 @@ export default function BlogPost5Page() {
               </li>
             ))}
           </ol>
-          <div className="bg-card border border-card-border rounded-xl p-5">
+          <div className="bg-card border border-card-border rounded-xl p-5 mb-4">
             <p className="text-foreground font-semibold mb-2">Benefits of algo execution for large orders</p>
             <ul className="space-y-1">
               {['Reduced slippage', 'Better execution quality', 'More maker fills', 'Lower fees'].map((pt, i) => (
@@ -372,6 +405,7 @@ export default function BlogPost5Page() {
               ))}
             </ul>
           </div>
+          <ArticleImage src={img8} alt="TreadFi Algo execution interface for large Ondo Perps orders" />
         </section>
 
         {/* Final Thoughts */}
