@@ -26,6 +26,7 @@ import DNBotPage from "@/pages/DNBotPage";
 import BlogPost3Page from "@/pages/BlogPost3Page";
 import StatsPage from "@/pages/StatsPage";
 import BlogPost4Page from "@/pages/BlogPost4Page";
+import BlogPost5Page from "@/pages/BlogPost5Page";
 
 function Router() {
   return (
@@ -49,6 +50,7 @@ function Router() {
         <Route path="/modes/blend" component={BlendBotPage} />
         <Route path="/blog/3" component={BlogPost3Page} />
         <Route path="/blog/4" component={BlogPost4Page} />
+        <Route path="/blog/5" component={BlogPost5Page} />
         <Route path="/stats" component={StatsPage} />
         <Route path="/modes/polymarket" component={PolymarketPage} />
         <Route path="/modes/dn-bot" component={DNBotPage} />

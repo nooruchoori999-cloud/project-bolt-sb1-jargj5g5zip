@@ -39,6 +39,15 @@ const posts = [
     duration: '7 min read',
     path: '/blog/4',
   },
+  {
+    id: 5,
+    category: 'Market Making',
+    title: 'How I\'m Farming Ondo Perps Using TreadFi for a Share of $250K/Week Rewards',
+    excerpt:
+      'Ondo recently launched Ondo Perps. DMM volume is excluded from rewards, meaning retail competition is smaller than most realize. Here\'s a full breakdown of the three methods I use to farm — MM Bot, Delta Neutral Bot, and normal trading — and exactly how to set each one up.',
+    duration: '10 min read',
+    path: '/blog/5',
+  },
 ];
 
 export default function Blog() {

@@ -43,6 +43,16 @@ const lessons = [
     level: 'Advanced',
     path: '/modes/polymarket',
   },
+  {
+    id: 5,
+    number: 'Lesson 5',
+    title: 'How to Farm Ondo Perps for a Share of $250K/Week Using TreadFi',
+    description:
+      'Ondo Perps launched with $250k/week in incentives — and DMM volume is excluded, so retail competition is smaller than it looks. Learn the three methods (MM Bot, Delta Neutral Bot, and terminal trading) to generate volume and capture rewards.',
+    duration: '10 min read',
+    level: 'Intermediate',
+    path: '/blog/5',
+  },
 ];
 
 export default function Lessons() {
