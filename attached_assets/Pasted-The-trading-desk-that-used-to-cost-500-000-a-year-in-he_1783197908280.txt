@@ -1,0 +1,153 @@
+The trading desk that used to cost $500,000 a year in headcount is now available to anyone with an internet connection.
+@tread_fi Agents have been live for around two weeks. I've been working closely with the team during that time — extensively testing every feature across real market conditions, from delta-neutral execution to fully automated market making loops. I've seen what these agents can actually do, not just what they're supposed to do.
+Further down this article, I'll show you exactly how to use them in your trading workflow — with real examples from my own runs. Whether you're a beginner trying to understand what's possible, or a serious trader looking for a genuine execution edge, this is for you.
+There is a moment in every technology cycle when a capability that was locked behind institutional walls suddenly becomes available to ordinary people. The spreadsheet did it for financial modeling. Roboadvisors did it for portfolio management. Now, TreadFi agents are doing it for active trading execution — giving individual traders access to the kind of coordinated, data-driven, round-the-clock market participation that was previously the exclusive domain of hedge funds and professional trading desks.
+But let's be precise about what these agents actually are — and what they are not. They are not a fortune teller. They do not predict the future. They cannot guarantee a profitable trade. What they do is gather data based on your idea, help you pressure-test that idea against real market signals, and then execute and monitor the trade with a precision and consistency that humans simply cannot maintain on their own.
+The power of these agents is not in replacing your judgment — it is in amplifying it.
+What Are TreadFi Agents?
+TreadFi agents are a chat-driven workspace where you hire an AI specialist to plan and run trades for you. Instead of manually filling in order forms, clicking through interfaces, and watching charts for hours, you describe what you want in plain English — and the agent translates that into action.
+The simplest mental model: imagine hiring a senior trader who works 24/7, never gets tired, never misses a signal, and executes your instructions with machine precision. You bring the idea. The agent brings the execution.
+The official documentation describes it clearly: "You describe what you want in plain English — 'work 500k of SOL on Binance over the next 2 hours, stay passive' — and the agent translates that into an order with the desired parameters."
+Each agent is a different specialist with its own personality and toolset. As of now, the roster includes:
+Supervisor Agent ⭐ The most powerful agent on the platform — and still evolving. — Think of this as your personal trading desk manager. The Supervisor doesn't just execute a single task; it orchestrates every other agent behind the scenes on your behalf. You give it a high-level goal in plain English, and it figures out which specialists to call, in what order, and what to do with their output. For example: you tell the Supervisor you want to explore a potential trade on $HYPE. It quietly spins up the Research Agent in the background to pull CVD, OI, and order flow data. Once the research comes back, it presents you with the findings. You say go — and it calls the Desk Trader in the background to open the position with your parameters. The whole time, you're having one conversation. You never manually switch agents or copy-paste outputs between tools. As new agents are added to TreadFi, the Supervisor gains new capabilities automatically — which is why this is the agent to watch as the platform matures.
+Desk Trader — Your execution strategist. The go-to for opening and closing positions, running algos, managing basket trades, and handling the full trade lifecycle.
+Market Maker — Runs a market-making bot on your behalf. Designed for providing liquidity and earning spreads without hand-tuning every parameter.
+Research Agent — A dedicated market analyst with access to CoinGecko, Precept, and backtesting tools. Ask about any token, not just what TreadFi trades.
+Delta Neutral (DN) Agent — Built specifically for delta-neutral strategies. It handles the complexity of running simultaneous long and short positions across different venues to collect funding rates while hedging directional risk. You tell it your notional size and venues; it calculates sizing, duration, and execution across both legs automatically.
+Sports Consultant — A data-driven analyst for sports events. Break down any game or match using real statistics and historical data. Currently read-only, but the roadmap includes placing bets on prediction markets like Polymarket and Hyperliquid directly from the agent — making it the first bridge between sports analytics and on-chain execution.
+What agents can do: read market data, place and manage orders on the accounts you've explicitly whitelisted, monitor positions, and respond to your follow-up instructions in chat.
+What agents cannot do: touch accounts you haven't whitelisted, move funds off the platform, override your existing risk limits, or run forever silently.
+That last point is important. The guardrails are real. This is a tool that executes within boundaries you define — not an autonomous system that takes the wheel entirely.
+Step 1: Create a TreadFi Account
+Before anything else, you need a TreadFi account. Head to app.tread.fi and sign up.
+You can use my referral link: https://app.tread.fi/referral/59S1TB1X
+No discount or special deal on your end — it just gives me a small share from the referral program, which helps fund the time I put into writing and researching these articles. Appreciate it if you use it.
+Step 2: Getting Connected — Whitelisting Your Account
+Before an agent can do anything, it needs permission to act. This is by design.
+Go to the Settings view on TreadFi and move at least one account into the Whitelisted column. This is the only account the agent can touch. Any account you haven't whitelisted is completely invisible to the agent — it cannot read it, it cannot trade on it, it cannot do anything with it.
+This is the fundamental safety architecture: you define the perimeter. The agent operates within it.
+Once an account is whitelisted and the settings is saved, you are ready to start.
+Step 3: Choosing and Starting an Agent
+Navigate to the Agents workspace and select an agent by clicking its card. Then send your first prompt.
+The quality of your prompt directly determines the quality of the agent's execution. The docs give clear guidance: "Agents work best when you give them the same details you'd give a human trader."
+A good first prompt includes:
+Ticker and side — "buy SOL", "sell BTC perp"
+Size — notional ($100,000 worth of ETH) or token count (1 BTC)
+Account — which whitelisted account to use
+Time horizon — "over the next 2 hours", "by end of day"
+Constraints — "passive only", "don't cross 1% price impact", "stop if price moves through $X"
+Even if your prompt is incomplete, the agent will ask clarifying questions before taking any action. It will not guess on your behalf when real money is involved.
+The Propose Start Card
+For anything that touches your capital, the agent does not just execute immediately. It builds a Propose Start card — a summary of the proposed order parameters — and waits for your Start click. You can edit, reject, or accept.
+This is the human-in-the-loop moment. Every major action is gated by your confirmation. The agent proposes; you decide.
+Managing a Live Task
+At any point, you can:
+Pause / Resume — stops new actions without cancelling what's already in flight
+Cancel — ends the task cleanly if there are no open positions
+Cancel with positions — if there's open exposure, you choose whether to flatten or leave positions for manual management
+Edit mid-run — just message the agent. "Tighten the spread to 5bps" or "stop after the next fill" — it will acknowledge and act, or come back with a new Propose Start if the change is material
+Agent Memory
+Your agents no longer start cold every conversation. Tell one "when I say BTC I mean perps" or correct a bad fill once — it sticks. Preferences and corrections persist across every chat, and you can view and edit what your agents remember. This is a small detail that makes a significant practical difference for anyone who trades with a consistent methodology.
+The Cursor Codex Parallel: Why This Feels Familiar
+If you've used Cursor, the AI-powered code editor, you already understand the paradigm TreadFi agents are working in — even if the domain is completely different.
+In software development, Cursor didn't eliminate the need for engineers. What it did was remove the distance between an idea and its implementation. A developer describes what they want in natural language, the AI translates it into code, and the developer reviews, adjusts, and ships. The cognitive overhead of syntax and boilerplate collapses. The developer's time is redirected toward judgment and architecture — the things that actually require human intelligence.
+TreadFi agents are doing the same thing for trading.
+Previously, the distance between a trading idea and its execution was enormous. You had to:
+Identify the setup in the data
+Manually scan charts, order books, and CVD across multiple platforms
+Open the positions on one or more exchanges
+Monitor and adjust in real time
+Close at the right moment
+Do it all again when the next opportunity appeared
+Every one of those steps was a leak. Attention faded. Execution slipped. Opportunities passed while you were watching something else.
+TreadFi agents collapse that distance. You bring the idea; the agent handles the implementation. Your role shifts from execution to oversight — which is exactly where human judgment is most valuable.
+My Real Experiments: Use Cases From the Field
+Everything in this section is something I've personally tested on TreadFi. These are not theoretical walkthroughs — they are documented runs I shared publicly on X, most of them with experimental sizing while I explored what these agents are actually capable of. Don't read too much into the position sizes. I was here for the ideas.
+Experiment 1: The Full Research-to-Execution Loop
+I ran a complete research → execution → monitoring workflow in a single session, and it's probably the best summary of what these agents make possible.
+Here's exactly what I did:
+Opened the Market Researcher agent and gave it my own parameters — order flow divergence and positioning signals. It scanned every Hyperliquid pair, pulled live data via Kiyotaka, and returned 3 clean setups to focus on.
+Took one of those setups and used the Desk Trader agent to open a $LIT short at $1.88, with a stop loss at $2.06.
+Left the Researcher agent running in parallel to monitor positioning and order flow in real time — flagging whether the thesis still held as the trade evolved.
+The result: research, execution, and live oversight all running in one coordinated flow. Before this, each of those steps lived in a different tool, a different tab, and required constant manual attention to stitch together. Now it's one conversation.
+https://x.com/sportytechworld/status/2072324634167672891
+Experiment 2: The $LIT Short — Using Agents to Pressure-Test a Thesis
+This one shows exactly what "data gathering based on your idea" looks like in practice.
+My X timeline was bullish on $LIT because of a Robinhood announcement, with price trending up into it. But what I was seeing in the data told a different story. I brought the tension to the Supervisor agent with this prompt:
+"What do you think about shorting $LITUSD? My X timeline is bullish due to the Robinhood announcement, with price trending up into it. But spot CVD is trending down, perp CVD trending up, OI increasing, and funding is neutral for now. What do you think about positioning — is a short viable?"
+The agent didn't give me a prediction. It gave me analysis:
+Confirmed the divergence I spotted: spot CVD down while perp CVD climbs + OI up + neutral funding is a classic sign of speculative positioning, not organic demand
+Pulled a research specialist in the background to dig into live order flow, price action, and book depth for LITUSD
+Came back with a concrete setup: entry zone $2.10–$2.14 on any rollover, invalidation above $2.20
+Explained the reasoning at every step — buy liquidations exhausted, volume collapsing post-announcement, OI spiked +15.5% into the rally
+This is what an institutional research desk does before putting on a trade. The difference is I had it in a chat window in minutes.
+https://x.com/sportytechworld/status/2073003222264889827
+Experiment 3: The Market Making Automation Loop
+Market making is profitable in calm, ranging markets and painful in volatile ones. The core problem I've always had: manually checking ADX values and Bollinger Band tightness across dozens of pairs all day is tedious and time-consuming. Nobody has time to babysit dozens of charts.
+Here's the workflow I set up with the Supervisor agent:
+Told it which exchange and pairs I wanted to market make on
+It  monitored each chart and scored every pair out of 100 based on ADX, Bollinger Band tightness, and additional parameters I specified
+When a pair scored above 90, it launched my MM bot with my grid settings
+The entire monitoring and execution loop ran without me touching anything. As I put it at the time: I always knew what to look for — the conditions, the parameters, the logic. What I never had was the time and resources to continuously scan every chart and act the instant conditions changed. The agent closes that gap completely.
+https://x.com/sportytechworld/status/2069354378713047085
+Experiment 4: Delta-Neutral Trading Across Two Venues
+Delta-neutral trading — simultaneously long and short the same asset on different venues to collect the funding rate spread while staying hedged — has always required real infrastructure to execute cleanly. Both legs need to go on at the right size and price. Manual execution is messy. But here's what most people miss: DN trading isn't won on the entry. It's won on execution — especially the unwind.
+Opening the trade:
+Silver had positive funding on Hyperliquid. The strategy: short Silver on Hyperliquid, long Silver on Ondo Perps, and collect the funding spread. Simple in theory. I used the DN agent via the Supervisor to open $40k notional — $20k per venue. The agent calculated sizing, duration, and execution across both legs. I didn't touch anything.
+The executed spread came in at +0.064 (9.8 bps) — I sold Silver on Hyperliquid approximately 6.4 bps higher than I bought it on Ondo. Positive spread means I opened at an edge. Good start — but this is only half the trade.
+Where most DN traders silently lose money:
+The opening spread is not the full picture. When you close, if Hyperliquid is still the leading venue, you buy back your short higher and sell your long lower — you give back the spread on exit. The rule: your unwind loss must not exceed your opening gain. Opened at +0.064? Your unwind shouldn't cost more than -0.064. Get this right and net execution cost approaches zero. You keep the funding, minus fees. That's the entire game.
+Why the unwind is impossible to do manually — and how the agent solves it:
+The best time to unwind is when both venues converge in price. But you cannot watch two order books 24/7. This is where the agent stops being a convenience and starts being a genuine edge.
+Here's what I set up: I instructed the Supervisor agent to monitor the spread between both venues continuously and only fire the unwind when it crosses my threshold — for example, better than -0.008. It watches, waits, and executes only when the conditions are right. To my exact parameters. Around the clock.
+One more layer: don't unwind all at once. Dumping the full position when the gate opens can result in a worse exit if the unwind takes too long and the spread shifts mid-exit. So I unwind in smaller chunks — and the agent re-checks the spread before each one.
+The result: a manual strategy that required constant attention becomes fully set-and-forget, with better net P&L because the execution is tighter than anything I could do by hand.
+https://x.com/sportytechworld/status/2070509058529054925
+Experiment 5: Closing a Data Gap — Native HL Spot CVD
+If you trade $HYPE using order flow, you know the problem: tools like Kiyotaka give you CVD from Bybit, OKX, and Coinbase — but not from Hyperliquid native spot. And since HL native spot drives the most volume, you were never getting the full picture.
+I asked the Research agent to pull native HL spot CVD for $HYPE over two weeks. It delivered the data and the charts.
+Simple request, but genuinely useful. This is what I mean when I say these agents close data gaps that previously required either expensive proprietary tools or building your own pipeline.
+https://x.com/sportytechworld/status/2071221014776676814
+Experiment 6: Sports Agents — A Glimpse of What's Coming
+I spent some time with the newly launched Sports Consultant agent, which lets you break down any sports event with real statistics and historical data. Right now it's read-only — you can research and analyze, but not yet act.
+What's coming is the interesting part: placing bets on Polymarket and Hyperliquid based on those stats, directly from the agent. The same research-then-execute workflow I use for crypto trades, applied to sports prediction markets.
+This is the Supervisor architecture at its broadest — research agents feeding into execution agents across completely different markets. The infrastructure is already there. The surface area is just expanding.
+https://x.com/sportytechworld/status/2072607528148681024
+Why This Is Game-Changing: The Institutional Edge, Democratized
+The capabilities described above are not new. Hedge funds, prop trading firms, and institutional desks have been running versions of these workflows for years. The difference is cost and access.
+To replicate the research-to-execution-to-monitoring loop described in Use Case 1 at a professional level, you would previously need:
+A quantitative analyst to build the data pipeline
+A risk management system to set position limits
+A team of traders to monitor and execute across venues
+Infrastructure to run 24/7
+Hundreds of thousands of dollars in annual cost
+TreadFi agents compress all of that into a chat interface.
+This doesn't mean every individual trader will suddenly outperform institutions. Institutions still have advantages in capital, proprietary data, and years of refined strategy. But the execution gap — the friction between idea and action, between intent and implementation — that gap is closing rapidly.
+What TreadFi Agents Are Not
+This needs to be said clearly, because the excitement around AI trading tools often leads to misplaced expectations.
+TreadFi agents are not predictive. They do not forecast price movements. They do not tell you that $LIT is going to fall. What they do is help you gather data to evaluate your own thesis — and then execute that thesis with precision if you decide to act.
+They are not set-and-forget. The best use of these agents involves an active trader who brings informed ideas and uses the agent to implement and monitor them. The agent amplifies your judgment; it doesn't replace it.
+They are not infallible. The platform is in beta. There will be rough edges. The docs say it plainly: expect occasional issues, and send feedback when you find them.
+The alpha comes from your idea.  "Don't read into the size — these are experimental runs. I'm here for the ideas and to see what's actually possible with these agents." The agent executes brilliantly, but the signal — the insight that a trade is worth taking — still has to come from you.
+How This Will Evolve
+The current architecture already suggests where this is heading.
+The full automation loop is close. The Supervisor → Research → Execution → Monitor → Re-research cycle is nearly complete. A few more updates, and the workflow becomes fully self-sustaining within the parameters you define. You set the strategy; the agent runs it continuously.
+Multi-venue coordination will deepen. The delta-neutral use case already operates across Hyperliquid and Ondo simultaneously. As more venues are added, cross-venue arbitrage and funding strategies become increasingly accessible.
+Non-financial markets will expand. Sports agents are already live. Prediction markets — Polymarket and others — are next. The underlying capability (research + execution + monitoring) translates to any market with actionable data.
+Personalization will compound. Agent memory already makes agents smarter with each interaction. Over time, an agent that knows your preferred assets, your typical position sizing, your risk tolerance, and your execution preferences becomes a genuinely personalized trading system — not a generic tool.
+The barrier between idea and execution will continue to fall. The trend is clear. What took a team of people will take one person with the right tools. What took a day will take an hour. What required constant attention will run in the background.
+Getting Started: Your First Prompt
+If you've read this far and want to try it, here is a practical starting point.
+Whitelist an account in Settings with a size you're comfortable experimenting with.
+Open the Research agent and ask it a question about a market you already have a view on. Don't ask it what to trade — ask it to gather data on a specific setup you're already thinking about. Example: "Pull CVD, OI, and funding data for $HYPE on Hyperliquid over the last 48 hours. I'm thinking about a long position — does the data support it?"
+Review the output. Does it confirm your thesis? Complicate it? Change it?
+If you want to act, open the Desk Trader agent and describe the trade: ticker, side, size, account, time horizon, constraints.
+Review the Propose Start card. Edit if needed. Click Start.
+Watch the mission log. Ask follow-up questions as the trade evolves.
+Start small. The value of these agents is not in the size of the first trade — it's in learning how to work with them. Every trader who shared results publicly started with experimental sizing. The learning phase is part of the value.
+Conclusion
+TreadFi agents represent something genuinely new in trading infrastructure. Not because the underlying strategies are new — CVD analysis, delta-neutral trading, and market making have existed for years. What's new is the compression of distance between idea and execution, and the accessibility of coordinated, multi-agent market participation to traders who are not backed by institutional infrastructure.
+The analogy to Cursor in software development is apt: just as AI coding assistants didn't make engineers obsolete but made skilled engineers dramatically more productive, TreadFi agents won't replace traders with good judgment — they will make traders with good judgment dramatically more capable.
+The edge has always come from the quality of the idea. What's changing is how much of the implementation — the data gathering, the execution, the monitoring, the iteration — can now be handled by an agent working on your behalf.
+The institutional wall is coming down. The question is what you're going to build on the other side of it.
+Sources: TreadFi official documentation (docs.tread.fi), real trader experiments documented by @sportytechworld and @tread_fi on X, July 2026.

@@ -21,20 +21,31 @@ const botModes = [
   { path: '/modes/polymarket', label: 'Polymarket' },
 ];
 
+const agentItems = [
+  { path: '/agents/getting-started', label: 'How to Get Started' },
+];
+
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [agentsDropdownOpen, setAgentsDropdownOpen] = useState(false);
   const [mobileModesOpen, setMobileModesOpen] = useState(false);
+  const [mobileAgentsOpen, setMobileAgentsOpen] = useState(false);
   const [location] = useLocation();
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const agentsDropdownRef = useRef<HTMLDivElement>(null);
 
   const isActive = (path: string) => location === path;
   const isModesActive = botModes.some((m) => location === m.path);
+  const isAgentsActive = agentItems.some((a) => location === a.path) || location === '/agents';
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
         setDropdownOpen(false);
+      }
+      if (agentsDropdownRef.current && !agentsDropdownRef.current.contains(e.target as Node)) {
+        setAgentsDropdownOpen(false);
       }
     }
     document.addEventListener('mousedown', handleClickOutside);
@@ -71,6 +82,56 @@ export default function Navigation() {
               </Link>
             ))}
 
+            {/* Agents Dropdown */}
+            <div className="relative" ref={agentsDropdownRef}>
+              <button
+                onClick={() => setAgentsDropdownOpen(!agentsDropdownOpen)}
+                data-testid="button-agents-dropdown"
+                className={`flex items-center gap-1 text-sm font-medium transition-colors duration-200 ${
+                  isAgentsActive ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                Agents
+                <ChevronDown
+                  size={15}
+                  className={`transition-transform duration-200 ${agentsDropdownOpen ? 'rotate-180' : ''}`}
+                />
+              </button>
+
+              {agentsDropdownOpen && (
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2.5 w-48 bg-card border border-card-border rounded-xl shadow-xl shadow-black/30 py-1.5 z-50">
+                  <Link
+                    to="/agents"
+                    onClick={() => setAgentsDropdownOpen(false)}
+                    data-testid="link-agents-index"
+                    className={`block px-4 py-2.5 text-sm font-medium transition-colors duration-150 ${
+                      isActive('/agents')
+                        ? 'text-primary bg-primary/5'
+                        : 'text-muted-foreground hover:text-foreground hover:bg-muted/40'
+                    }`}
+                  >
+                    All Agents Articles
+                  </Link>
+                  {agentItems.map((item) => (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      onClick={() => setAgentsDropdownOpen(false)}
+                      data-testid={`link-agent-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
+                      className={`block px-4 py-2.5 text-sm font-medium transition-colors duration-150 ${
+                        isActive(item.path)
+                          ? 'text-primary bg-primary/5'
+                          : 'text-muted-foreground hover:text-foreground hover:bg-muted/40'
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* MM Bot Modes Dropdown */}
             <div className="relative" ref={dropdownRef}>
               <button
                 onClick={() => setDropdownOpen(!dropdownOpen)}
@@ -159,6 +220,48 @@ export default function Navigation() {
               </Link>
             ))}
 
+            {/* Mobile Agents Accordion */}
+            <div>
+              <button
+                onClick={() => setMobileAgentsOpen(!mobileAgentsOpen)}
+                className={`flex items-center gap-1 w-full text-sm font-medium transition-colors duration-200 py-2 ${
+                  isAgentsActive ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                Agents
+                <ChevronDown
+                  size={14}
+                  className={`transition-transform duration-200 ${mobileAgentsOpen ? 'rotate-180' : ''}`}
+                />
+              </button>
+              {mobileAgentsOpen && (
+                <div className="pl-4 space-y-1 pb-1">
+                  <Link
+                    to="/agents"
+                    onClick={() => { setMobileMenuOpen(false); setMobileAgentsOpen(false); }}
+                    className={`block text-sm py-1.5 transition-colors duration-150 ${
+                      isActive('/agents') ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
+                    }`}
+                  >
+                    All Agents Articles
+                  </Link>
+                  {agentItems.map((item) => (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      onClick={() => { setMobileMenuOpen(false); setMobileAgentsOpen(false); }}
+                      className={`block text-sm py-1.5 transition-colors duration-150 ${
+                        isActive(item.path) ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Mobile MM Bot Modes Accordion */}
             <div>
               <button
                 onClick={() => setMobileModesOpen(!mobileModesOpen)}

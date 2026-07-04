@@ -27,6 +27,8 @@ import BlogPost3Page from "@/pages/BlogPost3Page";
 import StatsPage from "@/pages/StatsPage";
 import BlogPost4Page from "@/pages/BlogPost4Page";
 import BlogPost5Page from "@/pages/BlogPost5Page";
+import AgentsIndexPage from "@/pages/AgentsIndexPage";
+import AgentsGettingStartedPage from "@/pages/AgentsGettingStartedPage";
 
 function Router() {
   return (
@@ -54,6 +56,8 @@ function Router() {
         <Route path="/stats" component={StatsPage} />
         <Route path="/modes/polymarket" component={PolymarketPage} />
         <Route path="/modes/dn-bot" component={DNBotPage} />
+        <Route path="/agents" component={AgentsIndexPage} />
+        <Route path="/agents/getting-started" component={AgentsGettingStartedPage} />
         <Route component={NotFound} />
       </Switch>
     </div>
