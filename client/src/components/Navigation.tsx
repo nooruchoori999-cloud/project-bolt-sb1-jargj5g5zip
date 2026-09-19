@@ -26,15 +26,22 @@ const agentItems = [
   { path: '/agents/build-your-first-custom-agent', label: 'Build a Custom Agent' },
 ];
 
+const exchangeTutorialItems = [
+  { path: '/exchange-tutorials/arcus-treadfi-robinhood', label: 'Arcus × TreadFi × Robinhood' },
+];
+
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [agentsDropdownOpen, setAgentsDropdownOpen] = useState(false);
+  const [exchangeTutorialsDropdownOpen, setExchangeTutorialsDropdownOpen] = useState(false);
   const [mobileModesOpen, setMobileModesOpen] = useState(false);
   const [mobileAgentsOpen, setMobileAgentsOpen] = useState(false);
+  const [mobileExchangeTutorialsOpen, setMobileExchangeTutorialsOpen] = useState(false);
   const [location] = useLocation();
   const dropdownRef = useRef<HTMLDivElement>(null);
   const agentsDropdownRef = useRef<HTMLDivElement>(null);
+  const exchangeTutorialsDropdownRef = useRef<HTMLDivElement>(null);
 
   const isActive = (path: string) => location === path;
   const isModesActive = botModes.some((m) => location === m.path);
@@ -47,6 +54,9 @@ export default function Navigation() {
       }
       if (agentsDropdownRef.current && !agentsDropdownRef.current.contains(e.target as Node)) {
         setAgentsDropdownOpen(false);
+      }
+      if (exchangeTutorialsDropdownRef.current && !exchangeTutorialsDropdownRef.current.contains(e.target as Node)) {
+        setExchangeTutorialsDropdownOpen(false);
       }
     }
     document.addEventListener('mousedown', handleClickOutside);
@@ -119,6 +129,57 @@ export default function Navigation() {
                       to={item.path}
                       onClick={() => setAgentsDropdownOpen(false)}
                       data-testid={`link-agent-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
+                      className={`block px-4 py-2.5 text-sm font-medium transition-colors duration-150 ${
+                        isActive(item.path)
+                          ? 'text-primary bg-primary/5'
+                          : 'text-muted-foreground hover:text-foreground hover:bg-muted/40'
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Exchange Tutorials Dropdown */}
+            <div className="relative" ref={exchangeTutorialsDropdownRef}>
+              <button
+                onClick={() => setExchangeTutorialsDropdownOpen(!exchangeTutorialsDropdownOpen)}
+                data-testid="button-exchange-tutorials-dropdown"
+                className={`flex items-center gap-1 text-sm font-medium transition-colors duration-200 ${
+                  location.startsWith('/exchange-tutorials')
+                    ? 'text-primary'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                Exchange Tutorials
+                <ChevronDown
+                  size={15}
+                  className={`transition-transform duration-200 ${exchangeTutorialsDropdownOpen ? 'rotate-180' : ''}`}
+                />
+              </button>
+
+              {exchangeTutorialsDropdownOpen && (
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2.5 w-64 bg-card border border-card-border rounded-xl shadow-xl shadow-black/30 py-1.5 z-50">
+                  <Link
+                    to="/exchange-tutorials"
+                    onClick={() => setExchangeTutorialsDropdownOpen(false)}
+                    data-testid="link-exchange-tutorials-index"
+                    className={`block px-4 py-2.5 text-sm font-medium transition-colors duration-150 ${
+                      isActive('/exchange-tutorials')
+                        ? 'text-primary bg-primary/5'
+                        : 'text-muted-foreground hover:text-foreground hover:bg-muted/40'
+                    }`}
+                  >
+                    All Exchange Tutorials
+                  </Link>
+                  {exchangeTutorialItems.map((item) => (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      onClick={() => setExchangeTutorialsDropdownOpen(false)}
+                      data-testid="link-exchange-tutorial-article"
                       className={`block px-4 py-2.5 text-sm font-medium transition-colors duration-150 ${
                         isActive(item.path)
                           ? 'text-primary bg-primary/5'
@@ -251,6 +312,49 @@ export default function Navigation() {
                       key={item.path}
                       to={item.path}
                       onClick={() => { setMobileMenuOpen(false); setMobileAgentsOpen(false); }}
+                      className={`block text-sm py-1.5 transition-colors duration-150 ${
+                        isActive(item.path) ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Mobile Exchange Tutorials Accordion */}
+            <div>
+              <button
+                onClick={() => setMobileExchangeTutorialsOpen(!mobileExchangeTutorialsOpen)}
+                className={`flex items-center gap-1 w-full text-sm font-medium transition-colors duration-200 py-2 ${
+                  location.startsWith('/exchange-tutorials')
+                    ? 'text-primary'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                Exchange Tutorials
+                <ChevronDown
+                  size={14}
+                  className={`transition-transform duration-200 ${mobileExchangeTutorialsOpen ? 'rotate-180' : ''}`}
+                />
+              </button>
+              {mobileExchangeTutorialsOpen && (
+                <div className="pl-4 space-y-1 pb-1">
+                  <Link
+                    to="/exchange-tutorials"
+                    onClick={() => { setMobileMenuOpen(false); setMobileExchangeTutorialsOpen(false); }}
+                    className={`block text-sm py-1.5 transition-colors duration-150 ${
+                      isActive('/exchange-tutorials') ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
+                    }`}
+                  >
+                    All Exchange Tutorials
+                  </Link>
+                  {exchangeTutorialItems.map((item) => (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      onClick={() => { setMobileMenuOpen(false); setMobileExchangeTutorialsOpen(false); }}
                       className={`block text-sm py-1.5 transition-colors duration-150 ${
                         isActive(item.path) ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
                       }`}

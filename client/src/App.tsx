@@ -30,6 +30,8 @@ import BlogPost5Page from "@/pages/BlogPost5Page";
 import AgentsIndexPage from "@/pages/AgentsIndexPage";
 import AgentsGettingStartedPage from "@/pages/AgentsGettingStartedPage";
 import AgentsCustomAgentBuilderPage from "@/pages/AgentsCustomAgentBuilderPage";
+import ExchangeTutorialsIndexPage from "@/pages/ExchangeTutorialsIndexPage";
+import ExchangeTutorialArticlePage from "@/pages/ExchangeTutorialArticlePage";
 
 function Router() {
   return (
@@ -60,6 +62,8 @@ function Router() {
         <Route path="/agents" component={AgentsIndexPage} />
         <Route path="/agents/getting-started" component={AgentsGettingStartedPage} />
         <Route path="/agents/build-your-first-custom-agent" component={AgentsCustomAgentBuilderPage} />
+        <Route path="/exchange-tutorials" component={ExchangeTutorialsIndexPage} />
+        <Route path="/exchange-tutorials/arcus-treadfi-robinhood" component={ExchangeTutorialArticlePage} />
         <Route component={NotFound} />
       </Switch>
     </div>
