@@ -69,7 +69,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2.5 group" data-testid="link-home-logo">
-            <div className="w-8 h-8 gradient-bg-cyan-emerald rounded-lg flex items-center justify-center shadow-lg shadow-primary/20 group-hover:shadow-primary/40 transition-shadow">
+            <div className="w-8 h-8 gradient-bg-cyan-emerald rounded-lg flex items-center justify-center shadow-lg shadow-primary/20 group-hover:shadow-primary/40 transition-shadow duration-300">
               <Zap size={16} className="text-white" />
             </div>
             <span className="text-lg font-bold text-foreground">

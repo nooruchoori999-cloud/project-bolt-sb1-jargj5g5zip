@@ -88,21 +88,22 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <section className="pt-20 pb-16">
+        <section className="pt-20 pb-20 relative">
+          <div className="pointer-events-none absolute -top-16 left-1/2 h-72 w-[38rem] -translate-x-1/2 rounded-full bg-primary/10 blur-3xl" aria-hidden="true" />
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary text-sm font-medium mb-8">
               <Zap size={14} />
               From Market-Making Bots to a Complete Trading Stack
             </div>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-6 tracking-tight">
+            <h1 className="relative text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-6 tracking-tight">
               Trading Infrastructure
               <span className="block mt-2 gradient-text-cyan-emerald">
                 Made Accessible
               </span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
+            <p className="relative text-lg sm:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
               TreadFi has evolved beyond a market-making bot into a platform for automated strategies, AI agents, multi-venue execution, and professional trading tools.
             </p>
 

@@ -81,7 +81,7 @@ export default function Blog() {
           {posts.map((post) => (
             <div
               key={post.id}
-              className="bg-card border border-card-border rounded-xl p-6 flex flex-col sm:flex-row sm:items-center gap-6"
+              className="group bg-card border border-card-border rounded-xl p-6 flex flex-col sm:flex-row sm:items-center gap-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/45 hover:shadow-xl hover:shadow-primary/5"
               data-testid={`card-blog-${post.id}`}
             >
               <div className="flex-1 min-w-0">

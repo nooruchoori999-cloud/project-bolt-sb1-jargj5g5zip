@@ -1,1 +1,2 @@
 - [Importing X Articles](importing-x-articles.md) — preserve rich-text block order and original media when adding future X Articles.
+- [Visual theme](visual-theme.md) — keep new UI consistent with the warm orange, dark-first educational design system.

@@ -233,7 +233,7 @@ export default function ExchangeTutorialArticlePage() {
           className="w-full rounded-xl border border-border/40 object-cover mb-12"
         />
 
-        <div>
+        <div className="article-prose">
           {article.content.blocks.map((block) => (
             <ArticleBlockView key={block.key} block={block} />
           ))}
