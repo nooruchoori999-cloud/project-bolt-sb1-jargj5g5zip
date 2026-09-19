@@ -48,6 +48,15 @@ const posts = [
     duration: '10 min read',
     path: '/blog/5',
   },
+  {
+    id: 6,
+    category: 'Market Execution',
+    title: 'The Execution Tax: How Whales Bleed bps on Hyperliquid — and Why TreadFi Fixes It',
+    excerpt:
+      'A data-driven breakdown of execution microstructure, slippage math, and why algorithmic execution stops being optional once order size crosses $500K.',
+    duration: '14 min read',
+    path: '/blog/6',
+  },
 ];
 
 export default function Blog() {

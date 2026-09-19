@@ -27,6 +27,7 @@ import BlogPost3Page from "@/pages/BlogPost3Page";
 import StatsPage from "@/pages/StatsPage";
 import BlogPost4Page from "@/pages/BlogPost4Page";
 import BlogPost5Page from "@/pages/BlogPost5Page";
+import BlogPost6Page from "@/pages/BlogPost6Page";
 import AgentsIndexPage from "@/pages/AgentsIndexPage";
 import AgentsGettingStartedPage from "@/pages/AgentsGettingStartedPage";
 import AgentsCustomAgentBuilderPage from "@/pages/AgentsCustomAgentBuilderPage";
@@ -56,6 +57,7 @@ function Router() {
         <Route path="/blog/3" component={BlogPost3Page} />
         <Route path="/blog/4" component={BlogPost4Page} />
         <Route path="/blog/5" component={BlogPost5Page} />
+        <Route path="/blog/6" component={BlogPost6Page} />
         <Route path="/stats" component={StatsPage} />
         <Route path="/modes/polymarket" component={PolymarketPage} />
         <Route path="/modes/dn-bot" component={DNBotPage} />
