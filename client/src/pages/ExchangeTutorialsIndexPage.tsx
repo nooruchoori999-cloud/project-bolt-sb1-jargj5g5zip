@@ -9,6 +9,13 @@ const tutorials = [
       'A detailed look at Arcus, its Robinhood connection, the perps and stock-token opportunity, and why the current early-user window is worth studying.',
     readTime: '14 min read',
   },
+  {
+    path: '/exchange-tutorials/aftermath-treadfi-sui',
+    title: 'Aftermath × TreadFi Guide: Earn a Share of 60K SUI Every 2 Weeks',
+    excerpt:
+      'A complete walkthrough for connecting Aftermath to TreadFi, funding the account, configuring a market-making bot, and qualifying for the available SUI incentives.',
+    readTime: '12 min read',
+  },
 ];
 
 export default function ExchangeTutorialsIndexPage() {
@@ -29,8 +36,8 @@ export default function ExchangeTutorialsIndexPage() {
         </div>
 
         <div className="space-y-6">
-          {tutorials.map((tutorial) => (
-            <Link key={tutorial.path} to={tutorial.path} data-testid="link-exchange-tutorial-article-0">
+          {tutorials.map((tutorial, index) => (
+            <Link key={tutorial.path} to={tutorial.path} data-testid={`link-exchange-tutorial-article-${index}`}>
               <div className="bg-card border border-card-border rounded-xl p-6 hover:border-primary/40 transition-colors cursor-pointer group">
                 <div className="inline-flex items-center gap-2 mb-3">
                   <span className="inline-flex items-center px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-semibold">

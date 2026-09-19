@@ -28,6 +28,7 @@ const agentItems = [
 
 const exchangeTutorialItems = [
   { path: '/exchange-tutorials/arcus-treadfi-robinhood', label: 'Arcus × TreadFi × Robinhood' },
+  { path: '/exchange-tutorials/aftermath-treadfi-sui', label: 'Aftermath × TreadFi Guide' },
 ];
 
 export default function Navigation() {
