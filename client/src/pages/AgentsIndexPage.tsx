@@ -3,6 +3,13 @@ import { Bot, ArrowRight } from 'lucide-react';
 
 const agentArticles = [
   {
+    path: '/agents/build-your-first-custom-agent',
+    title: 'How to Build Your First Treadfi Custom Agent: Describe a Strategy in Plain English and Let It Trade',
+    excerpt: 'A complete walkthrough for turning a plain-English trading strategy into a live TreadFi custom agent, listing it publicly, managing hires, and building usage before builder fee sharing launches.',
+    readTime: '18 min read',
+    tag: 'Custom Agents',
+  },
+  {
     path: '/agents/getting-started',
     title: 'What Hedge Fund Desks Have Had for Years, You Now Have in a Chat Window: TreadFi Agents Explained',
     excerpt: 'A deep-dive into TreadFi Agents — what they are, how to set them up, and real experiments covering research-to-execution loops, delta-neutral automation, market making, and sports analytics.',

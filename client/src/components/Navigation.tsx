@@ -23,6 +23,7 @@ const botModes = [
 
 const agentItems = [
   { path: '/agents/getting-started', label: 'How to Get Started' },
+  { path: '/agents/build-your-first-custom-agent', label: 'Build a Custom Agent' },
 ];
 
 export default function Navigation() {
@@ -99,7 +100,7 @@ export default function Navigation() {
               </button>
 
               {agentsDropdownOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2.5 w-48 bg-card border border-card-border rounded-xl shadow-xl shadow-black/30 py-1.5 z-50">
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2.5 w-56 bg-card border border-card-border rounded-xl shadow-xl shadow-black/30 py-1.5 z-50">
                   <Link
                     to="/agents"
                     onClick={() => setAgentsDropdownOpen(false)}

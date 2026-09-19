@@ -29,6 +29,7 @@ import BlogPost4Page from "@/pages/BlogPost4Page";
 import BlogPost5Page from "@/pages/BlogPost5Page";
 import AgentsIndexPage from "@/pages/AgentsIndexPage";
 import AgentsGettingStartedPage from "@/pages/AgentsGettingStartedPage";
+import AgentsCustomAgentBuilderPage from "@/pages/AgentsCustomAgentBuilderPage";
 
 function Router() {
   return (
@@ -58,6 +59,7 @@ function Router() {
         <Route path="/modes/dn-bot" component={DNBotPage} />
         <Route path="/agents" component={AgentsIndexPage} />
         <Route path="/agents/getting-started" component={AgentsGettingStartedPage} />
+        <Route path="/agents/build-your-first-custom-agent" component={AgentsCustomAgentBuilderPage} />
         <Route component={NotFound} />
       </Switch>
     </div>
