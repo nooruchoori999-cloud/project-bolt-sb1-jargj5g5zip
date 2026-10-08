@@ -75,8 +75,7 @@ export default function Navigation() {
               <Zap size={16} className="text-white" />
             </div>
             <span className="text-lg font-bold text-foreground">
-              tread<span className="gradient-text-cyan-emerald">.fi</span>{' '}
-              <span className="text-muted-foreground font-medium text-sm">Learn</span>
+              tread101<span className="gradient-text-cyan-emerald">.xyz</span>
             </span>
           </Link>
 
