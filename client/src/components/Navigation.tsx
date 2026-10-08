@@ -6,6 +6,7 @@ const navLinks = [
   { path: '/', label: 'Home' },
   { path: '/lessons', label: 'Lessons' },
   { path: '/blog', label: 'Blog' },
+  { path: '/discounts-and-refs', label: 'Discounts & Refs' },
   { path: '/glossary', label: 'Glossary' },
   { path: '/faq', label: 'FAQ' },
   { path: '/modes/dn-bot', label: 'DN Bot' },
@@ -66,7 +67,7 @@ export default function Navigation() {
 
   return (
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2.5 group" data-testid="link-home-logo">
             <div className="w-8 h-8 gradient-bg-cyan-emerald rounded-lg flex items-center justify-center shadow-lg shadow-primary/20 group-hover:shadow-primary/40 transition-shadow duration-300">
@@ -78,7 +79,7 @@ export default function Navigation() {
             </span>
           </Link>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden min-[1440px]:flex items-center gap-5">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
@@ -257,7 +258,9 @@ export default function Navigation() {
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             data-testid="button-mobile-menu"
-            className="md:hidden text-muted-foreground hover:text-foreground transition-colors p-1"
+            aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={mobileMenuOpen}
+            className="min-[1440px]:hidden text-muted-foreground hover:text-foreground transition-colors p-1"
           >
             {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
@@ -265,7 +268,7 @@ export default function Navigation() {
       </div>
 
       {mobileMenuOpen && (
-        <div className="md:hidden bg-background border-t border-border/50">
+        <div className="min-[1440px]:hidden bg-background border-t border-border/50 max-h-[calc(100dvh-4rem)] overflow-y-auto">
           <div className="px-4 py-4 space-y-1">
             {navLinks.map((link) => (
               <Link

@@ -34,6 +34,7 @@ import AgentsCustomAgentBuilderPage from "@/pages/AgentsCustomAgentBuilderPage";
 import ExchangeTutorialsIndexPage from "@/pages/ExchangeTutorialsIndexPage";
 import ExchangeTutorialArticlePage from "@/pages/ExchangeTutorialArticlePage";
 import ExchangeTutorialAftermathPage from "@/pages/ExchangeTutorialAftermathPage";
+import DiscountsRefsPage from "@/pages/DiscountsRefsPage";
 
 function Router() {
   return (
@@ -45,6 +46,7 @@ function Router() {
         <Route path="/lessons/1" component={Lesson1Page} />
         <Route path="/lessons/2" component={Lesson2Page} />
         <Route path="/blog" component={Blog} />
+        <Route path="/discounts-and-refs" component={DiscountsRefsPage} />
         <Route path="/blog/1" component={BlogPost1Page} />
         <Route path="/blog/2" component={BlogPost2Page} />
         <Route path="/glossary" component={Glossary} />
