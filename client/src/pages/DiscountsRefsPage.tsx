@@ -59,6 +59,10 @@ const referrals = [
     name: 'Extended',
     url: 'https://app.extended.exchange/join/NOORUCN',
   },
+  {
+    name: 'Hyperliquid',
+    url: 'https://app.hyperliquid.xyz/join/CRYPTONOOR',
+  },
 ];
 
 function OutboundMark() {
@@ -88,7 +92,7 @@ export default function DiscountsRefsPage() {
               My referral links and available discounts, gathered in one place. Where a benefit is available, you’ll find it noted below.
             </p>
             <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-border/70 pt-5 text-sm text-muted-foreground">
-              <span><strong className="font-semibold text-foreground">14</strong> platform links</span>
+              <span><strong className="font-semibold text-foreground">{referrals.length}</strong> platform links</span>
               <span aria-hidden="true" className="hidden h-1 w-1 rounded-full bg-primary/70 sm:block" />
               <span><strong className="font-semibold text-foreground">3</strong> listed benefits</span>
             </div>
@@ -101,7 +105,7 @@ export default function DiscountsRefsPage() {
               <p className="mb-1 text-xs font-semibold uppercase tracking-[0.16em] text-primary">Directory</p>
               <h2 id="directory-heading" className="text-xl font-semibold tracking-tight">Platform links</h2>
             </div>
-            <span className="pb-0.5 font-mono text-xs tabular-nums text-muted-foreground">01 — 14</span>
+            <span className="pb-0.5 font-mono text-xs tabular-nums text-muted-foreground">01 — {referrals.length}</span>
           </div>
 
           <ol className="divide-y divide-border/80 overflow-hidden rounded-xl border border-border bg-card">
