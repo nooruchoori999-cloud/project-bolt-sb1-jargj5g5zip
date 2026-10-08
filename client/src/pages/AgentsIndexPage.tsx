@@ -3,6 +3,13 @@ import { Bot, ArrowRight } from 'lucide-react';
 
 const agentArticles = [
   {
+    path: '/agents/market-making-custom-agent',
+    title: 'How to Run a Market Making Bot on Any Exchange with a Tread Custom Agent',
+    excerpt: 'Connect an exchange, whitelist trading access, hire Nooru’s Market Maker Bot, and configure its strategy. Includes margin sizing, regime checks, CPM comparisons, and the supervisor-agent alternative.',
+    readTime: '9 min read',
+    tag: 'Market Making',
+  },
+  {
     path: '/agents/build-your-first-custom-agent',
     title: 'How to Build Your First Treadfi Custom Agent: Describe a Strategy in Plain English and Let It Trade',
     excerpt: 'A complete walkthrough for turning a plain-English trading strategy into a live TreadFi custom agent, listing it publicly, managing hires, and building usage before builder fee sharing launches.',

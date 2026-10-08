@@ -1,0 +1,1763 @@
+{
+  "tweet": {
+    "url": "https://x.com/sportytechworld/status/2107760576445448466",
+    "article": {
+      "created_at": "2026-10-07T09:10:56.000Z",
+      "modified_at": "2026-10-07T09:10:56.000Z",
+      "id": "2106683461692235776",
+      "title": "How to Run a Market Making Bot on Any Exchange with a Tread Custom Agent",
+      "preview_text": "I've been market making with a @tread_fi agent for a while now, and the setup needs almost no input from me. I hire one agent, answer four questions, and the bot handles the rest. It scans the regime,",
+      "cover_media": {
+        "id": "QXBpTWVkaWE6DAAFCgABHTx5hTIbIAAKAAIAAAAAFJ5OBgAA",
+        "media_id": "2106692338680799232",
+        "media_info": {
+          "__typename": "ApiImage",
+          "color_info": {
+            "palette": [
+              {
+                "percentage": 88.57,
+                "rgb": {
+                  "blue": 14,
+                  "green": 10,
+                  "red": 9
+                }
+              },
+              {
+                "percentage": 4.49,
+                "rgb": {
+                  "blue": 178,
+                  "green": 176,
+                  "red": 176
+                }
+              },
+              {
+                "percentage": 2.54,
+                "rgb": {
+                  "blue": 113,
+                  "green": 157,
+                  "red": 33
+                }
+              },
+              {
+                "percentage": 1.78,
+                "rgb": {
+                  "blue": 36,
+                  "green": 29,
+                  "red": 44
+                }
+              },
+              {
+                "percentage": 1.29,
+                "rgb": {
+                  "blue": 58,
+                  "green": 70,
+                  "red": 20
+                }
+              }
+            ]
+          },
+          "original_img_height": 1200,
+          "original_img_url": "https://pbs.twimg.com/media/HTx5hTIbIAAZw1Y.jpg",
+          "original_img_width": 3000
+        },
+        "media_key": "3_2106692338680799232"
+      },
+      "content": {
+        "blocks": [
+          {
+            "data": {
+              "mentions": [
+                {
+                  "fromIndex": 31,
+                  "text": "tread_fi",
+                  "toIndex": 40
+                }
+              ]
+            },
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "25mc",
+            "text": "I've been market making with a @tread_fi agent for a while now, and the setup needs almost no input from me. I hire one agent, answer four questions, and the bot handles the rest. It scans the regime, runs when conditions are good and pauses when they're not.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "eiiu0",
+            "text": "At this point, doing things manually is -EV. When agents can automate everything for you, there's no reason to do it by hand.",
+            "type": "unstyled"
+          },
+          {
+            "data": {
+              "mentions": [
+                {
+                  "fromIndex": 46,
+                  "text": "tread_fi",
+                  "toIndex": 55
+                }
+              ]
+            },
+            "entityRanges": [
+              {
+                "key": 0,
+                "length": 9,
+                "offset": 46
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "1f58j",
+            "text": "The setup works on any exchange integrated on @tread_fi. The only thing that changes is which exchange you pick in the exchange step.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "62rf",
+            "text": "This is the full walkthrough.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [
+              {
+                "length": 80,
+                "offset": 0,
+                "style": "Bold"
+              }
+            ],
+            "key": "6he9b",
+            "text": "TLDR, before the steps, for anyone saying their so and so bot gets a better CPM:",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "2iv0e",
+            "text": "> This bot does not promise a green PnL run. What it does is deliver a better-than-average CPM compared to most runs on TreadFi, by avoiding high-cost periods and automating the process. You start the bot and it handles the rest.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "71hc7",
+            "text": "> On other bots showing lower costs: most of them run at 0 fees. Once fees are enabled, the cost ends up higher than TreadFi. If fees are never enabled, the platform has no revenue, and its points have little to back their value.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "6s035",
+            "text": "> Users who generated volume through TreadFi during S1 and S1.5 netted at least 2-5x on their cost from the TREAD token alone, before counting any value from the DEX points earned alongside it.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "af8ql",
+            "text": "> So when comparing costs, factor in that volume run through TreadFi is also farming TREAD.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [
+              {
+                "key": 1,
+                "length": 1,
+                "offset": 0
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "2lshm",
+            "text": " ",
+            "type": "atomic"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "4mq6r",
+            "text": "Step 1 — Get your accounts",
+            "type": "header-two"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "8uf88",
+            "text": "You need a Tread account and an account on the exchange you want to market make on.",
+            "type": "unstyled"
+          },
+          {
+            "data": {
+              "urls": [
+                {
+                  "fromIndex": 7,
+                  "text": "https://app.tread.fi/referral/59S1TB1X",
+                  "toIndex": 45
+                }
+              ]
+            },
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "cja65",
+            "text": "Tread: https://app.tread.fi/referral/59S1TB1X",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "4c587",
+            "text": "Fund your exchange account with at least $20-50. That's the floor to run anything meaningful. Some exchanges have higher minimum order sizes, so check yours. More on sizing later.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "7j9d8",
+            "text": "Step 2 — Connect your exchange to Tread",
+            "type": "header-two"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "fk5uv",
+            "text": "On Tread, click the wallet icon in the top right of the menu.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [
+              {
+                "key": 2,
+                "length": 1,
+                "offset": 0
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "6nvsu",
+            "text": " ",
+            "type": "atomic"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "dg88d",
+            "text": "On the next screen, look at the bottom left and click \"Connect perp dex account\". Pick your exchange, hit \"Connect\", then \"Submit\". For a centralised exchange, add your API keys instead.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [
+              {
+                "key": 3,
+                "length": 1,
+                "offset": 0
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "a3u1j",
+            "text": " ",
+            "type": "atomic"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "3441s",
+            "text": "That's it. Your exchange account is now connected to Tread.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "diq66",
+            "text": "Step 3 — Pick how you want to run the bot",
+            "type": "header-two"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "dqenp",
+            "text": "There are two ways to do it.",
+            "type": "unstyled"
+          },
+          {
+            "data": {
+              "urls": [
+                {
+                  "fromIndex": 20,
+                  "text": "https://app.tread.fi/volume_bot",
+                  "toIndex": 51
+                },
+                {
+                  "fromIndex": 181,
+                  "text": "https://treadfiacademy--sportytechworld.replit.app/modes/dn-bot",
+                  "toIndex": 244
+                }
+              ]
+            },
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "elln0",
+            "text": "The manual route is https://app.tread.fi/volume_bot, where you choose the bot mode and the settings yourself. If you don't know how each mode behaves, I wrote out all of them here: https://treadfiacademy--sportytechworld.replit.app/modes/dn-bot",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "c30g",
+            "text": "The other route is agents. You let an AI agent find the settings and run the bot for you. That's what I use, and that's what the rest of this covers.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "3316n",
+            "text": "Using my custom agent",
+            "type": "header-two"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "3eira",
+            "text": "I built a market making agent and listed it on the Tread marketplace. It's free to hire, and once it's running you don't touch anything.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "dpbj0",
+            "text": "This agent has done more than 40m lifetime volume as of OCT 4,2026. Currently ranked #1 in the treadfi agent marketplace ranking for the most volume generated.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [
+              {
+                "key": 4,
+                "length": 1,
+                "offset": 0
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "as6d1",
+            "text": " ",
+            "type": "atomic"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "dikp4",
+            "text": "First, whitelist your exchange account for agents.",
+            "type": "unstyled"
+          },
+          {
+            "data": {
+              "urls": [
+                {
+                  "fromIndex": 6,
+                  "text": "https://app.tread.fi/agents/settings/access",
+                  "toIndex": 49
+                }
+              ]
+            },
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "7la46",
+            "text": "Go to https://app.tread.fi/agents/settings/access",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "ch5sc",
+            "text": "Hover over your exchange account and click \"+ Whitelist\". It moves to the Whitelist tab. The screenshot below shows a Hyperliquid account, but the process is the same for any exchange.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "dko1v",
+            "text": "From there, make sure you tick Trade. This is the part people miss. Without it the agent can't place orders. Then click Save.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [
+              {
+                "key": 5,
+                "length": 1,
+                "offset": 0
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "a4rmn",
+            "text": " ",
+            "type": "atomic"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "189np",
+            "text": "Second, hire the agent",
+            "type": "unstyled"
+          },
+          {
+            "data": {
+              "urls": [
+                {
+                  "fromIndex": 42,
+                  "text": "https://app.tread.fi/agents/marketplace/60164439dbd7431a84f610ede6130ec3",
+                  "toIndex": 114
+                }
+              ]
+            },
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "7g6bu",
+            "text": "My listing is \"Nooru's Market Maker Bot\": https://app.tread.fi/agents/marketplace/60164439dbd7431a84f610ede6130ec3",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "eb0m5",
+            "text": "Click \"Hire agent\". Done.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [
+              {
+                "key": 6,
+                "length": 1,
+                "offset": 0
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "ai24i",
+            "text": " ",
+            "type": "atomic"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "6sur4",
+            "text": "Third, run it.",
+            "type": "unstyled"
+          },
+          {
+            "data": {
+              "urls": [
+                {
+                  "fromIndex": 6,
+                  "text": "https://app.tread.fi/agents",
+                  "toIndex": 33
+                }
+              ]
+            },
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "1r63f",
+            "text": "Go to https://app.tread.fi/agents and open any of your projects. If you don't have a project yet, click \"+\" and start one.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [
+              {
+                "key": 7,
+                "length": 1,
+                "offset": 0
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "2hunu",
+            "text": " ",
+            "type": "atomic"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "3922k",
+            "text": "Inside the project, click \"Start a session\". You'll see every agent you have available. Pick \"Nooru's Market Maker Bot\".",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "c5l4j",
+            "text": "You now get a prompt box with three default prompts. Click \"Setup a market making bot on given exchange\".",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [
+              {
+                "key": 8,
+                "length": 1,
+                "offset": 0
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "8vogk",
+            "text": " ",
+            "type": "atomic"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "30mvn",
+            "text": "It shows you the available exchanges. Click the one you want to market make on. If it isn't in the list, type it into the \"Others\" field. Continue.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "ct7jn",
+            "text": "Pick your pair. The agent pulls the top 5 pairs on that exchange by volume. MM bots need volume to work with, so I always take the highest one on that list. Continue.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [
+              {
+                "key": 9,
+                "length": 1,
+                "offset": 0
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "dg8vj",
+            "text": " ",
+            "type": "atomic"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "59p7v",
+            "text": "Set your margin. This is the only number that really matters, so read this part carefully.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [
+              {
+                "key": 10,
+                "length": 1,
+                "offset": 0
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "8v3cl",
+            "text": " ",
+            "type": "atomic"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "4k46k",
+            "text": "If you have $100 in your exchange account, don't allocate more than $50 here. Keep a buffer.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "9o4oj",
+            "text": "How the sizing works: margin × leverage × 10 = target volume for that round. So $50 margin at 15x leverage means the bot is aiming for roughly $7,500 of volume in that round.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [
+              {
+                "length": 49,
+                "offset": 0,
+                "style": "Bold"
+              }
+            ],
+            "key": "fetl7",
+            "text": "Pick your strategy mode. There are three options:",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "f7uhn",
+            "text": "> A — ⚡ Fast Volume + Consistent PnL — Mid bot, -1 spread [my recommendation]",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "3jq5s",
+            "text": "> B — 🐢 Slow PnL-Focused — Grid bot, +1 spread, 0.05% reset",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "lkjl",
+            "text": "> C — 🔬 Strict Regime Check — Grid bot, +1 spread, 0.125% reset.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "ep5pp",
+            "text": "> D — MAX Volume 24/7",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [
+              {
+                "key": 11,
+                "length": 1,
+                "offset": 0
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "90j6m",
+            "text": " ",
+            "type": "atomic"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "cjg1i",
+            "text": "If you just want volume at a predictable cost per million (CPM), take A. That's the one I run most of the time..",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "b9s7b",
+            "text": "B aims for better PnL, but the CPM swings. Some rounds come out great and some don't, and it varies a lot by exchange. You'd have to run a few rounds on your exchange to see where it lands for you.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "dfiva",
+            "text": "C adds a higher-timeframe filter that keeps the bot out of trending markets and only lets it work in ranging conditions. On paper it has the best CPM of the three. The tradeoff is that the bot can sit stalled for a long time waiting for a clean environment, so you make less volume overall.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "cgfc4",
+            "text": "D is same as option A, except that it runs 24/7 except couple of hours during market open. This cancels time filter and to run 24/7 to get maximum volume in short period of time. PNL can b a bit volatile. So run this, only if you want fast volume withi a short period of time.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "17snr",
+            "text": "Pick one and continue. You'll get a confirmation card with your full config. Click \"Start Nooru's Market Maker Bot\".",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [
+              {
+                "key": 12,
+                "length": 1,
+                "offset": 0
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "3hi7g",
+            "text": " ",
+            "type": "atomic"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "35lkr",
+            "text": "NOT SURE WHICH OPTION? RUN AN A/B/C TEST",
+            "type": "header-two"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "cnn01",
+            "text": "Choose the 5th option, which is Loop option A and B. Its just going to loop between option A and B , run them and give you a estimate on which option is better. I cant just predict which is better, as each exchange and pair will have their own optimal settings that works best.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [
+              {
+                "key": 13,
+                "length": 1,
+                "offset": 0
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "807sc",
+            "text": " ",
+            "type": "atomic"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "foob1",
+            "text": "Or you can paste this into a new session on the same agent. Replace the exchange, account name, pair, margin and leverage with your own. This will loop between 3 options ad give a optimal optio for your pair and exchange.\n",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "eacs6",
+            "text": "Set up a market-making strategy on [exchange name] pairs on [exchange name] account. Account: [your account name]. Pair: \"pair name\". Margin: $100. Leverage: 10x. Run a sequential CPM comparison across 3 configs, looping for 7 days:Or you can paste this into a new session on the same agent. ",
+            "type": "blockquote"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "gmaa",
+            "text": "Replace the exchange, account name, pair, margin and leverage with your own. This will loop between 3 options ad give a optimal optio for your pair and exchange.",
+            "type": "blockquote"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "4pa88",
+            "text": "Option 1 — Mid bot, -1 spread, 5% SL/TP, aggressive POV. IST time windows only: 08:00–12:00, 14:00–17:30, 22:00–01:00. Gates: ADX < 30 on 1m + 5m. Run this first.",
+            "type": "blockquote"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "f6n2b",
+            "text": "Option 4 — Same as Option 1 but runs 24/7, no time gate. Gates: ADX < 30 on 1m + 5m AND 5m RSI within 35–65. Activate when Option 1 is time-gated out OR after an Option 1 SL hit.",
+            "type": "blockquote"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "2fsi2",
+            "text": "Option 2 — Grid bot, +1 spread, 0.05% grid reset, 5% SL/TP, passive POV. IST time windows only (same as Option 1). Same ADX gates.",
+            "type": "blockquote"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "9m1ot",
+            "text": "Rotation order: Option 1 → Option 4 (gap-fill / post-SL) → Option 2 in eligible windows → loop. Flatten and cancel ALL orders immediately when conditions are not met — no residue. Track CPM per run to identify best conditions.",
+            "type": "blockquote"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "c8316",
+            "text": "\nWith this prompt on the custom agent, agent will run all 3 strategy and find you the one with the best CPM. This is a bit token heavy prompt. So you will have to manually check in from time to time to see if everything is runnig smoothly, treadfi agent has put in some limit to reduce token burn, so this prompt could conflict with that. I just use this to find optimal strategy for a given pair and exchange, and the run that single strategy on a seperate task.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "8lcie",
+            "text": "What happens after that.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "14i2s",
+            "text": "The agent scans the regime, runs market making on your chosen exchange when conditions are favourable, pauses when they aren't, and repeats. You don't need to do anything.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "3idre",
+            "text": "There are two things you should still do:",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "c12lr",
+            "text": "> Check on it now and then. AI downtime can cause bugs. If it stalls, ask the agent what's going wrong and it'll tell you.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "5jo1u",
+            "text": "> Watch your margin. These bots repeat the same cycle, and the balance grinds down over rounds. Top it up so the bot keeps running instead of stopping halfway.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "eqbdh",
+            "text": "Running more than one exchange? Repeat the same steps for each one. Whitelist each account, start a new session and pick the next exchange.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "63otu",
+            "text": "The other way — supervisor agent",
+            "type": "header-two"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "1tkfr",
+            "text": "If you'd rather not use my agent, go to \"Start session\" and pick the supervisor agent instead.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [
+              {
+                "key": 14,
+                "length": 1,
+                "offset": 0
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "1n0p8",
+            "text": " ",
+            "type": "atomic"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "d5k2r",
+            "text": "Ask it to run an MM bot on your exchange with the best settings for cost. It'll give you a config you can use to start the bot.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "iqoc",
+            "text": "It's up to you which one you take.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "9dh5i",
+            "text": "Get started with my ref. There's no promo or discount tied to it, but it helps fund my research.",
+            "type": "unstyled"
+          },
+          {
+            "data": {
+              "urls": [
+                {
+                  "fromIndex": 7,
+                  "text": "https://app.tread.fi/referral/59S1TB1X",
+                  "toIndex": 45
+                }
+              ]
+            },
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "biusu",
+            "text": "Tread: https://app.tread.fi/referral/59S1TB1X ",
+            "type": "unstyled"
+          }
+        ],
+        "entityMap": [
+          {
+            "key": "12",
+            "value": {
+              "data": {
+                "entityKey": "f33b4563-841b-4733-b697-0d18fc04362a",
+                "mediaItems": [
+                  {
+                    "localMediaId": "33",
+                    "mediaCategory": "DraftTweetImage",
+                    "mediaId": "2106690045646389249"
+                  }
+                ]
+              },
+              "mutability": "Immutable",
+              "type": "MEDIA"
+            }
+          },
+          {
+            "key": "8",
+            "value": {
+              "data": {
+                "entityKey": "4e9ed024-2b14-42c4-9f9e-e60081017edc",
+                "mediaItems": [
+                  {
+                    "localMediaId": "25",
+                    "mediaCategory": "DraftTweetImage",
+                    "mediaId": "2106687067904434176"
+                  }
+                ]
+              },
+              "mutability": "Immutable",
+              "type": "MEDIA"
+            }
+          },
+          {
+            "key": "4",
+            "value": {
+              "data": {
+                "entityKey": "e3798d7f-ce61-4b42-8e76-7e7d4908d75e",
+                "mediaItems": [
+                  {
+                    "localMediaId": "17",
+                    "mediaCategory": "DraftTweetImage",
+                    "mediaId": "2106686440482689024"
+                  }
+                ]
+              },
+              "mutability": "Immutable",
+              "type": "MEDIA"
+            }
+          },
+          {
+            "key": "11",
+            "value": {
+              "data": {
+                "entityKey": "7b556bd1-fd9d-4780-b0e6-b1fa5df9e3c2",
+                "mediaItems": [
+                  {
+                    "localMediaId": "31",
+                    "mediaCategory": "DraftTweetImage",
+                    "mediaId": "2106689136287703040"
+                  }
+                ]
+              },
+              "mutability": "Immutable",
+              "type": "MEDIA"
+            }
+          },
+          {
+            "key": "9",
+            "value": {
+              "data": {
+                "entityKey": "2d7a64db-fdbb-407a-b5c6-bc1da78363fb",
+                "mediaItems": [
+                  {
+                    "localMediaId": "27",
+                    "mediaCategory": "DraftTweetImage",
+                    "mediaId": "2106687281184784384"
+                  }
+                ]
+              },
+              "mutability": "Immutable",
+              "type": "MEDIA"
+            }
+          },
+          {
+            "key": "13",
+            "value": {
+              "data": {
+                "entityKey": "cc07e3d5-4ab1-43c8-b223-4806c79b4792",
+                "mediaItems": [
+                  {
+                    "localMediaId": "15",
+                    "mediaCategory": "DraftTweetImage",
+                    "mediaId": "2107759500237389824"
+                  }
+                ]
+              },
+              "mutability": "Immutable",
+              "type": "MEDIA"
+            }
+          },
+          {
+            "key": "5",
+            "value": {
+              "data": {
+                "entityKey": "270bb9dd-8a36-4967-80ea-bb9fb581d9a8",
+                "mediaItems": [
+                  {
+                    "localMediaId": "19",
+                    "mediaCategory": "DraftTweetImage",
+                    "mediaId": "2106686605536964608"
+                  }
+                ]
+              },
+              "mutability": "Immutable",
+              "type": "MEDIA"
+            }
+          },
+          {
+            "key": "10",
+            "value": {
+              "data": {
+                "entityKey": "814745f5-88d4-433b-88d9-11602114acc3",
+                "mediaItems": [
+                  {
+                    "localMediaId": "29",
+                    "mediaCategory": "DraftTweetImage",
+                    "mediaId": "2106687371404316672"
+                  }
+                ]
+              },
+              "mutability": "Immutable",
+              "type": "MEDIA"
+            }
+          },
+          {
+            "key": "6",
+            "value": {
+              "data": {
+                "entityKey": "12673be0-c80c-4737-a8c6-1f160df1d35d",
+                "mediaItems": [
+                  {
+                    "localMediaId": "21",
+                    "mediaCategory": "DraftTweetImage",
+                    "mediaId": "2106686763939053568"
+                  }
+                ]
+              },
+              "mutability": "Immutable",
+              "type": "MEDIA"
+            }
+          },
+          {
+            "key": "1",
+            "value": {
+              "data": {
+                "tweetId": "2102695904583237775"
+              },
+              "mutability": "Immutable",
+              "type": "TWEET"
+            }
+          },
+          {
+            "key": "14",
+            "value": {
+              "data": {
+                "entityKey": "d4c55242-51ce-441d-88dd-9181a827fcdd",
+                "mediaItems": [
+                  {
+                    "localMediaId": "35",
+                    "mediaCategory": "DraftTweetImage",
+                    "mediaId": "2106691120805896192"
+                  }
+                ]
+              },
+              "mutability": "Immutable",
+              "type": "MEDIA"
+            }
+          },
+          {
+            "key": "0",
+            "value": {
+              "data": {
+                "entityKey": "561c3820-4f08-4e63-96f8-55fa1f4e38c5",
+                "url": "https://x.com/@tread_fi"
+              },
+              "mutability": "Mutable",
+              "type": "LINK"
+            }
+          },
+          {
+            "key": "2",
+            "value": {
+              "data": {
+                "entityKey": "78dc126d-04c8-459b-a469-8c3ed2980249",
+                "mediaItems": [
+                  {
+                    "localMediaId": "13",
+                    "mediaCategory": "DraftTweetImage",
+                    "mediaId": "2106685143721426944"
+                  }
+                ]
+              },
+              "mutability": "Immutable",
+              "type": "MEDIA"
+            }
+          },
+          {
+            "key": "7",
+            "value": {
+              "data": {
+                "entityKey": "960dbe1d-6abf-4096-be57-1d26fda2ee87",
+                "mediaItems": [
+                  {
+                    "localMediaId": "23",
+                    "mediaCategory": "DraftTweetImage",
+                    "mediaId": "2106686894197334016"
+                  }
+                ]
+              },
+              "mutability": "Immutable",
+              "type": "MEDIA"
+            }
+          },
+          {
+            "key": "3",
+            "value": {
+              "data": {
+                "entityKey": "669a42df-6995-426d-ba86-a02375438516",
+                "mediaItems": [
+                  {
+                    "localMediaId": "15",
+                    "mediaCategory": "DraftTweetImage",
+                    "mediaId": "2106685223924846593"
+                  }
+                ]
+              },
+              "mutability": "Immutable",
+              "type": "MEDIA"
+            }
+          }
+        ]
+      },
+      "media_entities": [
+        {
+          "id": "QXBpTWVkaWE6DAAFCgABHTx0uf9aYAAKAAIAAAAAFJ5OBgAA",
+          "media_id": "2106687067904434176",
+          "media_info": {
+            "__typename": "ApiImage",
+            "color_info": {
+              "palette": [
+                {
+                  "percentage": 99.41,
+                  "rgb": {
+                    "blue": 18,
+                    "green": 18,
+                    "red": 18
+                  }
+                },
+                {
+                  "percentage": 0.46,
+                  "rgb": {
+                    "blue": 50,
+                    "green": 77,
+                    "red": 100
+                  }
+                }
+              ]
+            },
+            "original_img_height": 787,
+            "original_img_url": "https://pbs.twimg.com/media/HTx0uf9aYAAo2R9.jpg",
+            "original_img_width": 1200
+          },
+          "media_key": "3_2106687067904434176"
+        },
+        {
+          "id": "QXBpTWVkaWE6DAAFCgABHTx2m5SaYAAKAAIAAAAAFJ5OBgAA",
+          "media_id": "2106689136287703040",
+          "media_info": {
+            "__typename": "ApiImage",
+            "color_info": {
+              "palette": [
+                {
+                  "percentage": 96.84,
+                  "rgb": {
+                    "blue": 25,
+                    "green": 25,
+                    "red": 25
+                  }
+                },
+                {
+                  "percentage": 1.75,
+                  "rgb": {
+                    "blue": 97,
+                    "green": 97,
+                    "red": 97
+                  }
+                },
+                {
+                  "percentage": 0.97,
+                  "rgb": {
+                    "blue": 15,
+                    "green": 95,
+                    "red": 224
+                  }
+                },
+                {
+                  "percentage": 0.34,
+                  "rgb": {
+                    "blue": 22,
+                    "green": 60,
+                    "red": 122
+                  }
+                }
+              ]
+            },
+            "original_img_height": 356,
+            "original_img_url": "https://pbs.twimg.com/media/HTx2m5SaYAArfSQ.png",
+            "original_img_width": 664
+          },
+          "media_key": "3_2106689136287703040"
+        },
+        {
+          "id": "QXBpTWVkaWE6DAAFCgABHTxy+f0bwAAKAAIAAAAAFJ5OBgAA",
+          "media_id": "2106685143721426944",
+          "media_info": {
+            "__typename": "ApiImage",
+            "color_info": {
+              "palette": [
+                {
+                  "percentage": 95.6,
+                  "rgb": {
+                    "blue": 18,
+                    "green": 18,
+                    "red": 18
+                  }
+                },
+                {
+                  "percentage": 1.6,
+                  "rgb": {
+                    "blue": 23,
+                    "green": 33,
+                    "red": 91
+                  }
+                },
+                {
+                  "percentage": 1.42,
+                  "rgb": {
+                    "blue": 32,
+                    "green": 44,
+                    "red": 24
+                  }
+                },
+                {
+                  "percentage": 0.78,
+                  "rgb": {
+                    "blue": 108,
+                    "green": 106,
+                    "red": 105
+                  }
+                },
+                {
+                  "percentage": 0.5,
+                  "rgb": {
+                    "blue": 28,
+                    "green": 57,
+                    "red": 99
+                  }
+                }
+              ]
+            },
+            "original_img_height": 203,
+            "original_img_url": "https://pbs.twimg.com/media/HTxy-f0bwAA3HNn.jpg",
+            "original_img_width": 1198
+          },
+          "media_key": "3_2106685143721426944"
+        },
+        {
+          "id": "QXBpTWVkaWE6DAAFCgABHTx1AKlbEAAKAAIAAAAAFJ5OBgAA",
+          "media_id": "2106687371404316672",
+          "media_info": {
+            "__typename": "ApiImage",
+            "color_info": {
+              "palette": [
+                {
+                  "percentage": 97.11,
+                  "rgb": {
+                    "blue": 23,
+                    "green": 23,
+                    "red": 23
+                  }
+                },
+                {
+                  "percentage": 1.15,
+                  "rgb": {
+                    "blue": 108,
+                    "green": 108,
+                    "red": 108
+                  }
+                },
+                {
+                  "percentage": 1.14,
+                  "rgb": {
+                    "blue": 49,
+                    "green": 121,
+                    "red": 229
+                  }
+                },
+                {
+                  "percentage": 0.6,
+                  "rgb": {
+                    "blue": 39,
+                    "green": 74,
+                    "red": 130
+                  }
+                }
+              ]
+            },
+            "original_img_height": 408,
+            "original_img_url": "https://pbs.twimg.com/media/HTx1AKlbEAA12oO.jpg",
+            "original_img_width": 1199
+          },
+          "media_key": "3_2106687371404316672"
+        },
+        {
+          "id": "QXBpTWVkaWE6DAAFCgABHTx3b06awAEKAAIAAAAAFJ5OBgAA",
+          "media_id": "2106690045646389249",
+          "media_info": {
+            "__typename": "ApiImage",
+            "color_info": {
+              "palette": [
+                {
+                  "percentage": 81.04,
+                  "rgb": {
+                    "blue": 26,
+                    "green": 26,
+                    "red": 26
+                  }
+                },
+                {
+                  "percentage": 12.99,
+                  "rgb": {
+                    "blue": 52,
+                    "green": 126,
+                    "red": 238
+                  }
+                },
+                {
+                  "percentage": 4.57,
+                  "rgb": {
+                    "blue": 49,
+                    "green": 82,
+                    "red": 133
+                  }
+                },
+                {
+                  "percentage": 1.19,
+                  "rgb": {
+                    "blue": 112,
+                    "green": 112,
+                    "red": 112
+                  }
+                },
+                {
+                  "percentage": 0.25,
+                  "rgb": {
+                    "blue": 129,
+                    "green": 98,
+                    "red": 80
+                  }
+                }
+              ]
+            },
+            "original_img_height": 375,
+            "original_img_url": "https://pbs.twimg.com/media/HTx3b06awAEqhhv.jpg",
+            "original_img_width": 1199
+          },
+          "media_key": "3_2106690045646389249"
+        },
+        {
+          "id": "QXBpTWVkaWE6DAAFCgABHTx0czmawAAKAAIAAAAAFJ5OBgAA",
+          "media_id": "2106686763939053568",
+          "media_info": {
+            "__typename": "ApiImage",
+            "color_info": {
+              "palette": [
+                {
+                  "percentage": 98.4,
+                  "rgb": {
+                    "blue": 18,
+                    "green": 18,
+                    "red": 18
+                  }
+                },
+                {
+                  "percentage": 0.53,
+                  "rgb": {
+                    "blue": 46,
+                    "green": 99,
+                    "red": 180
+                  }
+                },
+                {
+                  "percentage": 0.52,
+                  "rgb": {
+                    "blue": 104,
+                    "green": 104,
+                    "red": 104
+                  }
+                },
+                {
+                  "percentage": 0.46,
+                  "rgb": {
+                    "blue": 28,
+                    "green": 52,
+                    "red": 90
+                  }
+                }
+              ]
+            },
+            "original_img_height": 586,
+            "original_img_url": "https://pbs.twimg.com/media/HTx0czmawAA0UTy.jpg",
+            "original_img_width": 1200
+          },
+          "media_key": "3_2106686763939053568"
+        },
+        {
+          "id": "QXBpTWVkaWE6DAAFCgABHTx4aaMa4AAKAAIAAAAAFJ5OBgAA",
+          "media_id": "2106691120805896192",
+          "media_info": {
+            "__typename": "ApiImage",
+            "color_info": {
+              "palette": [
+                {
+                  "percentage": 99.69,
+                  "rgb": {
+                    "blue": 18,
+                    "green": 18,
+                    "red": 18
+                  }
+                },
+                {
+                  "percentage": 0.25,
+                  "rgb": {
+                    "blue": 29,
+                    "green": 51,
+                    "red": 86
+                  }
+                }
+              ]
+            },
+            "original_img_height": 616,
+            "original_img_url": "https://pbs.twimg.com/media/HTx4aaMa4AAGAHt.jpg",
+            "original_img_width": 1200
+          },
+          "media_key": "3_2106691120805896192"
+        },
+        {
+          "id": "QXBpTWVkaWE6DAAFCgABHTx0kY2aYAAKAAIAAAAAFJ5OBgAA",
+          "media_id": "2106686894197334016",
+          "media_info": {
+            "__typename": "ApiImage",
+            "color_info": {
+              "palette": [
+                {
+                  "percentage": 99.79,
+                  "rgb": {
+                    "blue": 18,
+                    "green": 18,
+                    "red": 18
+                  }
+                },
+                {
+                  "percentage": 0.2,
+                  "rgb": {
+                    "blue": 27,
+                    "green": 48,
+                    "red": 80
+                  }
+                }
+              ]
+            },
+            "original_img_height": 489,
+            "original_img_url": "https://pbs.twimg.com/media/HTx0kY2aYAAZQMr.jpg",
+            "original_img_width": 1200
+          },
+          "media_key": "3_2106686894197334016"
+        },
+        {
+          "id": "QXBpTWVkaWE6DAAFCgABHTx066faQAAKAAIAAAAAFJ5OBgAA",
+          "media_id": "2106687281184784384",
+          "media_info": {
+            "__typename": "ApiImage",
+            "color_info": {
+              "palette": [
+                {
+                  "percentage": 97.98,
+                  "rgb": {
+                    "blue": 26,
+                    "green": 26,
+                    "red": 26
+                  }
+                },
+                {
+                  "percentage": 0.83,
+                  "rgb": {
+                    "blue": 50,
+                    "green": 117,
+                    "red": 217
+                  }
+                },
+                {
+                  "percentage": 0.61,
+                  "rgb": {
+                    "blue": 107,
+                    "green": 107,
+                    "red": 107
+                  }
+                },
+                {
+                  "percentage": 0.31,
+                  "rgb": {
+                    "blue": 41,
+                    "green": 68,
+                    "red": 108
+                  }
+                }
+              ]
+            },
+            "original_img_height": 663,
+            "original_img_url": "https://pbs.twimg.com/media/HTx066faQAAF6XS.jpg",
+            "original_img_width": 1200
+          },
+          "media_key": "3_2106687281184784384"
+        },
+        {
+          "id": "QXBpTWVkaWE6DAAFCgABHUBEGRuawAAKAAIAAAAAFJ5OBgAA",
+          "media_id": "2107759500237389824",
+          "media_info": {
+            "__typename": "ApiImage",
+            "color_info": {
+              "palette": [
+                {
+                  "percentage": 97.39,
+                  "rgb": {
+                    "blue": 25,
+                    "green": 25,
+                    "red": 25
+                  }
+                },
+                {
+                  "percentage": 1.29,
+                  "rgb": {
+                    "blue": 100,
+                    "green": 100,
+                    "red": 100
+                  }
+                },
+                {
+                  "percentage": 1.01,
+                  "rgb": {
+                    "blue": 15,
+                    "green": 99,
+                    "red": 235
+                  }
+                },
+                {
+                  "percentage": 0.25,
+                  "rgb": {
+                    "blue": 23,
+                    "green": 45,
+                    "red": 80
+                  }
+                }
+              ]
+            },
+            "original_img_height": 285,
+            "original_img_url": "https://pbs.twimg.com/media/HUBEGRuawAAQHPy.png",
+            "original_img_width": 587
+          },
+          "media_key": "3_2107759500237389824"
+        },
+        {
+          "id": "QXBpTWVkaWE6DAAFCgABHTx0TlgasAAKAAIAAAAAFJ5OBgAA",
+          "media_id": "2106686605536964608",
+          "media_info": {
+            "__typename": "ApiImage",
+            "color_info": {
+              "palette": [
+                {
+                  "percentage": 99.4,
+                  "rgb": {
+                    "blue": 18,
+                    "green": 18,
+                    "red": 18
+                  }
+                },
+                {
+                  "percentage": 0.31,
+                  "rgb": {
+                    "blue": 42,
+                    "green": 98,
+                    "red": 178
+                  }
+                },
+                {
+                  "percentage": 0.12,
+                  "rgb": {
+                    "blue": 97,
+                    "green": 97,
+                    "red": 97
+                  }
+                },
+                {
+                  "percentage": 0.11,
+                  "rgb": {
+                    "blue": 68,
+                    "green": 54,
+                    "red": 45
+                  }
+                }
+              ]
+            },
+            "original_img_height": 586,
+            "original_img_url": "https://pbs.twimg.com/media/HTx0TlgasAAMrdh.jpg",
+            "original_img_width": 1200
+          },
+          "media_key": "3_2106686605536964608"
+        },
+        {
+          "id": "QXBpTWVkaWE6DAAFCgABHTx0J+oaUAAKAAIAAAAAFJ5OBgAA",
+          "media_id": "2106686440482689024",
+          "media_info": {
+            "__typename": "ApiImage",
+            "color_info": {
+              "palette": [
+                {
+                  "percentage": 96.61,
+                  "rgb": {
+                    "blue": 15,
+                    "green": 15,
+                    "red": 15
+                  }
+                },
+                {
+                  "percentage": 2.43,
+                  "rgb": {
+                    "blue": 21,
+                    "green": 43,
+                    "red": 92
+                  }
+                },
+                {
+                  "percentage": 0.47,
+                  "rgb": {
+                    "blue": 97,
+                    "green": 97,
+                    "red": 97
+                  }
+                },
+                {
+                  "percentage": 0.29,
+                  "rgb": {
+                    "blue": 49,
+                    "green": 116,
+                    "red": 218
+                  }
+                }
+              ]
+            },
+            "original_img_height": 1288,
+            "original_img_url": "https://pbs.twimg.com/media/HTx0J-oaUAAsiJn.jpg",
+            "original_img_width": 2258
+          },
+          "media_key": "3_2106686440482689024"
+        },
+        {
+          "id": "QXBpTWVkaWE6DAAFCgABHTxzDKma0AEKAAIAAAAAFJ5OBgAA",
+          "media_id": "2106685223924846593",
+          "media_info": {
+            "__typename": "ApiImage",
+            "color_info": {
+              "palette": [
+                {
+                  "percentage": 97.78,
+                  "rgb": {
+                    "blue": 6,
+                    "green": 6,
+                    "red": 6
+                  }
+                },
+                {
+                  "percentage": 0.68,
+                  "rgb": {
+                    "blue": 15,
+                    "green": 37,
+                    "red": 72
+                  }
+                },
+                {
+                  "percentage": 0.56,
+                  "rgb": {
+                    "blue": 101,
+                    "green": 111,
+                    "red": 113
+                  }
+                },
+                {
+                  "percentage": 0.25,
+                  "rgb": {
+                    "blue": 55,
+                    "green": 59,
+                    "red": 39
+                  }
+                },
+                {
+                  "percentage": 0.24,
+                  "rgb": {
+                    "blue": 77,
+                    "green": 45,
+                    "red": 46
+                  }
+                }
+              ]
+            },
+            "original_img_height": 797,
+            "original_img_url": "https://pbs.twimg.com/media/HTxzDKma0AEzo-D.jpg",
+            "original_img_width": 1200
+          },
+          "media_key": "3_2106685223924846593"
+        }
+      ]
+    }
+  }
+}

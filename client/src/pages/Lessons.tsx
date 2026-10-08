@@ -133,6 +133,16 @@ const lessons = [
     level: 'Intermediate',
     path: '/lessons/2',
   },
+  {
+    id: 14,
+    number: 'Lesson 14',
+    title: 'How to Run a Market Making Bot on Any Exchange with a Tread Custom Agent',
+    description:
+      'Connect your exchange, whitelist trading access, hire a market-making agent, and learn how to choose a strategy, size margin, compare CPM, and monitor your bot.',
+    duration: '9 min read',
+    level: 'Advanced',
+    path: '/agents/market-making-custom-agent',
+  },
 ];
 
 export default function Lessons() {

@@ -46,7 +46,7 @@ type ArticleEntity = {
   };
 };
 
-type ArticlePayload = {
+export type ArticlePayload = {
   tweet: {
     article: {
       title: string;
@@ -59,7 +59,6 @@ type ArticlePayload = {
 };
 
 const articlePayload = JSON.parse(articlePayloadRaw) as ArticlePayload;
-const article = articlePayload.tweet.article;
 
 const mediaById: Record<string, string> = {
   '2099163730202517505': image2099163730202517505,
@@ -78,15 +77,24 @@ const mediaById: Record<string, string> = {
   '2099166038126710784': image2099166038126710784,
 };
 
-const entityByKey = Object.fromEntries(
-  article.content.entityMap.map((entity) => [Number(entity.key), entity.value]),
-);
+type EntityMap = Record<number, ArticleEntity['value']>;
 
-function renderInline(block: ArticleBlock): ReactNode {
+function renderInline(block: ArticleBlock, entityByKey: EntityMap): ReactNode {
   if (!block.text) return null;
 
+  const plainUrls = Array.from(block.text.matchAll(/https?:\/\/[^\s]+/g));
+  const entityRanges = [...(block.entityRanges ?? [])];
+  const inlineEntities = { ...entityByKey };
+  plainUrls.forEach((match, index) => {
+    const offset = match.index!;
+    if (entityRanges.some((range) => offset >= range.offset && offset < range.offset + range.length)) return;
+    const key = -index - 1;
+    entityRanges.push({ key, offset, length: match[0].length });
+    inlineEntities[key] = { type: 'LINK', data: { url: match[0] } };
+  });
+
   const boundaries = new Set([0, block.text.length]);
-  for (const range of [...(block.entityRanges ?? []), ...(block.inlineStyleRanges ?? [])]) {
+  for (const range of [...entityRanges, ...(block.inlineStyleRanges ?? [])]) {
     boundaries.add(range.offset);
     boundaries.add(range.offset + range.length);
   }
@@ -99,10 +107,10 @@ function renderInline(block: ArticleBlock): ReactNode {
     const styles = (block.inlineStyleRanges ?? []).filter(
       (range) => start >= range.offset && end <= range.offset + range.length,
     );
-    const entityRange = (block.entityRanges ?? []).find(
+    const entityRange = entityRanges.find(
       (range) => start >= range.offset && end <= range.offset + range.length,
     );
-    const entity = entityRange?.key === undefined ? undefined : entityByKey[entityRange.key];
+    const entity = entityRange?.key === undefined ? undefined : inlineEntities[entityRange.key];
 
     let node: ReactNode = text;
 
@@ -122,7 +130,7 @@ function renderInline(block: ArticleBlock): ReactNode {
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-primary underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
+          className="break-words text-primary underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
         >
           {node}
         </a>
@@ -133,7 +141,11 @@ function renderInline(block: ArticleBlock): ReactNode {
   });
 }
 
-function ArticleMedia({ block }: { block: ArticleBlock }) {
+function ArticleMedia({ block, entityByKey, mediaById }: {
+  block: ArticleBlock;
+  entityByKey: EntityMap;
+  mediaById: Record<string, string>;
+}) {
   const entityKey = block.entityRanges?.[0]?.key;
   if (entityKey === undefined) return null;
 
@@ -162,7 +174,7 @@ function ArticleMedia({ block }: { block: ArticleBlock }) {
     <figure className="my-8">
       <img
         src={src}
-        alt="TreadFi custom agent article illustration"
+        alt="TreadFi agent walkthrough screenshot"
         className="w-full rounded-xl border border-border/40 object-contain bg-black/20"
         loading="lazy"
       />
@@ -170,15 +182,19 @@ function ArticleMedia({ block }: { block: ArticleBlock }) {
   );
 }
 
-function ArticleBlockView({ block }: { block: ArticleBlock }) {
+function ArticleBlockView({ block, entityByKey, mediaById }: {
+  block: ArticleBlock;
+  entityByKey: EntityMap;
+  mediaById: Record<string, string>;
+}) {
   if (block.type === 'atomic') {
-    return <ArticleMedia block={block} />;
+    return <ArticleMedia block={block} entityByKey={entityByKey} mediaById={mediaById} />;
   }
 
   if (block.type === 'header-two') {
     return (
       <h2 className="text-2xl sm:text-3xl font-bold text-foreground mt-14 mb-6 leading-tight">
-        {renderInline(block)}
+        {renderInline(block, entityByKey)}
       </h2>
     );
   }
@@ -186,7 +202,7 @@ function ArticleBlockView({ block }: { block: ArticleBlock }) {
   if (block.type === 'unordered-list-item') {
     return (
       <ul className="list-disc pl-6 mb-3 text-muted-foreground">
-        <li className="pl-1 leading-relaxed">{renderInline(block)}</li>
+        <li className="pl-1 leading-relaxed">{renderInline(block, entityByKey)}</li>
       </ul>
     );
   }
@@ -194,7 +210,7 @@ function ArticleBlockView({ block }: { block: ArticleBlock }) {
   if (block.type === 'blockquote') {
     return (
       <blockquote className="my-8 border-l-4 border-primary/70 bg-card rounded-r-xl p-6 text-muted-foreground leading-relaxed whitespace-pre-wrap">
-        {renderInline(block)}
+        {renderInline(block, entityByKey)}
       </blockquote>
     );
   }
@@ -205,12 +221,22 @@ function ArticleBlockView({ block }: { block: ArticleBlock }) {
 
   return (
     <p className="text-muted-foreground leading-relaxed mb-5 whitespace-pre-wrap">
-      {renderInline(block)}
+      {renderInline(block, entityByKey)}
     </p>
   );
 }
 
-export default function AgentsCustomAgentBuilderPage() {
+export function AgentsArticlePage({ payload, mediaById, coverImage, readTime, sourceUrl }: {
+  payload: ArticlePayload;
+  mediaById: Record<string, string>;
+  coverImage: string;
+  readTime: string;
+  sourceUrl: string;
+}) {
+  const article = payload.tweet.article;
+  const entityByKey: EntityMap = Object.fromEntries(
+    article.content.entityMap.map((entity) => [Number(entity.key), entity.value]),
+  );
   return (
     <div className="min-h-screen bg-background">
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -234,13 +260,13 @@ export default function AgentsCustomAgentBuilderPage() {
           <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
             <div className="flex items-center gap-1.5">
               <Clock size={13} />
-              <span>18 min read</span>
+              <span>{readTime}</span>
             </div>
             <Badge variant="outline" className="text-xs font-medium text-primary border-primary/30 bg-primary/5">
               Custom Agents
             </Badge>
             <a
-              href="https://x.com/sportytechworld/status/2099421620968513813"
+              href={sourceUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 hover:text-foreground transition-colors"
@@ -253,16 +279,28 @@ export default function AgentsCustomAgentBuilderPage() {
 
         <img
           src={coverImage}
-          alt="How to build your first TreadFi custom agent"
+          alt={article.title}
           className="w-full rounded-xl border border-border/40 object-cover mb-12"
         />
 
         <div className="article-prose">
           {article.content.blocks.map((block) => (
-            <ArticleBlockView key={block.key} block={block} />
+            <ArticleBlockView key={block.key} block={block} entityByKey={entityByKey} mediaById={mediaById} />
           ))}
         </div>
       </article>
     </div>
+  );
+}
+
+export default function AgentsCustomAgentBuilderPage() {
+  return (
+    <AgentsArticlePage
+      payload={articlePayload}
+      mediaById={mediaById}
+      coverImage={coverImage}
+      readTime="18 min read"
+      sourceUrl="https://x.com/sportytechworld/status/2099421620968513813"
+    />
   );
 }
