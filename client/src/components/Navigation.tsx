@@ -3,7 +3,6 @@ import { Menu, X, Zap, ChevronDown } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 
 const navLinks = [
-  { path: '/', label: 'Home' },
   { path: '/lessons', label: 'Lessons' },
   { path: '/blog', label: 'Blog' },
   { path: '/discounts-and-refs', label: 'Discounts & Refs' },
