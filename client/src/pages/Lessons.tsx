@@ -143,6 +143,16 @@ const lessons = [
     level: 'Advanced',
     path: '/agents/market-making-custom-agent',
   },
+  {
+    id: 15,
+    number: 'Lesson 15',
+    title: 'How to let an AI agent run your market making on Arcus — full @tread_fi setup',
+    description:
+      'Set up Arcus with TreadFi, enable agent trading access, hire a market-making agent, and compare strategy modes while managing your margin and monitoring the bot.',
+    duration: '6 min read',
+    level: 'Advanced',
+    path: '/agents/arcus-market-making-agent',
+  },
 ];
 
 export default function Lessons() {

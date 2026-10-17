@@ -32,6 +32,7 @@ import AgentsIndexPage from "@/pages/AgentsIndexPage";
 import AgentsGettingStartedPage from "@/pages/AgentsGettingStartedPage";
 import AgentsCustomAgentBuilderPage from "@/pages/AgentsCustomAgentBuilderPage";
 import AgentsMarketMakingPage from "@/pages/AgentsMarketMakingPage";
+import AgentsArcusMarketMakingPage from "@/pages/AgentsArcusMarketMakingPage";
 import ExchangeTutorialsIndexPage from "@/pages/ExchangeTutorialsIndexPage";
 import ExchangeTutorialArticlePage from "@/pages/ExchangeTutorialArticlePage";
 import ExchangeTutorialAftermathPage from "@/pages/ExchangeTutorialAftermathPage";
@@ -69,6 +70,7 @@ function Router() {
         <Route path="/agents/getting-started" component={AgentsGettingStartedPage} />
         <Route path="/agents/build-your-first-custom-agent" component={AgentsCustomAgentBuilderPage} />
         <Route path="/agents/market-making-custom-agent" component={AgentsMarketMakingPage} />
+        <Route path="/agents/arcus-market-making-agent" component={AgentsArcusMarketMakingPage} />
         <Route path="/exchange-tutorials" component={ExchangeTutorialsIndexPage} />
         <Route path="/exchange-tutorials/arcus-treadfi-robinhood" component={ExchangeTutorialArticlePage} />
         <Route path="/exchange-tutorials/aftermath-treadfi-sui" component={ExchangeTutorialAftermathPage} />

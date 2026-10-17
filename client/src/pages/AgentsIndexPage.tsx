@@ -3,6 +3,13 @@ import { Bot, ArrowRight } from 'lucide-react';
 
 const agentArticles = [
   {
+    path: '/agents/arcus-market-making-agent',
+    title: 'How to let an AI agent run your market making on Arcus — full @tread_fi setup',
+    excerpt: 'A complete Arcus walkthrough: connect your account to TreadFi, whitelist trading access, hire a market-making agent, choose your margin and strategy, and compare configurations by CPM.',
+    readTime: '6 min read',
+    tag: 'Arcus Setup',
+  },
+  {
     path: '/agents/market-making-custom-agent',
     title: 'How to Run a Market Making Bot on Any Exchange with a Tread Custom Agent',
     excerpt: 'Connect an exchange, whitelist trading access, hire Nooru’s Market Maker Bot, and configure its strategy. Includes margin sizing, regime checks, CPM comparisons, and the supervisor-agent alternative.',

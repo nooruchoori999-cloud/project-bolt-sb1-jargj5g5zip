@@ -1,0 +1,1729 @@
+{
+  "tweet": {
+    "url": "https://x.com/sportytechworld/status/2110749270915908048",
+    "article": {
+      "created_at": "2026-10-15T15:06:56.000Z",
+      "modified_at": "2026-10-15T15:06:56.000Z",
+      "id": "2099072758667964416",
+      "title": "How to let an AI agent run your market making on Arcus — full @tread_fi setup",
+      "preview_text": "I've been market making on @arcus_xyz for a while now, and the setup I use today needs almost no input from me. I hire one @tread_fi agent, answer four questions, and the bot handles the rest —",
+      "cover_media": {
+        "id": "QXBpTWVkaWE6DAAFCgABHSFvi0XaMAAKAAIAAAAAFJ5OBgAA",
+        "media_id": "2099081545294426112",
+        "media_info": {
+          "__typename": "ApiImage",
+          "color_info": {
+            "palette": [
+              {
+                "percentage": 91.51,
+                "rgb": {
+                  "blue": 20,
+                  "green": 13,
+                  "red": 9
+                }
+              },
+              {
+                "percentage": 3.97,
+                "rgb": {
+                  "blue": 182,
+                  "green": 177,
+                  "red": 174
+                }
+              },
+              {
+                "percentage": 2.62,
+                "rgb": {
+                  "blue": 97,
+                  "green": 125,
+                  "red": 28
+                }
+              },
+              {
+                "percentage": 0.72,
+                "rgb": {
+                  "blue": 54,
+                  "green": 64,
+                  "red": 20
+                }
+              }
+            ]
+          },
+          "original_img_height": 1200,
+          "original_img_url": "https://pbs.twimg.com/media/HSFvi0XaMAAS784.jpg",
+          "original_img_width": 3000
+        },
+        "media_key": "3_2099081545294426112"
+      },
+      "content": {
+        "blocks": [
+          {
+            "data": {
+              "mentions": [
+                {
+                  "fromIndex": 27,
+                  "text": "arcus_xyz",
+                  "toIndex": 37
+                },
+                {
+                  "fromIndex": 123,
+                  "text": "tread_fi",
+                  "toIndex": 132
+                }
+              ]
+            },
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "35vjf",
+            "text": "I've been market making on @arcus_xyz for a while now, and the setup I use today needs almost no input from me. I hire one @tread_fi agent, answer four questions, and the bot handles the rest — scanning the regime, running when conditions are good, pausing when they're not.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "ecq45",
+            "text": "This is the full walkthrough.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [
+              {
+                "length": 26,
+                "offset": 0,
+                "style": "Bold"
+              }
+            ],
+            "key": "cd96b",
+            "text": "Step 1 — Get both accounts",
+            "type": "unstyled"
+          },
+          {
+            "data": {
+              "mentions": [
+                {
+                  "fromIndex": 11,
+                  "text": "tread_fi",
+                  "toIndex": 20
+                },
+                {
+                  "fromIndex": 36,
+                  "text": "arcus_xyz",
+                  "toIndex": 46
+                }
+              ]
+            },
+            "entityRanges": [
+              {
+                "key": 0,
+                "length": 10,
+                "offset": 36
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "2m08i",
+            "text": "You need a @tread_fi account and an @arcus_xyz account. Arcus is invite only for now, but using my ref link, you can skip the invite code. My refs are auto eligible for signup without a access code.",
+            "type": "unstyled"
+          },
+          {
+            "data": {
+              "urls": [
+                {
+                  "fromIndex": 7,
+                  "text": "https://app.tread.fi/referral/59S1TB1X",
+                  "toIndex": 45
+                },
+                {
+                  "fromIndex": 53,
+                  "text": "https://app.arcus.xyz/ref/NOORUCN",
+                  "toIndex": 86
+                }
+              ]
+            },
+            "entityRanges": [
+              {
+                "key": 1,
+                "length": 38,
+                "offset": 7
+              },
+              {
+                "key": 2,
+                "length": 33,
+                "offset": 53
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "7oppu",
+            "text": "Tread: https://app.tread.fi/referral/59S1TB1X\nArcus: https://app.arcus.xyz/ref/NOORUCN",
+            "type": "blockquote"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "da3d6",
+            "text": "Fund the Arcus account with at least $20. That's the floor to run anything meaningful. More on sizing later.\n\nHere's some codes if arcus still asking for codes. \nBJW3VQ\n9COTQ5\nP4DBY4\nGQACJI\nKTW59B\nO9YNWZ",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [
+              {
+                "length": 31,
+                "offset": 0,
+                "style": "Bold"
+              }
+            ],
+            "key": "1uask",
+            "text": "Step 2 — Connect Arcus to Tread",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "b00vq",
+            "text": "On Tread, click the wallet icon in the top right of the menu. ",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [
+              {
+                "key": 3,
+                "length": 1,
+                "offset": 0
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "2l41h",
+            "text": " ",
+            "type": "atomic"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "f0pr9",
+            "text": "On the next screen, look at the bottom left and click \"Connect perp dex account\". Pick Arcus, hit \"Connect\", then \"Submit\".",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [
+              {
+                "key": 4,
+                "length": 1,
+                "offset": 0
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "elrl6",
+            "text": " ",
+            "type": "atomic"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "37lp4",
+            "text": "That's it. Your Arcus account is now wired into Tread.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [
+              {
+                "length": 41,
+                "offset": 0,
+                "style": "Bold"
+              }
+            ],
+            "key": "4h3l5",
+            "text": "Step 3 — Pick how you want to run the bot",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "ekr7e",
+            "text": "Two routes from here.",
+            "type": "unstyled"
+          },
+          {
+            "data": {
+              "urls": [
+                {
+                  "fromIndex": 20,
+                  "text": "https://app.tread.fi/volume_bot",
+                  "toIndex": 51
+                },
+                {
+                  "fromIndex": 181,
+                  "text": "https://treadfiacademy--sportytechworld.replit.app/modes/dn-bot",
+                  "toIndex": 244
+                }
+              ]
+            },
+            "entityRanges": [
+              {
+                "key": 5,
+                "length": 31,
+                "offset": 20
+              },
+              {
+                "key": 6,
+                "length": 63,
+                "offset": 181
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "2fogo",
+            "text": "The manual route is https://app.tread.fi/volume_bot, where you choose the bot mode and the settings yourself. If you don't know how each mode behaves, I wrote out all of them here: https://treadfiacademy--sportytechworld.replit.app/modes/dn-bot",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "3arl9",
+            "text": "The other route is agents — you let an AI agent find the settings and run the bot for you. That's what I use, and that's what the rest of this covers.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [
+              {
+                "length": 21,
+                "offset": 0,
+                "style": "Bold"
+              }
+            ],
+            "key": "5have",
+            "text": "Using my custom agent",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "em779",
+            "text": "I built a market making agent and listed it on the Tread marketplace. It's free to hire. Once it's running you don't touch anything.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [
+              {
+                "length": 47,
+                "offset": 0,
+                "style": "Bold"
+              }
+            ],
+            "key": "ar36h",
+            "text": "First, whitelist your Arcus account for agents.",
+            "type": "unstyled"
+          },
+          {
+            "data": {
+              "urls": [
+                {
+                  "fromIndex": 6,
+                  "text": "https://app.tread.fi/agents/settings/access",
+                  "toIndex": 49
+                }
+              ]
+            },
+            "entityRanges": [
+              {
+                "key": 7,
+                "length": 43,
+                "offset": 6
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "6g12j",
+            "text": "Go to https://app.tread.fi/agents/settings/access",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "5jmdu",
+            "text": "Hover over your Arcus account and click \"+ Whitelist\". It moves to the Whitelist tab. ",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [
+              {
+                "key": 8,
+                "length": 1,
+                "offset": 0
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "9jckf",
+            "text": " ",
+            "type": "atomic"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [
+              {
+                "length": 5,
+                "offset": 31,
+                "style": "Bold"
+              }
+            ],
+            "key": "9t5b3",
+            "text": "From there, make sure you tick Trade — this is the part people miss, without it the agent can't actually place orders. Then click Save.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [
+              {
+                "key": 9,
+                "length": 1,
+                "offset": 0
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "cu2jh",
+            "text": " ",
+            "type": "atomic"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [
+              {
+                "length": 23,
+                "offset": 0,
+                "style": "Bold"
+              }
+            ],
+            "key": "fb3oo",
+            "text": "Second, hire the agent.",
+            "type": "unstyled"
+          },
+          {
+            "data": {
+              "urls": [
+                {
+                  "fromIndex": 42,
+                  "text": "https://app.tread.fi/agents/marketplace/60164439dbd7431a84f610ede6130ec3",
+                  "toIndex": 114
+                }
+              ]
+            },
+            "entityRanges": [
+              {
+                "key": 10,
+                "length": 72,
+                "offset": 42
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "2duh5",
+            "text": "My listing is \"Nooru's Market Maker Bot\": https://app.tread.fi/agents/marketplace/60164439dbd7431a84f610ede6130ec3",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "869k4",
+            "text": "Click \"Hire agent\". Done.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [
+              {
+                "key": 11,
+                "length": 1,
+                "offset": 0
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "fqubk",
+            "text": " ",
+            "type": "atomic"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [
+              {
+                "length": 14,
+                "offset": 0,
+                "style": "Bold"
+              }
+            ],
+            "key": "8fqaa",
+            "text": "Third, run it.",
+            "type": "unstyled"
+          },
+          {
+            "data": {
+              "urls": [
+                {
+                  "fromIndex": 6,
+                  "text": "https://app.tread.fi/agents",
+                  "toIndex": 33
+                }
+              ]
+            },
+            "entityRanges": [
+              {
+                "key": 12,
+                "length": 27,
+                "offset": 6
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "drkiq",
+            "text": "Go to https://app.tread.fi/agents and open any of your projects. No project yet? Click \"+\" and start one.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "23ckh",
+            "text": "Inside the project, click \"Start a session\". You'll see every agent you have available. Pick \"Nooru's Market Maker Bot\".",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [
+              {
+                "key": 13,
+                "length": 1,
+                "offset": 0
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "btmmu",
+            "text": " ",
+            "type": "atomic"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [
+              {
+                "length": 45,
+                "offset": 69,
+                "style": "Bold"
+              }
+            ],
+            "key": "9k1vm",
+            "text": "Now you get a prompt box with three default prompts. For this, click \"Setup a market making bot on given exchange\".",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [
+              {
+                "key": 14,
+                "length": 1,
+                "offset": 0
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "4109s",
+            "text": " ",
+            "type": "atomic"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "ac8ga",
+            "text": "It'll show you the available exchanges. Click Arcus. If Arcus isn't in the list, type it into the \"Others\" field. Continue.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [
+              {
+                "length": 15,
+                "offset": 0,
+                "style": "Bold"
+              }
+            ],
+            "key": "ao8jb",
+            "text": "Pick your pair. The agent pulls the top 5 pairs on Arcus by volume. MM bots need volume to work with, so I always take the highest one on that list. Continue.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [
+              {
+                "key": 15,
+                "length": 1,
+                "offset": 0
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "1dmi6",
+            "text": " ",
+            "type": "atomic"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [
+              {
+                "length": 16,
+                "offset": 0,
+                "style": "Bold"
+              }
+            ],
+            "key": "ariu5",
+            "text": "Set your margin. This is the only number that really matters, so read this part properly.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [
+              {
+                "key": 16,
+                "length": 1,
+                "offset": 0
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "eapja",
+            "text": " ",
+            "type": "atomic"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "aopoa",
+            "text": "If you have $100 sitting in your Arcus account, don't allocate more than $50 here. Keep buffer.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "58al2",
+            "text": "How the sizing works: margin × leverage × 10 = target volume for that round. So $50 margin at 15x leverage means the bot is aiming for roughly $7,500 of volume in that round.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [
+              {
+                "length": 24,
+                "offset": 0,
+                "style": "Bold"
+              }
+            ],
+            "key": "5lj1r",
+            "text": "Pick your strategy mode. Three options:",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [
+              {
+                "length": 34,
+                "offset": 0,
+                "style": "Bold"
+              },
+              {
+                "length": 22,
+                "offset": 78,
+                "style": "Bold"
+              },
+              {
+                "length": 25,
+                "offset": 137,
+                "style": "Bold"
+              }
+            ],
+            "key": "4vovl",
+            "text": "A — ⚡ Fast Volume + Consistent PnL — Mid bot, -1 spread. [my recommendation] \nB — 🐢 Slow PnL-Focused — Grid bot, +1 spread, 0.05% reset \nC — 🔬 Strict Regime Check — Grid bot, +1 spread, 0.125% reset",
+            "type": "blockquote"
+          },
+          {
+            "data": {},
+            "entityRanges": [
+              {
+                "key": 17,
+                "length": 1,
+                "offset": 0
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "fdmmc",
+            "text": " ",
+            "type": "atomic"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "fk1a",
+            "text": "If you just want volume at a predictable cost per million, take A. That's the one I run most of the time.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "95haq",
+            "text": "B is aimed at better PnL, but the CPM swings. Some rounds come out great, some don't, and it varies a lot by exchange. You'd have to run a few rounds on Arcus yourself to see where it lands for you.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "eb55q",
+            "text": "C adds a higher-timeframe filter that keeps the bot out of trending markets and only lets it work in ranging conditions. Best CPM of the three on paper. The tradeoff is real though — the bot can sit stalled for a long time waiting for a clean environment, so you make less volume overall.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [
+              {
+                "length": 32,
+                "offset": 83,
+                "style": "Bold"
+              }
+            ],
+            "key": "e60r6",
+            "text": "Pick one and continue. You'll get a confirmation card with your full config. Click \"Start Nooru's Market Maker Bot\".",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [
+              {
+                "key": 18,
+                "length": 1,
+                "offset": 0
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "bc6q0",
+            "text": " ",
+            "type": "atomic"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "8kb21",
+            "text": "NOT SURE WHICH OPTION? RUN AN A/B/C TEST",
+            "type": "header-two"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "6t8if",
+            "text": "Paste this into a fresh session on the same agent. Replace account name, margin and leverage with your own.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "33v2l",
+            "text": "Set up a market-making strategy on Arcus pairs on Arcus account. Account: [your account name]. Pair: \"pair name\". Margin: $100. Leverage: 10x.   Run a sequential CPM comparison across 3 configs, looping for 7 days:",
+            "type": "blockquote"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "csqe8",
+            "text": "Option 1 — Mid bot, -1 spread, 5% SL/TP, aggressive POV. IST time windows only: 08:00–12:00, 14:00–17:30, 22:00–01:00. Gates: ADX < 30 on 1m + 5m. Run this first.",
+            "type": "blockquote"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "5rqqp",
+            "text": "Option 4 — Same as Option 1 but runs 24/7, no time gate. Gates: ADX < 30 on 1m + 5m AND 5m RSI within 35–65. Activate when Option 1 is time-gated out OR after an Option 1 SL hit.",
+            "type": "blockquote"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "f3hol",
+            "text": "Option 2 — Grid bot, +1 spread, 0.05% grid reset, 5% SL/TP, passive POV. IST time windows only (same as Option 1). Same ADX gates.",
+            "type": "blockquote"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "87jlj",
+            "text": "Rotation order: Option 1 → Option 4 (gap-fill / post-SL) → Option 2 in eligible windows → loop. Flatten and cancel ALL orders immediately when conditions are not met — no residue. Track CPM per run to identify best conditions. ",
+            "type": "blockquote"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [
+              {
+                "length": 23,
+                "offset": 0,
+                "style": "Bold"
+              }
+            ],
+            "key": "7fdkv",
+            "text": "What happens after that\nThe agent scans the regime, runs market making on Arcus when conditions are favourable, pauses when they aren't, and repeats. You don't need to do anything.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [
+              {
+                "length": 6,
+                "offset": 15,
+                "style": "Italic"
+              }
+            ],
+            "key": "9qb83",
+            "text": "Two things you should do:",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "8egii",
+            "text": "Check on it now and then. There can be bugs from AI downtime, and if it stalls you can just ask the agent what's going wrong — it'll tell you. Watch your margin. These are repetitive bots and the balance grinds down over rounds. Top it up so the bot keeps running instead of dying halfway.",
+            "type": "blockquote"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [
+              {
+                "length": 32,
+                "offset": 0,
+                "style": "Bold"
+              }
+            ],
+            "key": "elv93",
+            "text": "The other way — supervisor agent",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [
+              {
+                "length": 16,
+                "offset": 69,
+                "style": "Bold"
+              }
+            ],
+            "key": "m3tj",
+            "text": "If you'd rather not use my agent, go to \"Start session\" and pick the supervisor agent instead. ",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [
+              {
+                "key": 19,
+                "length": 1,
+                "offset": 0
+              }
+            ],
+            "inlineStyleRanges": [],
+            "key": "4dlbs",
+            "text": " ",
+            "type": "atomic"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "3nat6",
+            "text": "Ask it to run an MM bot on Arcus with the best settings for cost. It'll hand you a config you can go and start the bot with.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "9le0k",
+            "text": "Up to you which one you take.",
+            "type": "unstyled"
+          },
+          {
+            "data": {},
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "8htlf",
+            "text": "Get started using my ref -  No promo or discount assocated with this ref, however, it will be fund my research. ",
+            "type": "unstyled"
+          },
+          {
+            "data": {
+              "urls": [
+                {
+                  "fromIndex": 8,
+                  "text": "https://app.tread.fi/referral/59S1TB1X",
+                  "toIndex": 46
+                },
+                {
+                  "fromIndex": 54,
+                  "text": "https://app.arcus.xyz/ref/NOORUCN",
+                  "toIndex": 87
+                }
+              ]
+            },
+            "entityRanges": [],
+            "inlineStyleRanges": [],
+            "key": "bjln2",
+            "text": "\nTread: https://app.tread.fi/referral/59S1TB1X\nArcus: https://app.arcus.xyz/ref/NOORUCN",
+            "type": "unstyled"
+          }
+        ],
+        "entityMap": [
+          {
+            "key": "12",
+            "value": {
+              "data": {
+                "entityKey": "dbeeda5e-ad4d-4d55-ab20-3e1f6bb0d473",
+                "url": "https://app.tread.fi/agents"
+              },
+              "mutability": "Mutable",
+              "type": "LINK"
+            }
+          },
+          {
+            "key": "8",
+            "value": {
+              "data": {
+                "caption": "This is a screenhsot for adding a hl account, you can do similarly for your Arcuus account. The process is same.",
+                "entityKey": "aafd23f0-5380-42e5-9f8a-76f5568fd932",
+                "mediaItems": [
+                  {
+                    "localMediaId": "5",
+                    "mediaCategory": "DraftTweetImage",
+                    "mediaId": "2099075228156780544"
+                  }
+                ]
+              },
+              "mutability": "Immutable",
+              "type": "MEDIA"
+            }
+          },
+          {
+            "key": "19",
+            "value": {
+              "data": {
+                "entityKey": "07a2ed27-f56b-44fd-866e-b71796c64902",
+                "mediaItems": [
+                  {
+                    "localMediaId": "23",
+                    "mediaCategory": "DraftTweetImage",
+                    "mediaId": "2099079255875530752"
+                  }
+                ]
+              },
+              "mutability": "Immutable",
+              "type": "MEDIA"
+            }
+          },
+          {
+            "key": "4",
+            "value": {
+              "data": {
+                "entityKey": "bd3f752e-4a25-45e4-9837-ec407a8e8af1",
+                "mediaItems": [
+                  {
+                    "localMediaId": "3",
+                    "mediaCategory": "DraftTweetImage",
+                    "mediaId": "2099074477649018880"
+                  }
+                ]
+              },
+              "mutability": "Immutable",
+              "type": "MEDIA"
+            }
+          },
+          {
+            "key": "15",
+            "value": {
+              "data": {
+                "entityKey": "660c809c-6755-4106-9e68-210bf2c64064",
+                "mediaItems": [
+                  {
+                    "localMediaId": "15",
+                    "mediaCategory": "DraftTweetImage",
+                    "mediaId": "2099078539542949888"
+                  }
+                ]
+              },
+              "mutability": "Immutable",
+              "type": "MEDIA"
+            }
+          },
+          {
+            "key": "11",
+            "value": {
+              "data": {
+                "entityKey": "82475ce8-6a5e-4004-8d20-db88eb7d3a41",
+                "mediaItems": [
+                  {
+                    "localMediaId": "9",
+                    "mediaCategory": "DraftTweetImage",
+                    "mediaId": "2099075965385338880"
+                  }
+                ]
+              },
+              "mutability": "Immutable",
+              "type": "MEDIA"
+            }
+          },
+          {
+            "key": "9",
+            "value": {
+              "data": {
+                "entityKey": "225ed9a0-7557-4435-9da7-2e609875e680",
+                "mediaItems": [
+                  {
+                    "localMediaId": "7",
+                    "mediaCategory": "DraftTweetImage",
+                    "mediaId": "2099075316681699328"
+                  }
+                ]
+              },
+              "mutability": "Immutable",
+              "type": "MEDIA"
+            }
+          },
+          {
+            "key": "13",
+            "value": {
+              "data": {
+                "entityKey": "1a6fca85-b3de-4153-87a2-ca02b434b87e",
+                "mediaItems": [
+                  {
+                    "localMediaId": "11",
+                    "mediaCategory": "DraftTweetImage",
+                    "mediaId": "2099078165708832768"
+                  }
+                ]
+              },
+              "mutability": "Immutable",
+              "type": "MEDIA"
+            }
+          },
+          {
+            "key": "16",
+            "value": {
+              "data": {
+                "entityKey": "fc937d4d-915f-4112-b93f-ce6ad3d7dd94",
+                "mediaItems": [
+                  {
+                    "localMediaId": "17",
+                    "mediaCategory": "DraftTweetImage",
+                    "mediaId": "2099078620400771073"
+                  }
+                ]
+              },
+              "mutability": "Immutable",
+              "type": "MEDIA"
+            }
+          },
+          {
+            "key": "5",
+            "value": {
+              "data": {
+                "entityKey": "70946c37-76b3-49e0-9df6-b2a6fef2540f",
+                "url": "https://app.tread.fi/volume_bot"
+              },
+              "mutability": "Mutable",
+              "type": "LINK"
+            }
+          },
+          {
+            "key": "10",
+            "value": {
+              "data": {
+                "entityKey": "9fe27634-9429-40a7-9316-266e1e8ec347",
+                "url": "https://app.tread.fi/agents/marketplace/60164439dbd7431a84f610ede6130ec3"
+              },
+              "mutability": "Mutable",
+              "type": "LINK"
+            }
+          },
+          {
+            "key": "6",
+            "value": {
+              "data": {
+                "entityKey": "571fdef3-ad77-4bb1-aef4-3bfdec32160b",
+                "url": "https://treadfiacademy--sportytechworld.replit.app/modes/dn-bot"
+              },
+              "mutability": "Mutable",
+              "type": "LINK"
+            }
+          },
+          {
+            "key": "1",
+            "value": {
+              "data": {
+                "entityKey": "efe5749b-13db-448e-9193-1b87a985ba93",
+                "url": "https://app.tread.fi/referral/59S1TB1X"
+              },
+              "mutability": "Mutable",
+              "type": "LINK"
+            }
+          },
+          {
+            "key": "17",
+            "value": {
+              "data": {
+                "entityKey": "ab00183f-6e0f-4588-b47e-8f9685b62fb6",
+                "mediaItems": [
+                  {
+                    "localMediaId": "19",
+                    "mediaCategory": "DraftTweetImage",
+                    "mediaId": "2099078768866582528"
+                  }
+                ]
+              },
+              "mutability": "Immutable",
+              "type": "MEDIA"
+            }
+          },
+          {
+            "key": "14",
+            "value": {
+              "data": {
+                "entityKey": "35ecd747-cf54-46a7-8c7e-da47e8ad67a2",
+                "mediaItems": [
+                  {
+                    "localMediaId": "13",
+                    "mediaCategory": "DraftTweetImage",
+                    "mediaId": "2099078458370609152"
+                  }
+                ]
+              },
+              "mutability": "Immutable",
+              "type": "MEDIA"
+            }
+          },
+          {
+            "key": "0",
+            "value": {
+              "data": {
+                "entityKey": "14898c7b-4598-47d9-82fa-61511df10972",
+                "url": "https://x.com/@arcus_xyz"
+              },
+              "mutability": "Mutable",
+              "type": "LINK"
+            }
+          },
+          {
+            "key": "2",
+            "value": {
+              "data": {
+                "entityKey": "8b9b5860-8614-4ce2-ba79-e1eb50cf99f0",
+                "url": "https://app.arcus.xyz/ref/NOORUCN"
+              },
+              "mutability": "Mutable",
+              "type": "LINK"
+            }
+          },
+          {
+            "key": "18",
+            "value": {
+              "data": {
+                "entityKey": "3d5b8369-7420-4157-8505-e665ec108ee0",
+                "mediaItems": [
+                  {
+                    "localMediaId": "21",
+                    "mediaCategory": "DraftTweetImage",
+                    "mediaId": "2099078882167300096"
+                  }
+                ]
+              },
+              "mutability": "Immutable",
+              "type": "MEDIA"
+            }
+          },
+          {
+            "key": "7",
+            "value": {
+              "data": {
+                "entityKey": "b00b2770-d420-4233-a577-013166d3fc5e",
+                "url": "https://app.tread.fi/agents/settings/access"
+              },
+              "mutability": "Mutable",
+              "type": "LINK"
+            }
+          },
+          {
+            "key": "3",
+            "value": {
+              "data": {
+                "entityKey": "be797f46-3a95-4b21-be36-5c9c310dead1",
+                "mediaItems": [
+                  {
+                    "localMediaId": "1",
+                    "mediaCategory": "DraftTweetImage",
+                    "mediaId": "2099074044591263744"
+                  }
+                ]
+              },
+              "mutability": "Immutable",
+              "type": "MEDIA"
+            }
+          }
+        ]
+      },
+      "media_entities": [
+        {
+          "id": "QXBpTWVkaWE6DAAFCgABHSFtdjnaMAAKAAIAAAAAFJ5OBgAA",
+          "media_id": "2099079255875530752",
+          "media_info": {
+            "__typename": "ApiImage",
+            "color_info": {
+              "palette": [
+                {
+                  "percentage": 99.87,
+                  "rgb": {
+                    "blue": 18,
+                    "green": 18,
+                    "red": 18
+                  }
+                },
+                {
+                  "percentage": 0.11,
+                  "rgb": {
+                    "blue": 45,
+                    "green": 68,
+                    "red": 89
+                  }
+                }
+              ]
+            },
+            "original_img_height": 1268,
+            "original_img_url": "https://pbs.twimg.com/media/HSFtdjnaMAAvT6u.jpg",
+            "original_img_width": 2470
+          },
+          "media_key": "3_2099079255875530752"
+        },
+        {
+          "id": "QXBpTWVkaWE6DAAFCgABHSFs4kSa4AEKAAIAAAAAFJ5OBgAA",
+          "media_id": "2099078620400771073",
+          "media_info": {
+            "__typename": "ApiImage",
+            "color_info": {
+              "palette": [
+                {
+                  "percentage": 97.59,
+                  "rgb": {
+                    "blue": 22,
+                    "green": 22,
+                    "red": 22
+                  }
+                },
+                {
+                  "percentage": 1.38,
+                  "rgb": {
+                    "blue": 45,
+                    "green": 109,
+                    "red": 206
+                  }
+                },
+                {
+                  "percentage": 0.99,
+                  "rgb": {
+                    "blue": 99,
+                    "green": 99,
+                    "red": 99
+                  }
+                }
+              ]
+            },
+            "original_img_height": 418,
+            "original_img_url": "https://pbs.twimg.com/media/HSFs4kSa4AEURFX.jpg",
+            "original_img_width": 1228
+          },
+          "media_key": "3_2099078620400771073"
+        },
+        {
+          "id": "QXBpTWVkaWE6DAAFCgABHSFp4Q+acAAKAAIAAAAAFJ5OBgAA",
+          "media_id": "2099075316681699328",
+          "media_info": {
+            "__typename": "ApiImage",
+            "color_info": {
+              "palette": [
+                {
+                  "percentage": 99.38,
+                  "rgb": {
+                    "blue": 18,
+                    "green": 18,
+                    "red": 18
+                  }
+                },
+                {
+                  "percentage": 0.32,
+                  "rgb": {
+                    "blue": 44,
+                    "green": 97,
+                    "red": 176
+                  }
+                },
+                {
+                  "percentage": 0.14,
+                  "rgb": {
+                    "blue": 101,
+                    "green": 101,
+                    "red": 101
+                  }
+                },
+                {
+                  "percentage": 0.11,
+                  "rgb": {
+                    "blue": 83,
+                    "green": 64,
+                    "red": 52
+                  }
+                }
+              ]
+            },
+            "original_img_height": 1174,
+            "original_img_url": "https://pbs.twimg.com/media/HSFp4Q-acAAM4v6.jpg",
+            "original_img_width": 2404
+          },
+          "media_key": "3_2099075316681699328"
+        },
+        {
+          "id": "QXBpTWVkaWE6DAAFCgABHSFseGbagAAKAAIAAAAAFJ5OBgAA",
+          "media_id": "2099078165708832768",
+          "media_info": {
+            "__typename": "ApiImage",
+            "color_info": {
+              "palette": [
+                {
+                  "percentage": 99.79,
+                  "rgb": {
+                    "blue": 18,
+                    "green": 18,
+                    "red": 18
+                  }
+                },
+                {
+                  "percentage": 0.2,
+                  "rgb": {
+                    "blue": 43,
+                    "green": 67,
+                    "red": 87
+                  }
+                }
+              ]
+            },
+            "original_img_height": 1158,
+            "original_img_url": "https://pbs.twimg.com/media/HSFseGbagAAh8WF.jpg",
+            "original_img_width": 2844
+          },
+          "media_key": "3_2099078165708832768"
+        },
+        {
+          "id": "QXBpTWVkaWE6DAAFCgABHSFpzHMbYAAKAAIAAAAAFJ5OBgAA",
+          "media_id": "2099075228156780544",
+          "media_info": {
+            "__typename": "ApiImage",
+            "color_info": {
+              "palette": [
+                {
+                  "percentage": 99.83,
+                  "rgb": {
+                    "blue": 18,
+                    "green": 18,
+                    "red": 18
+                  }
+                },
+                {
+                  "percentage": 0.12,
+                  "rgb": {
+                    "blue": 98,
+                    "green": 98,
+                    "red": 98
+                  }
+                }
+              ]
+            },
+            "original_img_height": 1174,
+            "original_img_url": "https://pbs.twimg.com/media/HSFpzHMbYAAIJoa.jpg",
+            "original_img_width": 2404
+          },
+          "media_key": "3_2099075228156780544"
+        },
+        {
+          "id": "QXBpTWVkaWE6DAAFCgABHSFtHzcbIAAKAAIAAAAAFJ5OBgAA",
+          "media_id": "2099078882167300096",
+          "media_info": {
+            "__typename": "ApiImage",
+            "color_info": {
+              "palette": [
+                {
+                  "percentage": 80.92,
+                  "rgb": {
+                    "blue": 26,
+                    "green": 26,
+                    "red": 26
+                  }
+                },
+                {
+                  "percentage": 17.27,
+                  "rgb": {
+                    "blue": 52,
+                    "green": 125,
+                    "red": 235
+                  }
+                },
+                {
+                  "percentage": 1.35,
+                  "rgb": {
+                    "blue": 123,
+                    "green": 110,
+                    "red": 108
+                  }
+                },
+                {
+                  "percentage": 0.25,
+                  "rgb": {
+                    "blue": 45,
+                    "green": 80,
+                    "red": 115
+                  }
+                },
+                {
+                  "percentage": 0.14,
+                  "rgb": {
+                    "blue": 95,
+                    "green": 80,
+                    "red": 81
+                  }
+                }
+              ]
+            },
+            "original_img_height": 384,
+            "original_img_url": "https://pbs.twimg.com/media/HSFtHzcbIAAXUmg.jpg",
+            "original_img_width": 1228
+          },
+          "media_key": "3_2099078882167300096"
+        },
+        {
+          "id": "QXBpTWVkaWE6DAAFCgABHSFpHbVbwAAKAAIAAAAAFJ5OBgAA",
+          "media_id": "2099074477649018880",
+          "media_info": {
+            "__typename": "ApiImage",
+            "color_info": {
+              "palette": [
+                {
+                  "percentage": 97.71,
+                  "rgb": {
+                    "blue": 6,
+                    "green": 6,
+                    "red": 6
+                  }
+                },
+                {
+                  "percentage": 0.65,
+                  "rgb": {
+                    "blue": 20,
+                    "green": 42,
+                    "red": 78
+                  }
+                },
+                {
+                  "percentage": 0.55,
+                  "rgb": {
+                    "blue": 117,
+                    "green": 118,
+                    "red": 120
+                  }
+                },
+                {
+                  "percentage": 0.23,
+                  "rgb": {
+                    "blue": 60,
+                    "green": 64,
+                    "red": 42
+                  }
+                },
+                {
+                  "percentage": 0.21,
+                  "rgb": {
+                    "blue": 82,
+                    "green": 49,
+                    "red": 40
+                  }
+                }
+              ]
+            },
+            "original_img_height": 1182,
+            "original_img_url": "https://pbs.twimg.com/media/HSFpHbVbwAAyMaY.jpg",
+            "original_img_width": 1780
+          },
+          "media_key": "3_2099074477649018880"
+        },
+        {
+          "id": "QXBpTWVkaWE6DAAFCgABHSFsz3EacAAKAAIAAAAAFJ5OBgAA",
+          "media_id": "2099078539542949888",
+          "media_info": {
+            "__typename": "ApiImage",
+            "color_info": {
+              "palette": [
+                {
+                  "percentage": 98.01,
+                  "rgb": {
+                    "blue": 26,
+                    "green": 26,
+                    "red": 26
+                  }
+                },
+                {
+                  "percentage": 0.86,
+                  "rgb": {
+                    "blue": 48,
+                    "green": 112,
+                    "red": 207
+                  }
+                },
+                {
+                  "percentage": 0.77,
+                  "rgb": {
+                    "blue": 102,
+                    "green": 102,
+                    "red": 102
+                  }
+                }
+              ]
+            },
+            "original_img_height": 678,
+            "original_img_url": "https://pbs.twimg.com/media/HSFsz3EacAAPyCU.jpg",
+            "original_img_width": 1228
+          },
+          "media_key": "3_2099078539542949888"
+        },
+        {
+          "id": "QXBpTWVkaWE6DAAFCgABHSFouOEa0AAKAAIAAAAAFJ5OBgAA",
+          "media_id": "2099074044591263744",
+          "media_info": {
+            "__typename": "ApiImage",
+            "color_info": {
+              "palette": [
+                {
+                  "percentage": 94.92,
+                  "rgb": {
+                    "blue": 18,
+                    "green": 18,
+                    "red": 18
+                  }
+                },
+                {
+                  "percentage": 1.63,
+                  "rgb": {
+                    "blue": 26,
+                    "green": 35,
+                    "red": 99
+                  }
+                },
+                {
+                  "percentage": 1.49,
+                  "rgb": {
+                    "blue": 33,
+                    "green": 43,
+                    "red": 25
+                  }
+                },
+                {
+                  "percentage": 1.42,
+                  "rgb": {
+                    "blue": 104,
+                    "green": 104,
+                    "red": 104
+                  }
+                },
+                {
+                  "percentage": 0.43,
+                  "rgb": {
+                    "blue": 31,
+                    "green": 64,
+                    "red": 117
+                  }
+                }
+              ]
+            },
+            "original_img_height": 208,
+            "original_img_url": "https://pbs.twimg.com/media/HSFouOEa0AAfLQv.jpg",
+            "original_img_width": 1228
+          },
+          "media_key": "3_2099074044591263744"
+        },
+        {
+          "id": "QXBpTWVkaWE6DAAFCgABHSFqeBlacAAKAAIAAAAAFJ5OBgAA",
+          "media_id": "2099075965385338880",
+          "media_info": {
+            "__typename": "ApiImage",
+            "color_info": {
+              "palette": [
+                {
+                  "percentage": 98.83,
+                  "rgb": {
+                    "blue": 18,
+                    "green": 18,
+                    "red": 18
+                  }
+                },
+                {
+                  "percentage": 0.55,
+                  "rgb": {
+                    "blue": 47,
+                    "green": 111,
+                    "red": 207
+                  }
+                },
+                {
+                  "percentage": 0.35,
+                  "rgb": {
+                    "blue": 110,
+                    "green": 110,
+                    "red": 110
+                  }
+                },
+                {
+                  "percentage": 0.19,
+                  "rgb": {
+                    "blue": 100,
+                    "green": 81,
+                    "red": 78
+                  }
+                }
+              ]
+            },
+            "original_img_height": 1174,
+            "original_img_url": "https://pbs.twimg.com/media/HSFqeBlacAAi798.jpg",
+            "original_img_width": 2404
+          },
+          "media_key": "3_2099075965385338880"
+        },
+        {
+          "id": "QXBpTWVkaWE6DAAFCgABHSFtBNXbYAAKAAIAAAAAFJ5OBgAA",
+          "media_id": "2099078768866582528",
+          "media_info": {
+            "__typename": "ApiImage",
+            "color_info": {
+              "palette": [
+                {
+                  "percentage": 97.67,
+                  "rgb": {
+                    "blue": 26,
+                    "green": 26,
+                    "red": 26
+                  }
+                },
+                {
+                  "percentage": 0.97,
+                  "rgb": {
+                    "blue": 50,
+                    "green": 121,
+                    "red": 228
+                  }
+                },
+                {
+                  "percentage": 0.83,
+                  "rgb": {
+                    "blue": 98,
+                    "green": 98,
+                    "red": 98
+                  }
+                },
+                {
+                  "percentage": 0.51,
+                  "rgb": {
+                    "blue": 35,
+                    "green": 59,
+                    "red": 94
+                  }
+                }
+              ]
+            },
+            "original_img_height": 492,
+            "original_img_url": "https://pbs.twimg.com/media/HSFtBNXbYAA6LBh.jpg",
+            "original_img_width": 1228
+          },
+          "media_key": "3_2099078768866582528"
+        },
+        {
+          "id": "QXBpTWVkaWE6DAAFCgABHSFsvIra0AAKAAIAAAAAFJ5OBgAA",
+          "media_id": "2099078458370609152",
+          "media_info": {
+            "__typename": "ApiImage",
+            "color_info": {
+              "palette": [
+                {
+                  "percentage": 99.21,
+                  "rgb": {
+                    "blue": 18,
+                    "green": 18,
+                    "red": 18
+                  }
+                },
+                {
+                  "percentage": 0.57,
+                  "rgb": {
+                    "blue": 50,
+                    "green": 78,
+                    "red": 102
+                  }
+                },
+                {
+                  "percentage": 0.14,
+                  "rgb": {
+                    "blue": 93,
+                    "green": 93,
+                    "red": 93
+                  }
+                }
+              ]
+            },
+            "original_img_height": 1268,
+            "original_img_url": "https://pbs.twimg.com/media/HSFsvIra0AABLE0.jpg",
+            "original_img_width": 1934
+          },
+          "media_key": "3_2099078458370609152"
+        }
+      ]
+    }
+  }
+}

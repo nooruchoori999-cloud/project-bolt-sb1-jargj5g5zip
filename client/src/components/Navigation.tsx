@@ -22,6 +22,7 @@ const botModes = [
 ];
 
 const agentItems = [
+  { path: '/agents/arcus-market-making-agent', label: 'Arcus Agent Setup' },
   { path: '/agents/market-making-custom-agent', label: 'Market Making with an Agent' },
   { path: '/agents/getting-started', label: 'How to Get Started' },
   { path: '/agents/build-your-first-custom-agent', label: 'Build a Custom Agent' },

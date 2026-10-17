@@ -41,6 +41,7 @@ type ArticleEntity = {
     data?: {
       url?: string;
       tweetId?: string;
+      caption?: string;
       mediaItems?: Array<{ mediaId: string }>;
     };
   };
@@ -174,10 +175,15 @@ function ArticleMedia({ block, entityByKey, mediaById }: {
     <figure className="my-8">
       <img
         src={src}
-        alt="TreadFi agent walkthrough screenshot"
+        alt={entity?.data?.caption || 'TreadFi agent walkthrough screenshot'}
         className="w-full rounded-xl border border-border/40 object-contain bg-black/20"
         loading="lazy"
       />
+      {entity?.data?.caption && (
+        <figcaption className="mt-3 text-sm text-muted-foreground leading-relaxed">
+          {entity.data.caption}
+        </figcaption>
+      )}
     </figure>
   );
 }
