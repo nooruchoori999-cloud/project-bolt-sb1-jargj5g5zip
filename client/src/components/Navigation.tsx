@@ -6,7 +6,6 @@ const navLinks = [
   { path: '/lessons', label: 'Lessons' },
   { path: '/blog', label: 'Blog' },
   { path: '/discounts-and-refs', label: 'Discounts & Refs' },
-  { path: '/glossary', label: 'Glossary' },
   { path: '/faq', label: 'FAQ' },
   { path: '/modes/dn-bot', label: 'DN Bot' },
   { path: '/stats', label: 'TreadFi Stats' },
@@ -28,6 +27,11 @@ const agentItems = [
   { path: '/agents/build-your-first-custom-agent', label: 'Build a Custom Agent' },
 ];
 
+const toolItems = [
+  { path: '/tools/tread-holder-data', label: '$TREAD Holder Data' },
+  { path: '/tools/dn-arb-tool', label: 'DN ARB Tool' },
+];
+
 const exchangeTutorialItems = [
   { path: '/exchange-tutorials/arcus-treadfi-robinhood', label: 'Arcus × TreadFi × Robinhood' },
   { path: '/exchange-tutorials/aftermath-treadfi-sui', label: 'Aftermath × TreadFi Guide' },
@@ -38,6 +42,9 @@ export default function Navigation() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [agentsDropdownOpen, setAgentsDropdownOpen] = useState(false);
   const [exchangeTutorialsDropdownOpen, setExchangeTutorialsDropdownOpen] = useState(false);
+  const [toolsDropdownOpen, setToolsDropdownOpen] = useState(false);
+  const [mobileToolsOpen, setMobileToolsOpen] = useState(false);
+  const toolsDropdownRef = useRef<HTMLDivElement>(null);
   const [mobileModesOpen, setMobileModesOpen] = useState(false);
   const [mobileAgentsOpen, setMobileAgentsOpen] = useState(false);
   const [mobileExchangeTutorialsOpen, setMobileExchangeTutorialsOpen] = useState(false);
@@ -54,6 +61,9 @@ export default function Navigation() {
     function handleClickOutside(e: MouseEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
         setDropdownOpen(false);
+      }
+      if (toolsDropdownRef.current && !toolsDropdownRef.current.contains(e.target as Node)) {
+        setToolsDropdownOpen(false);
       }
       if (agentsDropdownRef.current && !agentsDropdownRef.current.contains(e.target as Node)) {
         setAgentsDropdownOpen(false);
@@ -94,6 +104,37 @@ export default function Navigation() {
                 {link.label}
               </Link>
             ))}
+
+            {/* Tools Dropdown */}
+            <div className="relative" ref={toolsDropdownRef}>
+              <button
+                onClick={() => setToolsDropdownOpen(!toolsDropdownOpen)}
+                data-testid="button-tools-dropdown"
+                className={`flex items-center gap-1 text-sm font-medium transition-colors duration-200 ${
+                  location.startsWith('/tools') ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                Tools
+                <ChevronDown size={15} className={`transition-transform duration-200 ${toolsDropdownOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {toolsDropdownOpen && (
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2.5 w-56 bg-card border border-card-border rounded-xl shadow-xl shadow-black/30 py-1.5 z-50">
+                  {toolItems.map((item) => (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      onClick={() => setToolsDropdownOpen(false)}
+                      data-testid={`link-tool-${item.path.split('/').pop()}`}
+                      className={`block px-4 py-2.5 text-sm font-medium transition-colors duration-150 ${
+                        isActive(item.path) ? 'text-primary bg-primary/5' : 'text-muted-foreground hover:text-foreground hover:bg-muted/40'
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
 
             {/* Agents Dropdown */}
             <div className="relative" ref={agentsDropdownRef}>
@@ -285,6 +326,35 @@ export default function Navigation() {
                 {link.label}
               </Link>
             ))}
+
+            {/* Mobile Tools Accordion */}
+            <div>
+              <button
+                onClick={() => setMobileToolsOpen(!mobileToolsOpen)}
+                className={`flex items-center gap-1 w-full text-sm font-medium transition-colors duration-200 py-2 ${
+                  location.startsWith('/tools') ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                Tools
+                <ChevronDown size={14} className={`transition-transform duration-200 ${mobileToolsOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {mobileToolsOpen && (
+                <div className="pl-4 space-y-1 pb-1">
+                  {toolItems.map((item) => (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      onClick={() => { setMobileMenuOpen(false); setMobileToolsOpen(false); }}
+                      className={`block text-sm py-1.5 transition-colors duration-150 ${
+                        isActive(item.path) ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
 
             {/* Mobile Agents Accordion */}
             <div>
