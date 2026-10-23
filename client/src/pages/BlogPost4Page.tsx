@@ -225,7 +225,7 @@ export default function BlogPost4Page() {
             <Img src={img14} alt="TreadFi — configuring MM bot for Aftermath with Crypto dGrid mode" />
             <p className="text-muted-foreground text-sm mt-2">
               If you want to explore other modes and strategies in depth, check out the{' '}
-              <a href="https://treadfiacademy--sportytechworld.replit.app/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+              <a href="/" className="text-primary hover:underline">
                 TreadFi Academy
               </a>.
             </p>

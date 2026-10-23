@@ -242,8 +242,8 @@ export default function BlogPost1Page() {
                 <span className="mt-2 block w-1.5 h-1.5 rounded-full flex-shrink-0 gradient-bg-cyan-emerald" />
                 <span className="text-muted-foreground text-sm">
                   Start here:{' '}
-                  <a href="https://treadfiacademy--sportytechworld.replit.app/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                    treadfiacademy--sportytechworld.replit.app
+                  <a href="/" className="text-primary hover:underline">
+                    Homepage
                   </a>
                 </span>
               </li>
