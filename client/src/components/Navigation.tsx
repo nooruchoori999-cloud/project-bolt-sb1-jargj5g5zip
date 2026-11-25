@@ -29,7 +29,6 @@ const agentItems = [
 
 const toolItems = [
   { path: '/tools/tread-holder-data', label: '$TREAD Holder Data' },
-  { path: '/tools/dn-arb-tool', label: 'DN ARB Tool' },
 ];
 
 const exchangeTutorialItems = [

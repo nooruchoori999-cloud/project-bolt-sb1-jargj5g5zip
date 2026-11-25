@@ -26,7 +26,6 @@ import DNBotPage from "@/pages/DNBotPage";
 import BlogPost3Page from "@/pages/BlogPost3Page";
 import StatsPage from "@/pages/StatsPage";
 import TreadHolderDataPage from "@/pages/TreadHolderDataPage";
-import DnArbToolPage from "@/pages/DnArbToolPage";
 import BlogPost4Page from "@/pages/BlogPost4Page";
 import BlogPost5Page from "@/pages/BlogPost5Page";
 import BlogPost6Page from "@/pages/BlogPost6Page";
@@ -67,7 +66,6 @@ function Router() {
         <Route path="/blog/6" component={BlogPost6Page} />
         <Route path="/stats" component={StatsPage} />
         <Route path="/tools/tread-holder-data" component={TreadHolderDataPage} />
-        <Route path="/tools/dn-arb-tool" component={DnArbToolPage} />
         <Route path="/modes/polymarket" component={PolymarketPage} />
         <Route path="/modes/dn-bot" component={DNBotPage} />
         <Route path="/agents" component={AgentsIndexPage} />
